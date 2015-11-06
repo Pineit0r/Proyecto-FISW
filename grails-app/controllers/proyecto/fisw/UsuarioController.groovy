@@ -8,6 +8,8 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class UsuarioController {
 
+    def scaffold = Usuario
+/*
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -100,5 +102,5 @@ class UsuarioController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
+    }*/
 }
