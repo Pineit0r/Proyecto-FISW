@@ -2,10 +2,10 @@ package proyecto.fisw
 
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured(['ROLE_ADMIN'])
-class AdminController {
+@Secured(['ROLE_DIRECTOR'])
+class DirectorController {
 
-    def admin() {
+    def director() {
         respond Usuario.list(params), model:[usuarioInstanceCount: Usuario.countByEnabled(false)]
     }
 }

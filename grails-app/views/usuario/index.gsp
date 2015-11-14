@@ -28,9 +28,9 @@
 
 						<g:sortableColumn property="nombre" title="${message(code: 'usuario.nombre.label', default: 'Nombre')}" />
 
-						<sec:ifAllGranted roles="ROLE_ADMIN">
+						<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
 							<g:sortableColumn property="enable" title="${message(code: 'usuario.nombre.label', default: 'Verificado')}" />
-						</sec:ifAllGranted>
+						</sec:ifAnyGranted>
 					</tr>
 				</thead>
 				<tbody>
@@ -41,9 +41,9 @@
 					
 						<td>${fieldValue(bean: usuarioInstance, field: "nombre")}</td>
 
-						<sec:ifAllGranted roles="ROLE_ADMIN">
+						<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
 							<td><g:formatBoolean boolean="${usuarioInstance?.enabled}" /></td>
-						</sec:ifAllGranted>
+						</sec:ifAnyGranted>
 					
 					</tr>
 				</g:each>

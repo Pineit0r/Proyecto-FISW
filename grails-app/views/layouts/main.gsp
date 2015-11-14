@@ -28,7 +28,7 @@
 					<li><g:link controller="home">Dashboard Usuario</g:link></li>
 				</sec:ifAnyGranted>
 				<sec:ifAnyGranted roles="ROLE_DIRECTOR">
-					<li><g:link controller="home">Dashboard Director</g:link></li>
+					<li><g:link controller="director">Dashboard Director</g:link></li>
 				</sec:ifAnyGranted>
 				<sec:ifLoggedIn>
 					<li><g:link controller="intranet">Intranet</g:link></li>

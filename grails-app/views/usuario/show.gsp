@@ -11,7 +11,7 @@
 		<a href="#show-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="index">Lista de Usuarios</g:link></li>
 			</ul>
 		</div>
 		<div id="show-usuario" class="content scaffold-show" role="main">
@@ -75,14 +75,14 @@
 				</li>
 				</g:if>
 
-				<sec:ifAllGranted roles="ROLE_ADMIN">
+				<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
 					<li class="fieldcontain">
 						<span id="enabled-label" class="property-label"><g:message code="usuario.enabled.label" default="Verificado" /></span>
 
 						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${usuarioInstance?.enabled}" /></span>
 
 					</li>
-				</sec:ifAllGranted>
+				</sec:ifAnyGranted>
 			
 			</ol>
 			<g:form url="[resource:usuarioInstance, action:'delete']" method="DELETE">
