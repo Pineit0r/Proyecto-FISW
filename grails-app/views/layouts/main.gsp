@@ -17,8 +17,33 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
-		<g:layoutBody/>
+		<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="USM.png" alt="Grails"/></a></div>
+		<div class="nav" role="navigation">
+			<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<sec:ifAnyGranted roles="ROLE_ADMIN">
+					<li><g:link controller="admin">Dashboard Administrador</g:link></li>
+				</sec:ifAnyGranted>
+				<sec:ifAnyGranted roles="ROLE_USER">
+					<li><g:link controller="home">Dashboard Usuario</g:link></li>
+				</sec:ifAnyGranted>
+				<sec:ifAnyGranted roles="ROLE_DIRECTOR">
+					<li><g:link controller="home">Dashboard Director</g:link></li>
+				</sec:ifAnyGranted>
+				<sec:ifLoggedIn>
+					<li><g:link controller="intranet">Intranet</g:link></li>
+					<li><g:link controller="logout">Logout</g:link></li>
+				</sec:ifLoggedIn>
+				<sec:ifNotLoggedIn>
+					<li><g:link controller="login">Login</g:link></li>
+					<li><g:link controller="usuario"action="create">Registrate</g:link></li>
+				</sec:ifNotLoggedIn>
+			</ul>
+		</div>
+	<g:layoutBody/>
+
+
+
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 	</body>

@@ -1,15 +1,14 @@
 package proyecto.fisw
 
-
+import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
+@Secured(['IS_AUTHENTICATED_FULLY'])
 class UsuarioController {
 
-    def scaffold = Usuario
-/*
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -17,15 +16,22 @@ class UsuarioController {
         respond Usuario.list(params), model:[usuarioInstanceCount: Usuario.count()]
     }
 
+    def indexPendiente(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Usuario.findAllByEnabled(false), model:[usuarioInstanceCount: Usuario.countByEnabled(false)]
+    }
+
     def show(Usuario usuarioInstance) {
         respond usuarioInstance
     }
 
+    @Secured("IS_AUTHENTICATED_ANONYMOUSLY")
     def create() {
         respond new Usuario(params)
     }
 
     @Transactional
+    @Secured("IS_AUTHENTICATED_ANONYMOUSLY")
     def save(Usuario usuarioInstance) {
         if (usuarioInstance == null) {
             notFound()
@@ -36,9 +42,11 @@ class UsuarioController {
             respond usuarioInstance.errors, view:'create'
             return
         }
-
+        usuarioInstance.enabled = false
         usuarioInstance.save flush:true
 
+        Rol_S rol = Rol_S.find{authority == 'ROLE_USER'}
+        UserRol_S.create usuarioInstance,rol,true
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuarioInstance.id])
@@ -48,11 +56,13 @@ class UsuarioController {
         }
     }
 
+    @Secured(['ROLE_ADMIN'])
     def edit(Usuario usuarioInstance) {
         respond usuarioInstance
     }
 
     @Transactional
+    @Secured(['ROLE_ADMIN'])
     def update(Usuario usuarioInstance) {
         if (usuarioInstance == null) {
             notFound()
@@ -76,6 +86,7 @@ class UsuarioController {
     }
 
     @Transactional
+    @Secured(['ROLE_ADMIN'])
     def delete(Usuario usuarioInstance) {
 
         if (usuarioInstance == null) {
@@ -83,6 +94,7 @@ class UsuarioController {
             return
         }
 
+        UserRol_S.findByUser(usuarioInstance).delete flush: true
         usuarioInstance.delete flush:true
 
         request.withFormat {
@@ -102,5 +114,5 @@ class UsuarioController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }*/
+    }
 }

@@ -115,3 +115,23 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'proyecto.fisw.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'proyecto.fisw.UserRol_S'
+grails.plugin.springsecurity.authority.className = 'proyecto.fisw.Rol_S'
+grails.plugin.springsecurity.successHandler.alwaysUseDefault=true
+grails.plugin.springsecurity.successHandler.defaultTargetUrl='/Intranet'
+grails.plugin.springsecurity.logout.postOnly= false
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                ['permitAll'],
+	'/index':           ['permitAll'],
+	'/index.gsp':       ['permitAll'],
+	'/assets/**':       ['permitAll'],
+	'/**/js/**':        ['permitAll'],
+	'/**/css/**':       ['permitAll'],
+	'/**/images/**':    ['permitAll'],
+	'/**/favicon.ico':  ['permitAll']
+]
+
