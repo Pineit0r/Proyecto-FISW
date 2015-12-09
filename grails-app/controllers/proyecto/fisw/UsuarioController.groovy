@@ -45,8 +45,8 @@ class UsuarioController {
         usuarioInstance.enabled = false
         usuarioInstance.save flush:true
 
-        Rol_S rol = Rol_S.find{authority == 'ROLE_USER'}
-        UserRol_S.create usuarioInstance,rol,true
+        Rol rol = Rol.find{authority == 'ROLE_USER'}
+        UserRol.create usuarioInstance,rol,true
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuarioInstance.id])
@@ -94,7 +94,7 @@ class UsuarioController {
             return
         }
 
-        UserRol_S.findByUser(usuarioInstance).delete flush: true
+        UserRol.findByUser(usuarioInstance).delete flush: true
         usuarioInstance.delete flush:true
 
         request.withFormat {

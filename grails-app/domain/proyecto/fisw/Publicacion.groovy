@@ -5,6 +5,8 @@ class Publicacion {
     String ruta
     String nombre
 
+    static belongsTo = [area: Area]
+
     static constraints = {
     }
 }

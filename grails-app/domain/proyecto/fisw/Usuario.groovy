@@ -2,7 +2,7 @@ package proyecto.fisw
 
 class Usuario extends User {
     String nombre
-    Rol_Lab rol_lab
+    RolLab rol_lab
     Area area
 
     // username corresponde a correo

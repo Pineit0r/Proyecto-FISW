@@ -34,8 +34,8 @@ class User implements Serializable {
 		username
 	}
 
-	Set<Rol_S> getAuthorities() {
-		UserRol_S.findAllByUser(this)*.rol_S
+	Set<Rol> getAuthorities() {
+		UserRol.findAllByUser(this)*.rol_S
 	}
 
 	def beforeInsert() {

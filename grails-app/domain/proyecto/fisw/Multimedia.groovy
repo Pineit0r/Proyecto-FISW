@@ -1,10 +1,10 @@
 package proyecto.fisw
 
 class Multimedia {
+    Usuario usuario
     String ruta
     String tipo
-
-    static belongsTo = [usuario: Usuario]
+    Date subido
 
     static constraints = {
     }

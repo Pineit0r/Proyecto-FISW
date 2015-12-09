@@ -119,8 +119,8 @@ log4j.main = {
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'proyecto.fisw.User'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'proyecto.fisw.UserRol_S'
-grails.plugin.springsecurity.authority.className = 'proyecto.fisw.Rol_S'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'proyecto.fisw.UserRol'
+grails.plugin.springsecurity.authority.className = 'proyecto.fisw.Rol'
 grails.plugin.springsecurity.successHandler.alwaysUseDefault=true
 grails.plugin.springsecurity.successHandler.defaultTargetUrl='/Intranet'
 grails.plugin.springsecurity.logout.postOnly= false

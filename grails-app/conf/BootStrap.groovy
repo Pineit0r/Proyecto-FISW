@@ -4,17 +4,17 @@ import proyecto.fisw.*
 class BootStrap {
 
     def init = { servletContext ->
-        def adminRol = new Rol_S("ROLE_ADMIN").save(failOnError: true)
-        def userRol = new Rol_S("ROLE_USER").save(failOnError: true)
-        def directorRol = new Rol_S("ROLE_DIRECTOR").save(failOnError: true)
+        def adminRol = new Rol("ROLE_ADMIN").save(failOnError: true)
+        def userRol = new Rol("ROLE_USER").save(failOnError: true)
+        def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
         def usuarioAdmin = new User("admin", "admin").save(failOnError: true)
         def usuarioUser = new User("user", "user").save(failOnError: true)
         def usuarioDirector = new User("director", "director").save(failOnError: true)
 
-        UserRol_S.create usuarioUser,userRol,true
-        UserRol_S.create usuarioAdmin,adminRol,true
-        UserRol_S.create usuarioDirector,directorRol,true
+        UserRol.create usuarioUser,userRol,true
+        UserRol.create usuarioAdmin,adminRol,true
+        UserRol.create usuarioDirector,directorRol,true
 
         def quimicaArea
         def biologiaArea
@@ -29,20 +29,20 @@ class BootStrap {
 
         def estudianteRol_Lab
         def profesorRol_Lab
-        if (Rol_Lab.list().size()==0) {
-            estudianteRol_Lab = new Rol_Lab("Estudiante").save(failOnError: true)
-            profesorRol_Lab = new Rol_Lab("Profesor").save(failOnError: true)
+        if (RolLab.list().size()==0) {
+            estudianteRol_Lab = new RolLab("Estudiante").save(failOnError: true)
+            profesorRol_Lab = new RolLab("Profesor").save(failOnError: true)
         }
         else {
-            estudianteRol_Lab = Rol_Lab.findByNombre("Estudiante")
-            profesorRol_Lab = Rol_Lab.findByNombre("Profesor")
+            estudianteRol_Lab = RolLab.findByNombre("Estudiante")
+            profesorRol_Lab = RolLab.findByNombre("Profesor")
         }
 
         def usuarioTest = new Usuario("test", "test", "test", quimicaArea, estudianteRol_Lab).save(failOnError: true)
         def usuarioFelipe = new Usuario("felipe", "felipe", "felipe", biologiaArea, estudianteRol_Lab).save(failOnError: true)
 
-        UserRol_S.create usuarioTest,userRol,true
-        UserRol_S.create usuarioFelipe,userRol,true
+        UserRol.create usuarioTest,userRol,true
+        UserRol.create usuarioFelipe,userRol,true
     }
     def destroy = {
     }
