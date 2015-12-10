@@ -1,8 +1,8 @@
 package proyecto.fisw
 
 class Tesis {
-    def Institucion institucion
-    static belongsTo = [Institucion]
+
+    static belongsTo = [institucion:Institucion]
     Usuario autor
     String nombre
     String ruta

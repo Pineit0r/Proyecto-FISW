@@ -1,11 +1,10 @@
 package proyecto.fisw
 
 class Ciudad {
-    static hasMany = [congresos: Congresos]
-    def Pais pais
-    static belongsTo = [Pais]
-    String ciudad
 
+    String ciudad
+    static hasMany = [congresos: Congreso]
+    static belongsTo = [pais:Pais]
     static constraints = {
     }
 }

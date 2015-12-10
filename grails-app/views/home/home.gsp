@@ -19,5 +19,11 @@
 </head>
 <body>
 <h1>Bienvenido al Laboratorio de Microbiología Molecular y Biotecnología Ambiental</h1>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        Basic panel example
+    </div>
+</div>
 </body>
 </html>

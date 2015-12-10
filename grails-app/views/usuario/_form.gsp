@@ -7,7 +7,7 @@
 		<g:message code="usuario.nombre.label" default="Nombre" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="nombre" required="" value="${usuarioInstance?.nombre}"/>
+	<g:field type="text"  name="nombre" required="" value="${usuarioInstance?.nombre}"/>
 
 </div>
 
@@ -16,7 +16,7 @@
 		<g:message code="usuario.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="password" required="" value="${usuarioInstance?.password}"/>
+	<g:field type="password" name="password" required="" value="${usuarioInstance?.password}"/>
 
 </div>
 
@@ -25,7 +25,7 @@
 		<g:message code="usuario.username.label" default="Correo" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="username" required="" value="${usuarioInstance?.username}"/>
+	<g:field type="email" name="username" required="" value="${usuarioInstance?.username}"/>
 
 </div>
 
@@ -90,7 +90,7 @@
 		<g:message code="usuario.rol_lab.label" default="Rol en el Laboratorio" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select optionValue="nombre" id="rol_lab" name="rol_lab.id" from="${proyecto.fisw.Rol_Lab.list()}" optionKey="id" required="" value="${usuarioInstance?.rol_lab?.nombre}" class="many-to-one"/>
+	<g:select optionValue="nombre" id="rol_lab" name="rol_lab.id" from="${proyecto.fisw.RolLab.list()}" optionKey="id" required="" value="${usuarioInstance?.rol_lab?.nombre}" class="many-to-one"/>
 
 </div>
 

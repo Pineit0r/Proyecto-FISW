@@ -8,7 +8,7 @@ class Usuario extends User {
     static hasMany = [titulo: Titulo]
 
     // username corresponde a correo
-    Usuario(String username, String password, String nombre, Area area, Rol_Lab rol_lab) {
+    Usuario(String username, String password, String nombre, Area area, RolLab rol_lab) {
         super(username, password)
         this.nombre = nombre
         this.rol_lab = rol_lab
