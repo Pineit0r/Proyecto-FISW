@@ -3,7 +3,7 @@ package proyecto.fisw
 class Area {
     String nombre
 
-    static hasMany = [publicaciones: Publicacion]
+    static hasMany = [publicaciones: PublicacionRevistas]
 
     Area(String nombre) {
         this.nombre = nombre

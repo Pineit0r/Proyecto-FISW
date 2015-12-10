@@ -2,7 +2,7 @@ package proyecto.fisw
 
 class Titulo {
     String titulo
-    Usuario usuario
+    Boolean tipo
 
     static belongsTo = [institucion: Institucion]
 

@@ -1,8 +1,10 @@
 package proyecto.fisw
 
 class Congresos {
-    String lugar
+    static belongsTo = [ciudad: Ciudad]
+
     String nombre
+    String lugar
     Date fecha
 
     static constraints = {
