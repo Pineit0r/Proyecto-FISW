@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Grails"/></title>
+		<title>Labmmba</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
@@ -18,34 +18,11 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a class="home" href="${createLink(uri: '/')}"><asset:image src="USM.png" alt="Grails"/></a></div>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<sec:ifAnyGranted roles="ROLE_ADMIN">
-					<li><g:link controller="admin">Dashboard Administrador</g:link></li>
-				</sec:ifAnyGranted>
-				<sec:ifAnyGranted roles="ROLE_USER">
-					<li><g:link controller="home">Dashboard Usuario</g:link></li>
-				</sec:ifAnyGranted>
-				<sec:ifAnyGranted roles="ROLE_DIRECTOR">
-					<li><g:link controller="director">Dashboard Director</g:link></li>
-				</sec:ifAnyGranted>
-				<sec:ifLoggedIn>
-					<li><g:link controller="intranet">Intranet</g:link></li>
-					<li><g:link controller="logout">Logout</g:link></li>
-				</sec:ifLoggedIn>
-				<sec:ifNotLoggedIn>
-					<li><g:link controller="login">Login</g:link></li>
-					<li><g:link controller="usuario"action="create">Registrate</g:link></li>
-				</sec:ifNotLoggedIn>
-			</ul>
-		</div>
-	<g:layoutBody/>
 
 
-
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+		<g:render template="/layouts/header"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="javascripts/bootstrap.min.js"></script>
+		<g:layoutBody/>
 	</body>
 </html>

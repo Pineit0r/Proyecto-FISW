@@ -1,6 +1,6 @@
 package proyecto.fisw
 
-class Cargo {
+class CargoProyecto {
     Usuario usuario
     Proyecto proyecto
     String cargo

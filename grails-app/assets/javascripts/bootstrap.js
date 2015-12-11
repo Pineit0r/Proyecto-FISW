@@ -2360,4 +2360,18 @@ if (typeof jQuery === 'undefined') {
     })
   })
 
+  $(function() {
+    //caches a jQuery object containing the header element
+    var header = $('.noBackground');
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 500) {
+        header.removeClass('noBackground').addClass('blackBackground').fadeOut();
+      } else {
+        header.removeClass('blackBackground').fadeIn().addClass('noBackground');
+      }
+    });
+  });
+
 }(jQuery);
