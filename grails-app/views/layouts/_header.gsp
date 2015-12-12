@@ -22,7 +22,7 @@
         </sec:ifLoggedIn>
         <sec:ifNotLoggedIn>
             <li><g:link controller="login">Login</g:link></li>
-            <li><g:link controller="usuario"action="create">Registrate</g:link></li>
+            <li><g:link controller="usuario" action="create">Registrate</g:link></li>
         </sec:ifNotLoggedIn>
     </ul>
 </div>
@@ -36,7 +36,23 @@
                     <ul class="nav masthead-nav">
 
                         <li class="active"><g:link controller="home" action="index">Inicio</g:link></li>
-                        <li><g:link controller="login">Login</g:link></li>
+                        <sec:ifAnyGranted roles="ROLE_ADMIN">
+                            <li><g:link controller="admin">Dashboard Administrador</g:link></li>
+                        </sec:ifAnyGranted>
+                        <sec:ifAnyGranted roles="ROLE_USER">
+                            <li><g:link controller="home">Dashboard Usuario</g:link></li>
+                        </sec:ifAnyGranted>
+                        <sec:ifAnyGranted roles="ROLE_DIRECTOR">
+                            <li><g:link controller="director">Dashboard Director</g:link></li>
+                        </sec:ifAnyGranted>
+                        <sec:ifLoggedIn>
+                            <li><g:link controller="intranet">Intranet</g:link></li>
+                            <li><g:link controller="logout">Logout</g:link></li>
+                        </sec:ifLoggedIn>
+                        <sec:ifNotLoggedIn>
+                            <li><g:link controller="login">Login</g:link></li>
+                            <li><g:link controller="usuario" action="create">Registrate</g:link></li>
+                        </sec:ifNotLoggedIn>
 
                     </ul>
                 </nav>

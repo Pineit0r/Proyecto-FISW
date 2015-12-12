@@ -122,7 +122,7 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'proyecto.fisw.Use
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'proyecto.fisw.UserRol'
 grails.plugin.springsecurity.authority.className = 'proyecto.fisw.Rol'
 grails.plugin.springsecurity.successHandler.alwaysUseDefault=true
-grails.plugin.springsecurity.successHandler.defaultTargetUrl='/Intranet'
+grails.plugin.springsecurity.successHandler.defaultTargetUrl='/Intranet/index'
 grails.plugin.springsecurity.logout.postOnly= false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                ['permitAll'],

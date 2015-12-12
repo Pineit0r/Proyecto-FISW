@@ -15,6 +15,7 @@
   		<asset:stylesheet src="application.css"/>
 		<asset:stylesheet src="bootstrap.css"/>
 		<asset:javascript src="application.js"/>
+		<asset:stylesheet src="home.css"/>
 		<g:layoutHead/>
 	</head>
 	<body>

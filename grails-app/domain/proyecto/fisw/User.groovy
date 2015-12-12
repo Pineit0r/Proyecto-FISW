@@ -6,6 +6,8 @@ class User implements Serializable {
 
 	transient springSecurityService
 
+	static hasOne = [usuario: Usuario]
+
 	String username
 	String password
 	boolean enabled = true
@@ -18,6 +20,10 @@ class User implements Serializable {
 		this.username = username
 		this.password = password
 	}
+
+    def attachUsuario(Usuario usuario) {
+        this.usuario = usuario
+    }
 
 	@Override
 	int hashCode() {
@@ -57,6 +63,7 @@ class User implements Serializable {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+        usuario nullable: true
 	}
 
 	static mapping = {

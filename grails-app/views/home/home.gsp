@@ -8,7 +8,6 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <asset:stylesheet src="home.css"/>
 </head>
 <body>
 <div class="site-wrapper">
