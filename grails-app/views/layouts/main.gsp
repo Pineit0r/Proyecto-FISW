@@ -9,19 +9,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Labmmba</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
-		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
+		<link rel="shortcut icon" href="${assetPath(src: 'usm.ico')}" type="image/x-icon">
+
   		<asset:stylesheet src="application.css"/>
 		<asset:stylesheet src="bootstrap.css"/>
 		<asset:javascript src="application.js"/>
-		<asset:stylesheet src="home.css"/>
+		<asset:stylesheet src="main.css"/>
 		<g:layoutHead/>
 	</head>
 	<body>
 
 
-		<g:render template="/layouts/header"/>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="javascripts/bootstrap.min.js"></script>
 		<g:layoutBody/>

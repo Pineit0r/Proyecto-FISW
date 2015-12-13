@@ -10,9 +10,9 @@ a:hover {
 }
 
 /* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
+.btn-registro,
+.btn-registro:hover,
+.btn-registro:focus {
     color: #fff;
     text-shadow: none; /* Prevent inheritence from `body` */
     background-color: #24228F;
@@ -28,20 +28,24 @@ html,
 body {
     height: 100%;
     background-color: #339933;
+    color: #fff;
 }
-body {
+.formulario {
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-.registro{
-    color: #FFF;
+.centrado{
+
+    text-align: center;
 }
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
     display: table;
+
     width: 100%;
     height: 100%; /* For at least Firefox */
     min-height: 100%;

@@ -4,16 +4,13 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'usuario.label', default: 'Usuario')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#show-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
+		<div class="container">
+			<div class="centrado">
 				<li><g:link class="list" action="index">Lista de Usuarios</g:link></li>
-			</ul>
-		</div>
+
+
 		<div id="show-usuario" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">

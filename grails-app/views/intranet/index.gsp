@@ -9,25 +9,24 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <style type="text/css" media="screen">
-    #login {
-        margin: 15px 0px;
-        padding: 0px;
-        text-align: center;
-    }
-    </style>
 </head>
 <body>
-    <h2>Intranet</h2>
-    <h3>Bienvenido
-        <sec:ifLoggedIn>
-            <sec:loggedInUserInfo field="username"/>
-        </sec:ifLoggedIn>
-        <sec:ifAllGranted roles="ROLE_ADMIN">
-            <g:if test="${usuarioInstanceCount > 0}">
-                <h1>Existen <g:link class="list" controller="usuario" action="indexPendiente">cuentas de usuarios</g:link> pendientes de verificación.</h1>
-            </g:if>
-        </sec:ifAllGranted>
-    </h3>
+    <div class="site-wrapper">
+        <div class="centrado">
+        <h2>Intranet</h2>
+        <h3>Bienvenido</h3>
+        <div class="container"
+            <sec:ifLoggedIn>
+                <sec:loggedInUserInfo field="username"/>
+            </sec:ifLoggedIn>
+            <sec:ifAllGranted roles="ROLE_ADMIN">
+                <g:if test="${usuarioInstanceCount > 0}">
+                    <h1>Existen <g:link class="list" controller="usuario" action="indexPendiente">cuentas de usuarios</g:link> pendientes de verificación.</h1>
+                </g:if>
+            </sec:ifAllGranted>
+        </div>
+    </div>
+
+
 </body>
 </html>
