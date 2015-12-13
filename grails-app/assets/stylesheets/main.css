@@ -28,7 +28,11 @@ html,
 body {
     height: 100%;
     background-color: #339933;
-    color: #fff;
+
+}
+
+#portada {
+    color: white;
 }
 .formulario {
     color: #fff;
@@ -37,7 +41,6 @@ body {
 }
 
 .centrado{
-
     text-align: center;
 }
 
@@ -81,9 +84,6 @@ body {
     background-color: #595959;
 }
 
-#descrip_title{
-    color: black;
-}
 /*
  * Header
  */
