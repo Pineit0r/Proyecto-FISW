@@ -15,6 +15,7 @@
 		<asset:stylesheet src="bootstrap.css"/>
 		<asset:javascript src="application.js"/>
 		<asset:stylesheet src="main.css"/>
+		<asset:stylesheet src="signin.css"/>
 		<g:layoutHead/>
 	</head>
 	<body>

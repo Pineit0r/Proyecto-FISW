@@ -9,9 +9,8 @@ class Usuario extends User {
 
     static belongsTo = [user: User]
 
-    // username corresponde a correo
-    Usuario(String username, String password, String nombre, Area area, RolLab rol_lab) {
-        super(username, password)
+    Usuario(String correo, String password, String nombre, Area area, RolLab rol_lab) {
+        super(correo, password)
         this.nombre = nombre
         this.rol_lab = rol_lab
         this.area = area

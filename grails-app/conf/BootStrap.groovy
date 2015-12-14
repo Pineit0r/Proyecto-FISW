@@ -8,9 +8,9 @@ class BootStrap {
         def userRol = new Rol("ROLE_USER").save(failOnError: true)
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
-        def usuarioAdmin = new User("admin", "admin").save(failOnError: true)
-        def usuarioUser = new User("user", "user").save(failOnError: true)
-        def usuarioDirector = new User("director", "director").save(failOnError: true)
+        def usuarioAdmin = new User("admin@admin.cl", "admin").save(failOnError: true)
+        def usuarioUser = new User("user@user.cl", "user").save(failOnError: true)
+        def usuarioDirector = new User("director@director.cl", "director").save(failOnError: true)
 
         UserRol.create usuarioUser,userRol,true
         UserRol.create usuarioAdmin,adminRol,true
@@ -38,8 +38,8 @@ class BootStrap {
             profesorRol_Lab = RolLab.findByNombre("Profesor")
         }
 
-        def usuarioTest = new Usuario("test", "test", "test", quimicaArea, profesorRol_Lab).save(failOnError: true)
-        def usuarioFelipe = new Usuario("felipe", "felipe", "felipe", biologiaArea, estudianteRol_Lab).save(failOnError: true)
+        def usuarioTest = new Usuario("test@test.cl", "test", "test", quimicaArea, profesorRol_Lab).save(failOnError: true)
+        def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", biologiaArea, estudianteRol_Lab).save(failOnError: true)
 
         UserRol.create usuarioTest,userRol,true
         UserRol.create usuarioFelipe,userRol,true

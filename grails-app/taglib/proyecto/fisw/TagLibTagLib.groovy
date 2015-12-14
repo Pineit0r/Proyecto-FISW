@@ -7,7 +7,11 @@ class TagLibTagLib {
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
 
     def getUserName = { attrs, body ->
-        out << ((Usuario) springSecurityService.currentUser).nombre.capitalize()
+        if (springSecurityService.currentUser instanceof Usuario) {
+            out << ((Usuario) springSecurityService.currentUser).nombre.capitalize()
+        } else {
+            out << ((User) springSecurityService.currentUser).username
+        }
     }
 
 }

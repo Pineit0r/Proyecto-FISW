@@ -24,7 +24,9 @@
                     </sec:ifLoggedIn>
                     <sec:ifAllGranted roles="ROLE_ADMIN">
                         <g:if test="${usuarioInstanceCount > 0}">
-                            <h1>Existen <g:link class="list" controller="usuario" action="indexPendiente">cuentas de usuarios</g:link> pendientes de verificación.</h1>
+                            <h1>Existen <g:link class="list" controller="usuario" action="indexPendiente">
+                                cuentas de usuarios</g:link> pendientes de verificación.
+                            </h1>
                         </g:if>
                     </sec:ifAllGranted>
                 </div>

@@ -16,7 +16,7 @@
     <div class="site-wrapper">
         <div class="centrado">
             <h2>Ficha Personal</h2>
-            <h3>${usuario.nombre.capitalize()}</h3>
+            <h3><g:getUserName /></h3>
         </div>
     </div>
 </div>

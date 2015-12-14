@@ -12,9 +12,15 @@ class IntranetController {
     }
 
     def ficha() {
-        Usuario usuario = (Usuario) springSecurityService.currentUser
-        return [
-                usuario: springSecurityService.currentUser as Usuario
-        ]
+
+        if (springSecurityService.currentUser instanceof Usuario) {
+            return [
+                    usuario: springSecurityService.currentUser as Usuario
+            ]
+        } else {
+            return [
+                    usuario: springSecurityService.currentUser as User
+            ]
+        }
     }
 }
