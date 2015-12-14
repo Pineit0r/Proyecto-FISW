@@ -8,11 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title></title>
+    <meta name="layout" content="main"/>
 </head>
-
 <body>
-Prueba
-<g:fieldValue bean="${usuario}" field="username"/>
+<g:render template="/layouts/headerInterno" model="${pageScope.variables}"/>
+<div class="fixed-navbar-content">
+    <div class="site-wrapper">
+        <div class="centrado">
+            <h2>Ficha Personal</h2>
+            <h3>${usuario.nombre.capitalize()}</h3>
+        </div>
+    </div>
+</div>
 </body>
 </html>

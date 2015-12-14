@@ -21,10 +21,6 @@ class User implements Serializable {
 		this.password = password
 	}
 
-    def attachUsuario(Usuario usuario) {
-        this.usuario = usuario
-    }
-
 	@Override
 	int hashCode() {
 		username?.hashCode() ?: 0

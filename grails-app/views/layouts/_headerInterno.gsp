@@ -20,7 +20,7 @@
                         </sec:ifAnyGranted>
 
                         <sec:ifAnyGranted roles="ROLE_USER">
-                            <li><g:link controller="home" href="#">Menú</g:link></li> //corregir
+                            <li><g:link controller="home" href="#">Menú</g:link></li> <!-- Corregir -->
                         </sec:ifAnyGranted>
 
                         <sec:ifAnyGranted roles="ROLE_DIRECTOR">
@@ -31,8 +31,8 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <sec:ifLoggedIn>
-                            <li><p class="navbar-text ">Bienvenido (Usuario) </p></li>
-                            <li><g:link class="disabled" controller="#">Mi perfil</g:link></li>
+                            <li><p class="navbar-text ">Bienvenido <g:getUserName /> </p></li>
+                            <li><g:link controller="intranet" action="ficha">Ficha Personal</g:link></li>
                             <li><g:link controller="logout">Cerrar sesión</g:link></li>
                         </sec:ifLoggedIn>
                     </ul>

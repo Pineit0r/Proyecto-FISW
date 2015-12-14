@@ -10,8 +10,10 @@
     <head>
         <meta name="layout" content="main"/>
     </head>
-    <body>
+    <div>
+<body>
     <g:render template="/layouts/headerInterno"/>
+    <div class="fixed-navbar-content">
         <div class="site-wrapper">
             <div class="centrado">
                 <h2>Intranet</h2>
@@ -28,5 +30,6 @@
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>

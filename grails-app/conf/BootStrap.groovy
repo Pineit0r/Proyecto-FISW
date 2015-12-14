@@ -41,9 +41,6 @@ class BootStrap {
         def usuarioTest = new Usuario("test", "test", "test", quimicaArea, profesorRol_Lab).save(failOnError: true)
         def usuarioFelipe = new Usuario("felipe", "felipe", "felipe", biologiaArea, estudianteRol_Lab).save(failOnError: true)
 
-        usuarioTest.attachUser()
-        usuarioFelipe.attachUser()
-
         UserRol.create usuarioTest,userRol,true
         UserRol.create usuarioFelipe,userRol,true
     }
