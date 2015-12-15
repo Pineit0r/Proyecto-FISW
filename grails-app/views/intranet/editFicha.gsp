@@ -17,7 +17,7 @@
         <div class="centrado">
             <h2>Editar Ficha Personal</h2>
             <h3><g:getUserName /></h3>
-            <g:render template="form"/>
+            <g:render template="editForm"/>
         </div>
     </div>
 </div>

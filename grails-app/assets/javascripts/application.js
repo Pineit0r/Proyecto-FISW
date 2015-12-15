@@ -18,3 +18,15 @@ if (typeof jQuery !== 'undefined') {
 		});
 	})(jQuery);
 }
+
+$(document).ready(function() {
+	$(".dropdown-toggle").dropdown();
+});
+
+$(function () {
+	$('[data-toggle="popover"]').popover()
+})
+
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})

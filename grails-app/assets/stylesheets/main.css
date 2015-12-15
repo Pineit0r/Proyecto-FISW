@@ -95,6 +95,12 @@ body {
  * Header
  */
 
+#user-image{
+    max-width:100px;
+    margin-top: 13%;
+    border: 1px solid darkgrey;
+}
+
 .masthead-brand {
     margin-top: 10px;
     margin-bottom: 10px;

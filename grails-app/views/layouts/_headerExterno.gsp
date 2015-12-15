@@ -16,13 +16,13 @@
                         <nav>
                             <ul class="nav masthead-nav">
 
-                                <li class="active"><g:link controller="home" action="index">Inicio</g:link></li>
+                                <li class="active"><g:link controller="home" action="index"><span class="glyphicon glyphicon-home"></span> Inicio</g:link></li>
                                 <sec:ifLoggedIn>
                                     <li><g:link controller="intranet">Intranet</g:link></li>
                                     <li><g:link controller="logout">Logout</g:link></li>
                                 </sec:ifLoggedIn>
                                 <sec:ifNotLoggedIn>
-                                    <li><g:link controller="login">Login</g:link></li>
+                                    <li><g:link controller="login"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesión</g:link></li>
                                 </sec:ifNotLoggedIn>
 
                             </ul>

@@ -16,9 +16,10 @@
     <div class="fixed-navbar-content">
         <div class="site-wrapper">
             <div class="centrado">
+
+                <div class="container"
                 <h2>Intranet</h2>
                 <h3>Bienvenido</h3>
-                <div class="container"
                     <sec:ifLoggedIn>
                         <sec:loggedInUserInfo field="username"/>
                     </sec:ifLoggedIn>
@@ -35,3 +36,5 @@
     </div>
 </body>
 </html>
+
+
