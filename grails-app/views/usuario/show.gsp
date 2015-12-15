@@ -27,11 +27,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${usuarioInstance?.nombre}">
+				<g:if test="${usuarioInstance?.nombres}">
 				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="usuario.nombre.label" default="Nombre" /></span>
+					<span id="nombre-label" class="property-label"><g:message code="usuario.nombres.label" default="Nombre" /></span>
 					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${usuarioInstance}" field="nombre"/></span>
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${usuarioInstance}" field="nombres"/></span>
 					
 				</li>
 				</g:if>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Proyecto-FISW dev" uuid="5a2430ce-7c7b-4721-92e2-f436c9928607">
+      <user-name>root</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9cdf9ddf92df93</user-password>
+      <schema-pattern>fisw.*</schema-pattern>
+      <default-schemas>fisw.*</default-schemas>
+    </data-source>
+  </component>
+</project>

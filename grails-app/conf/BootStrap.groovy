@@ -23,8 +23,8 @@ class BootStrap {
             biologiaArea = new Area("Biologia").save(failOnError: true)
         }
         else {
-            quimicaArea = Area.findByNombre("Quimica")
-            biologiaArea = Area.findByNombre("Biologia")
+            quimicaArea = Area.findByNombre("Química")
+            biologiaArea = Area.findByNombre("Biología")
         }
 
         def estudianteRol_Lab
@@ -38,8 +38,8 @@ class BootStrap {
             profesorRol_Lab = RolLab.findByNombre("Profesor")
         }
 
-        def usuarioTest = new Usuario("test@test.cl", "test", "test", quimicaArea, profesorRol_Lab).save(failOnError: true)
-        def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", biologiaArea, estudianteRol_Lab).save(failOnError: true)
+        def usuarioTest = new Usuario("test@test.cl", "test", "test", "test", quimicaArea, profesorRol_Lab).save(failOnError: true)
+        def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", biologiaArea, estudianteRol_Lab).save(failOnError: true)
 
         UserRol.create usuarioTest,userRol,true
         UserRol.create usuarioFelipe,userRol,true

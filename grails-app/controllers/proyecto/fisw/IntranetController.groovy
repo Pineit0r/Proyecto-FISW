@@ -23,4 +23,8 @@ class IntranetController {
             ]
         }
     }
+
+    def editFicha() {
+        render view: "editFicha"
+    }
 }

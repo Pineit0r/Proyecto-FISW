@@ -1,7 +1,8 @@
 package proyecto.fisw
 
 class Usuario extends User {
-    String nombre
+    String nombres
+    String apellidos
     RolLab rol_lab
     Area area
 
@@ -9,18 +10,20 @@ class Usuario extends User {
 
     static belongsTo = [user: User]
 
-    Usuario(String correo, String password, String nombre, Area area, RolLab rol_lab) {
+    Usuario(String correo, String password, String nombres, String apellidos, Area area, RolLab rol_lab) {
         super(correo, password)
-        this.nombre = nombre
+        this.nombres = nombres
+        this.apellidos = apellidos
         this.rol_lab = rol_lab
         this.area = area
     }
 
-    def attachUser() {
-        super.attachUsuario(this)
+    def getFullName() {
+        def nom = nombres.split("\\s+").collect { it.toLowerCase().capitalize() }.inject('') { accumulator, current -> accumulator + current + ' ' }.trim()
+        def ape = apellidos.split("\\s+").collect { it.toLowerCase().capitalize() }.inject('') { accumulator, current -> accumulator + current + ' ' }.trim()
+        return "${nom} ${ape}"
     }
 
     static constraints = {
-        nombre(blank: false)
     }
 }
