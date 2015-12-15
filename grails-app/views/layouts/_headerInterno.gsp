@@ -35,7 +35,7 @@
                             <li>
                                 <p class="navbar-text ">Bienvenido <g:getUserName />
                                     <sec:ifAnyGranted roles="ROLE_USER">
-                                        <span data-toggle="tooltip" data-placement="bottom" title="Verificado" class="glyphicon glyphicon-ok-sign"></span>
+                                        <span data-toggle="tooltip" data-placement="bottom" title="Autorizado" class="glyphicon glyphicon-ok-sign"></span>
                                     </sec:ifAnyGranted>
                                 </p>
                             </li>

@@ -5,6 +5,7 @@ class Usuario extends User {
     String apellidos
     RolLab rol_lab
     Area area
+    Boolean registroCompletado
 
     static hasMany = [titulo: Titulo]
 
@@ -16,6 +17,7 @@ class Usuario extends User {
         this.apellidos = apellidos
         this.rol_lab = rol_lab
         this.area = area
+        registroCompletado = true
     }
 
     def getFullName() {
@@ -25,5 +27,9 @@ class Usuario extends User {
     }
 
     static constraints = {
+        area nullable: true
+        rol_lab nullable: true
+        registroCompletado nullable: true
+        titulo nullable: true
     }
 }

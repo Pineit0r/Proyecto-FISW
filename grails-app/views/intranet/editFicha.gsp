@@ -16,9 +16,21 @@
         <div class="fixed-navbar-content">
             <div class="site-wrapper">
                 <div class="centrado">
-                    <h2>Editar Ficha Personal</h2>
-                    <h3><g:getUserName /></h3>
-                    <g:render template="editForm"/>
+                        <g:form url="[resource:usuario, action:'editFicha']" class="form-signin" style="max-width: 500px">
+                            <div class="row">
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <h1 class='panel-title' style="font-size: 40px">Editar Ficha Personal</h1>
+                                        </div>
+                                            <fieldset class="form">
+                                                <div class="panel-body">
+                                                <h3><g:getUserName /></h3>
+                                <g:render template="editForm"/>
+                                </div>
+                            </fieldset>
+                            </div>
+                            </div>
+                        </g:form>
                 </div>
             </div>
         </div>

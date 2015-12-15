@@ -4,7 +4,7 @@ class Titulo {
     String titulo
     Boolean tipo
 
-    static belongsTo = [institucion: Institucion]
+    static belongsTo = [institucion: Institucion, usuario: Usuario]
 
     static constraints = {
     }

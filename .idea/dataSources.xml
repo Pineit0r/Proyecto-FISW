@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3174778153">
+  <component name="DataSourceManagerImpl" format="xml" hash="1972252726">
     <data-source source="LOCAL" name="Proyecto-FISW dev" uuid="5a2430ce-7c7b-4721-92e2-f436c9928607">
-      <driver-ref>0d1a0a21-853f-4966-bb58-ddd11e326779</driver-ref>
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost/fisw?useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>

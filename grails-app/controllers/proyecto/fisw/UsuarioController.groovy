@@ -43,7 +43,16 @@ class UsuarioController {
             return
         }
         usuarioInstance.enabled = false
+        usuarioInstance.registroCompletado = false
         usuarioInstance.save flush:true
+
+        Rol rol_admin = Rol.findByAuthority('ROLE_ADMIN')
+        UserRol admin = UserRol.findByRol(rol_admin)
+        sendMail {
+            to "${admin.user}"
+            subject usuarioInstance.username
+            body "How are You?"
+        }
 
         Rol rol = Rol.find{authority == 'ROLE_USER'}
         UserRol.create usuarioInstance,rol,true

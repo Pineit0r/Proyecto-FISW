@@ -17,7 +17,7 @@ class TagLibTagLib {
     def getRole = { attrs, body ->
         def role = springSecurityService.getPrincipal().getAuthorities()
         if (role.first().getAuthority()=="ROLE_USER")
-            out << "Usuario"
+            out << "Usuario de Laboratorio"
         else if (role.first().getAuthority()=="ROLE_ADMIN")
             out << "Administrador"
         else

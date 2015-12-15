@@ -9,27 +9,18 @@
 		<span class="required-indicator">*</span>
 	</label>
 
-	<g:field type="text"  name="nombres" class="form-control" required="" value="${usuario?.nombres}"/>
+	<g:field type="text"  name="nombres" class="form-control" required="" value="${usuario?.nombres.capitalize()}"/>
 	</div>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuario, field: 'password', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: usuario, field: 'apellidos', 'error')} required">
 	<div class="form-group">
-	<label for="password">
-		<g:message code="usuario.password.label" default="Password" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="password" name="password" class="form-control" required=""/>
-	</div>
-</div>
+		<label for="nombres">
+			<g:message code="usuario.nombre.label" default="Apellidos" />
+			<span class="required-indicator">*</span>
+		</label>
 
-<div class="fieldcontain ${hasErrors(bean: usuario, field: 'username', 'error')} required">
-	<div class="form-group">
-	<label for="username">
-		<g:message code="usuario.username.label" default="Correo" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="email" name="username" class="form-control" required="" value="${usuario?.username}"/>
+		<g:field type="text"  name="nombres" class="form-control" required="" value="${usuario?.apellidos.capitalize()}"/>
 	</div>
 </div>
 
@@ -40,7 +31,7 @@
 		<g:message code="usuario.area.label" default="Area" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select optionValue="nombre"  id="area" class="form-control" name="area.id" from="${proyecto.fisw.Area.list()}" optionKey="id" required="" value="${usuario?.area?.nombre}" class="many-to-one"/>
+	<g:select optionValue="nombre" noSelection="['':'Seleccione Área']" id="area" class="form-control" name="area.id" from="${proyecto.fisw.Area.list()}" optionKey="id" required="" value="${usuario?.area?.id}"/>
 	</div>
 </div>
 
@@ -51,7 +42,22 @@
 		<g:message code="usuario.rol_lab.label" default="Rol en el Laboratorio" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select  optionValue="nombre" id="rol_lab" class="form-control" name="rol_lab.id" from="${proyecto.fisw.RolLab.list()}" optionKey="id" required="" value="${usuario?.rol_lab?.nombre}" class="many-to-one"/>
+	<g:select  optionValue="nombre" noSelection="['':'Seleccione Rol']" id="rol_lab" class="form-control" name="rol_lab.id" from="${proyecto.fisw.RolLab.list()}" optionKey="id" required="" value="${usuario?.rol_lab?.id}"/>
 	</div>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: usuario, field: 'titulo', 'error')} required">
+	<div class="form-group">
+		<label for="titulo">
+			<g:message code="usuario.username.label" default="Carrera" />
+			<span class="required-indicator">*</span>
+		</label>
+		<g:field type="text" placeholder="Carrera" name="usuario.titulo.nombre" class="form-control" required="" value="${usuario?.titulo?.nombre}"/>
+		<g:field type="text" placeholder="Universidad" name="usuario.titulo.institucion.nombre" class="form-control" required="" value="${usuario?.titulo?.institucion?.nombre}"/>
+		<g:field type="text" placeholder="País" name="usuario.titulo.institucion.pais.nombre" class="form-control" required="" value="${usuario?.titulo?.institucion?.pais?.nombre}"/>
+	</div>
+</div>
+
+<fieldset class="buttons">
+	<g:submitButton name="create" class="btn btn-success" value="Aceptar" />
+</fieldset>

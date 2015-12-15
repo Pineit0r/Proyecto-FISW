@@ -8,7 +8,7 @@ class BootStrap {
         def userRol = new Rol("ROLE_USER").save(failOnError: true)
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
-        def usuarioAdmin = new User("admin@admin.cl", "admin").save(failOnError: true)
+        def usuarioAdmin = new User("felipefdezpino@gmail.com", "admin").save(failOnError: true)
         def usuarioUser = new User("user@user.cl", "user").save(failOnError: true)
         def usuarioDirector = new User("director@director.cl", "director").save(failOnError: true)
 
