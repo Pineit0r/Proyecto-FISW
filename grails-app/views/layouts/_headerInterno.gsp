@@ -9,8 +9,7 @@
                 <div class="navbar-header">
                     <g:link class="navbar-brand" controller="home" action="index">Labmmba</g:link>
                 </div>
-                <div id="n
-                avbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-left">
 
                         <sec:ifLoggedIn>

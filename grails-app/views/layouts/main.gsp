@@ -18,6 +18,7 @@
 		<asset:stylesheet src="signin.css"/>
 		<g:layoutHead/>
 	</head>
+
 	<body>
 		<g:layoutBody/>
 	</body>

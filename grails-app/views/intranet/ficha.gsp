@@ -20,9 +20,7 @@
                         </br>
 
                         <div class="jumbotron">
-
                             <div class="row">
-
                                 <div class="panel panel-success">
                                     <div class="panel-heading">
                                         <h1 class="panel-title" style="font-size: 40px">Ficha Personal</h1>
