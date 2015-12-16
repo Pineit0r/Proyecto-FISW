@@ -117,12 +117,15 @@ class UsuarioController {
             return
         }
 
+        Titulo titulo = Titulo.findByNombre(params.titulo.nombre)
+        UsuarioTitulo usuarioTitulo = UsuarioTitulo.findOrSaveWhere(titulo: titulo, usuario: usuarioInstance)
+
         if (usuarioInstance.hasErrors()) {
             respond usuarioInstance.errors, view:'edit'
             return
         }
 
-        usuarioInstance.save flush:true
+        usuarioInstance.save flush:true, failOnError: true
 
         request.withFormat {
             form multipartForm {
@@ -166,8 +169,8 @@ class UsuarioController {
 
     def ficha() {
         if (!((Usuario) springSecurityService.currentUser).registroCompletado) {
-            Usuario _usuario = (Usuario) springSecurityService.currentUser
-            render(view: "editFicha", model: [usuarioInstance: _usuario])
+            Usuario usuario = (Usuario) springSecurityService.currentUser
+            render(view: "editFicha", model: [usuarioInstance: usuario])
         } else {
             return [
                     usuarioInstance: springSecurityService.currentUser as Usuario
@@ -176,8 +179,25 @@ class UsuarioController {
     }
 
     def editFicha() {
-        return [
-                usuarioInstance: springSecurityService.currentUser as Usuario
-        ]
+
+        Usuario usuario = (Usuario) springSecurityService.currentUser
+        /*
+        if (usuario.usuarioTitulo == null)
+            Titulo titulo = new Titulo(params)
+        */
+
+        def usuarioTitulo = UsuarioTitulo.findAllByUsuario(usuario)
+
+        Titulo titulo
+
+        for (UsuarioTitulo u : usuarioTitulo) {
+            if (u.titulo != null)
+                if (!u.titulo.tipo) {
+                    titulo = u.titulo
+                    break
+                }
+        }
+
+        return [usuarioInstance: usuario, tituloInstance: titulo]
     }
 }

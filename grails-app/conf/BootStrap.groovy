@@ -8,6 +8,12 @@ class BootStrap {
         def userRol = new Rol("ROLE_USER").save(failOnError: true)
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
+        def chile = new Pais("Chile").save(failOnError: true)
+
+        def usm = new Institucion("USM", chile).save(failOnError: true)
+
+        def informatica = new Titulo("Informática", usm, false).save(failOnError: true)
+
         def biotechVegetalArea = Area.findOrSaveByNombre("Biotecnología vegetal")
         def compuestosArea = Area.findOrSaveByNombre("Compuestos bioactivos")
         def microbiologiaArea = Area.findOrSaveByNombre("Microbiología")
