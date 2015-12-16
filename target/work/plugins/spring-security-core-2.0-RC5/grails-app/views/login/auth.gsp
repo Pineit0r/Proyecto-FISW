@@ -18,7 +18,7 @@
 
 							<g:if test='${flash.message}'>
 								<div class="alert alert-danger" role="alert">
-									<div class='login_message'>${flash.message}</div>
+									<button type="button" class="close" data-dismiss="alert">&times;</button>${flash.message}
 								</div>
 							</g:if>
 

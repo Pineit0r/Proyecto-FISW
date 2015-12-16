@@ -5218,3 +5218,5 @@ n:1964:org/codehaus/groovy/control/messages/SyntaxErrorMessage
 n:3175:org/codehaus/groovy/tools/ErrorReporter
 n:2273:org/codehaus/groovy/grails/commons/GrailsApplication$isArtefactOfType
 n:1543:org/apache/commons/logging/Log$isDebugEnabled
+n:2787:BuildConfig$_run_closure1$_closure5
+n:3655:com/sun/mail/smtp/SMTPMessage

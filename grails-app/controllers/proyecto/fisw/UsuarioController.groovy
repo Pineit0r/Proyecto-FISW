@@ -49,9 +49,9 @@ class UsuarioController {
         Rol rol_admin = Rol.findByAuthority('ROLE_ADMIN')
         UserRol admin = UserRol.findByRol(rol_admin)
         sendMail {
-            to "${admin.user}"
-            subject usuarioInstance.username
-            body "How are You?"
+            to admin.user //Agregar ${director.user}
+            subject "Autorización de Registro - Sistema Labmmba"
+            html g.render(template:"email", model:[ usuario: usuarioInstance])
         }
 
         Rol rol = Rol.find{authority == 'ROLE_USER'}

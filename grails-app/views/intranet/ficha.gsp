@@ -37,14 +37,14 @@
                                 <div class="col-md-6">
                                     <div class="well">
                                         <p><span class="label label-success">Cargo en el Laboratorio:</span>
-                                        <g:if test="${usuario instanceof Usuario}">${usuario?.rol_lab.nombre}</p>
+                                        <g:if test="${usuario instanceof Usuario}">${usuario?.rol_lab?.nombre}</p>
                                         </g:if>
                                         <g:else>
                                             -</p>
                                         </g:else>
 
                                         <p><span class="label label-success">Área de investigación:</span>
-                                        <g:if test="${usuario instanceof Usuario}">${usuario?.area.nombre}</p>
+                                        <g:if test="${usuario instanceof Usuario}">${usuario?.area?.nombre}</p>
                                         </g:if>
                                         <g:else>
                                             -</p>

@@ -8,40 +8,28 @@ class BootStrap {
         def userRol = new Rol("ROLE_USER").save(failOnError: true)
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
-        def usuarioAdmin = new User("felipefdezpino@gmail.com", "admin").save(failOnError: true)
-        def usuarioUser = new User("user@user.cl", "user").save(failOnError: true)
-        def usuarioDirector = new User("director@director.cl", "director").save(failOnError: true)
+        def biotechVegetalArea = Area.findOrSaveByNombre("Biotecnología vegetal")
+        def compuestosArea = Area.findOrSaveByNombre("Compuestos bioactivos")
+        def microbiologiaArea = Area.findOrSaveByNombre("Microbiología")
+        def biotechAmbientArea = Area.findOrSaveByNombre("Biotecnología Ambiental")
 
-        UserRol.create usuarioUser,userRol,true
+
+
+
+        def estudiantePregradoRolLab = RolLab.findOrSaveByNombre("Estudiante de Pregrado")
+        def estudiantePostgradoRolLab = RolLab.findOrSaveByNombre("Estudiante de Postgrado")
+        def trabajadorRolLab = RolLab.findOrSaveByNombre("Trabajador")
+        def jefeLaboratorioRolLab = RolLab.findOrSaveByNombre("Jefe de Laboratorio")
+        def colaboradorRolLab = RolLab.findOrSaveByNombre("Colaborador")
+
+
+
+        def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", compuestosArea, jefeLaboratorioRolLab).save(failOnError: true)
+        //def adminFelipe= new Usuario("tatafel_8@hotmail.com","123","Felipe","Gonzalez", microbiologiaArea,trabajadorRolLab).save(failOnError: true)
+        def usuarioAdmin = new Usuario("felipefdezpino@gmail.com", "admin00", "Administrador", "Administrador", biotechVegetalArea, trabajadorRolLab).save(failOnError: true)
+
+        //UserRol.create adminFelipe,adminRol,true
         UserRol.create usuarioAdmin,adminRol,true
-        UserRol.create usuarioDirector,directorRol,true
-
-        def quimicaArea
-        def biologiaArea
-        if (Area.list().size()==0) {
-            quimicaArea = new Area("Quimica").save(failOnError: true)
-            biologiaArea = new Area("Biologia").save(failOnError: true)
-        }
-        else {
-            quimicaArea = Area.findByNombre("Química")
-            biologiaArea = Area.findByNombre("Biología")
-        }
-
-        def estudianteRol_Lab
-        def profesorRol_Lab
-        if (RolLab.list().size()==0) {
-            estudianteRol_Lab = new RolLab("Estudiante").save(failOnError: true)
-            profesorRol_Lab = new RolLab("Profesor").save(failOnError: true)
-        }
-        else {
-            estudianteRol_Lab = RolLab.findByNombre("Estudiante")
-            profesorRol_Lab = RolLab.findByNombre("Profesor")
-        }
-
-        def usuarioTest = new Usuario("test@test.cl", "test", "test", "test", quimicaArea, profesorRol_Lab).save(failOnError: true)
-        def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", biologiaArea, estudianteRol_Lab).save(failOnError: true)
-
-        UserRol.create usuarioTest,userRol,true
         UserRol.create usuarioFelipe,userRol,true
     }
     def destroy = {
