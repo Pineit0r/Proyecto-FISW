@@ -31,20 +31,20 @@
                                     <g:img dir="imagenes" file="default_user.png" width="140" height="140" class="img-circle"></g:img>
                                     <h2><g:getUserName /></h2>
                                     <p><g:getRole /></p>
-                                    <p><g:link class="btn btn-lg btn-primary" controller="intranet" action="editFicha">Editar Ficha Personal</g:link></p>
+                                    <p><g:link class="btn btn-lg btn-primary" controller="usuario" action="editFicha">Editar Ficha Personal</g:link></p>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="well">
                                         <p><span class="label label-success">Cargo en el Laboratorio:</span>
-                                        <g:if test="${usuario instanceof Usuario}">${usuario?.rol_lab?.nombre}</p>
+                                        <g:if test="${usuarioInstance instanceof Usuario}">${usuarioInstance?.rol_lab?.nombre}</p>
                                         </g:if>
                                         <g:else>
                                             -</p>
                                         </g:else>
 
                                         <p><span class="label label-success">Área de investigación:</span>
-                                        <g:if test="${usuario instanceof Usuario}">${usuario?.area?.nombre}</p>
+                                        <g:if test="${usuarioInstance instanceof Usuario}">${usuarioInstance?.area?.nombre}</p>
                                         </g:if>
                                         <g:else>
                                             -</p>

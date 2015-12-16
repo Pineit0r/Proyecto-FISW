@@ -7,7 +7,7 @@ class Usuario extends User {
     Area area
     Boolean registroCompletado
 
-    static hasMany = [titulo: Titulo]
+    static hasMany = [usuarioTitulo: UsuarioTitulo]
 
     static belongsTo = [user: User]
 
@@ -30,6 +30,6 @@ class Usuario extends User {
         area nullable: true
         rol_lab nullable: true
         registroCompletado nullable: true
-        titulo nullable: true
+        usuarioTitulo nullable: true
     }
 }

@@ -99,6 +99,7 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        uploadFolder = "/temp/upload"
     }
     production {
         grails.logging.jul.usebridge = false

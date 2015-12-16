@@ -8,8 +8,9 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 @Secured(['IS_AUTHENTICATED_FULLY'])
 class UsuarioController {
+    def springSecurityService
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", updateFicha: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -47,12 +48,26 @@ class UsuarioController {
         usuarioInstance.save flush:true
 
         Rol rol_admin = Rol.findByAuthority('ROLE_ADMIN')
-        UserRol admin = UserRol.findByRol(rol_admin)
+        def admin = UserRol.findAllByRol(rol_admin)
+
+        admin.each { administrador ->
+            sendMail {
+                to administrador.user
+                subject "Autorización de Registro - Sistema Labmmba"
+                html g.render(template:"email", model:[ usuario: usuarioInstance])
+            }
+        }
+
+        Rol rol_director = Rol.findByAuthority('ROLE_DIRECTOR')
+        def director = UserRol.findByRol(rol_director)
+
         sendMail {
-            to admin.user //Agregar ${director.user}
+            to director.user
             subject "Autorización de Registro - Sistema Labmmba"
             html g.render(template:"email", model:[ usuario: usuarioInstance])
         }
+
+
 
         Rol rol = Rol.find{authority == 'ROLE_USER'}
         UserRol.create usuarioInstance,rol,true
@@ -95,6 +110,30 @@ class UsuarioController {
     }
 
     @Transactional
+    @Secured(['IS_AUTHENTICATED_FULLY'])
+    def updateFicha(Usuario usuarioInstance) {
+        if (usuarioInstance == null) {
+            notFound()
+            return
+        }
+
+        if (usuarioInstance.hasErrors()) {
+            respond usuarioInstance.errors, view:'edit'
+            return
+        }
+
+        usuarioInstance.save flush:true
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Usuario.label', default: 'Usuario'), usuarioInstance.id])
+                render view: "ficha", model: [usuarioInstance: usuarioInstance]//redirect usuarioInstance
+            }
+            '*'{ render view: "ficha" /*respond usuarioInstance, [status: OK]*/ }
+        }
+    }
+
+    @Transactional
     @Secured(['ROLE_ADMIN','ROLE_DIRECTOR'])
     def delete(Usuario usuarioInstance) {
 
@@ -123,5 +162,22 @@ class UsuarioController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    def ficha() {
+        if (!((Usuario) springSecurityService.currentUser).registroCompletado) {
+            Usuario _usuario = (Usuario) springSecurityService.currentUser
+            render(view: "editFicha", model: [usuarioInstance: _usuario])
+        } else {
+            return [
+                    usuarioInstance: springSecurityService.currentUser as Usuario
+            ]
+        }
+    }
+
+    def editFicha() {
+        return [
+                usuarioInstance: springSecurityService.currentUser as Usuario
+        ]
     }
 }

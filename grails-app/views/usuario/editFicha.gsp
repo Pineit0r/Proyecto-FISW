@@ -16,7 +16,7 @@
         <div class="fixed-navbar-content">
             <div class="site-wrapper">
                 <div class="centrado">
-                        <g:form url="[resource:usuario, action:'editFicha']" class="form-signin" style="max-width: 500px">
+                    <g:form url="[resource:usuarioInstance, action:'updateFicha']" class="form-signin" method="PUT"  style="max-width: 500px">
                             <div class="row">
                                     <div class="panel panel-success">
                                         <div class="panel-heading">
@@ -26,11 +26,14 @@
                                                 <div class="panel-body">
                                                 <h3><g:getUserName /></h3>
                                 <g:render template="editForm"/>
+                                <fieldset class="buttons">
+                                    <g:actionSubmit class="btn btn-success" action="updateFicha" value="Aceptar" />
+                                </fieldset>
                                 </div>
                             </fieldset>
                             </div>
                             </div>
-                        </g:form>
+                    </g:form>
                 </div>
             </div>
         </div>

@@ -45,7 +45,7 @@
                                 <g:img class="dropdown-toggle img-circle"  data-toggle="dropdown" dir="imagenes" id="user-image"  file="default_user.png" width="40" height="40"></g:img>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><g:link controller="intranet" action="ficha"><span class="glyphicon glyphicon-user"></span> Ficha Personal</g:link></li>
+                                    <li><g:link controller="usuario" action="ficha"><span class="glyphicon glyphicon-user"></span> Ficha Personal</g:link></li>
                                     <li role="separator" class="divider"></li>
                                     <li><g:link controller="logout"><span class="glyphicon glyphicon-off"></span> Cerrar sesión</g:link></li>
                                 </ul>
