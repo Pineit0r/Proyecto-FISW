@@ -117,7 +117,9 @@ class UsuarioController {
             return
         }
 
-        Titulo titulo = Titulo.findByNombre(params.titulo.nombre)
+        Pais pais = Pais.findByNombre(params.pais.nombre)
+        Institucion institucion = Institucion.findWhere(nombre: params.institucion.nombre, pais: pais)
+        Titulo titulo = Titulo.findWhere(nombre: params.titulo.nombre, institucion: institucion)
         UsuarioTitulo usuarioTitulo = UsuarioTitulo.findOrSaveWhere(titulo: titulo, usuario: usuarioInstance)
 
         if (usuarioInstance.hasErrors()) {
@@ -130,7 +132,7 @@ class UsuarioController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Usuario.label', default: 'Usuario'), usuarioInstance.id])
-                render view: "ficha", model: [usuarioInstance: usuarioInstance]//redirect usuarioInstance
+                render view: "ficha", model: [usuarioInstance: usuarioInstance, tituloInstance: titulo]//redirect usuarioInstance
             }
             '*'{ render view: "ficha" /*respond usuarioInstance, [status: OK]*/ }
         }
@@ -168,13 +170,24 @@ class UsuarioController {
     }
 
     def ficha() {
-        if (!((Usuario) springSecurityService.currentUser).registroCompletado) {
-            Usuario usuario = (Usuario) springSecurityService.currentUser
+        Usuario usuario = (Usuario) springSecurityService.currentUser
+
+        if (!usuario.registroCompletado) {
             render(view: "editFicha", model: [usuarioInstance: usuario])
         } else {
-            return [
-                    usuarioInstance: springSecurityService.currentUser as Usuario
-            ]
+            def usuarioTitulo = UsuarioTitulo.findAllByUsuario(usuario)
+
+            Titulo titulo = null
+
+            for (UsuarioTitulo u : usuarioTitulo) {
+                if (u.titulo != null)
+                    if (!u.titulo.tipo) {
+                        titulo = u.titulo
+                        break
+                    }
+            }
+
+            return [ usuarioInstance: usuario, tituloInstance: titulo]
         }
     }
 
@@ -188,7 +201,9 @@ class UsuarioController {
 
         def usuarioTitulo = UsuarioTitulo.findAllByUsuario(usuario)
 
-        Titulo titulo
+        Titulo titulo = null
+        Institucion institucion = null
+        Pais pais = null
 
         for (UsuarioTitulo u : usuarioTitulo) {
             if (u.titulo != null)
@@ -198,6 +213,11 @@ class UsuarioController {
                 }
         }
 
-        return [usuarioInstance: usuario, tituloInstance: titulo]
+        if (titulo != null) {
+            institucion = titulo.institucion
+            pais = institucion.pais
+        }
+
+        return [usuarioInstance: usuario, tituloInstance: titulo, institucionInstance: institucion, paisInstance: pais]
     }
 }

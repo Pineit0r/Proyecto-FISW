@@ -37,14 +37,14 @@
                                 <div class="col-md-6">
                                     <div class="well">
                                         <p><span class="label label-success">Cargo en el Laboratorio:</span>
-                                        <g:if test="${usuarioInstance instanceof Usuario}">${usuarioInstance?.rol_lab?.nombre}</p>
-                                        </g:if>
-                                        <g:else>
-                                            -</p>
-                                        </g:else>
+                                            ${usuarioInstance?.rol_lab?.nombre}</p>
 
                                         <p><span class="label label-success">Área de investigación:</span>
-                                        <g:if test="${usuarioInstance instanceof Usuario}">${usuarioInstance?.area?.nombre}</p>
+                                            ${usuarioInstance?.area?.nombre}</p>
+
+                                        <p><span class="label label-success">Estudios de Pregrado:</span>
+                                        <g:if test="${tituloInstance != null}">
+                                            ${tituloInstance?.nombre}, ${tituloInstance?.institucion?.nombre}, ${tituloInstance?.institucion?.pais?.nombre}</p>
                                         </g:if>
                                         <g:else>
                                             -</p>

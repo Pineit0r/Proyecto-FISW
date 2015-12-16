@@ -46,20 +46,31 @@
 			<g:message code="usuario.rol_lab.label" default="Carrera" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="titulo.nombre" from="${proyecto.fisw.Titulo.list()}" optionKey="nombre" required="" value="${(tituloInstance == null)? "" : tituloInstance?.nombre}"></g:select>
+		<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="titulo.nombre" from="${proyecto.fisw.Titulo.list()}" optionKey="nombre" required="" value="${(tituloInstance == null)? "" : tituloInstance?.nombre}"/>
 	</div>
 </div>
-%{--
+
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
 	<div class="form-group">
 		<label for="rol_lab">
 			<g:message code="usuario.rol_lab.label" default="Universidad" />
 			<span class="required-indicator">*</span>
 		</label>
-		<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" required="" value="${(institucionInstance == null)? "" : institucionInstance?.nombre}"></g:select>
+		<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" required="" value="${(institucionInstance == null)? "" : institucionInstance?.nombre}"/>
 	</div>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
+	<div class="form-group">
+		<label for="rol_lab">
+			<g:message code="usuario.rol_lab.label" default="País" />
+			<span class="required-indicator">*</span>
+		</label>
+		<g:select optionValue="nombre" noSelection="['':'Seleccione País']" id="pais" class="form-control" name="pais.nombre" from="${proyecto.fisw.Pais.list()}" optionKey="nombre" required="" value="${(paisInstance == null)? "" : paisInstance?.nombre}"/>
+	</div>
+</div>
+
+%{--
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'titulo', 'error')} required">
 	<div class="form-group">
 		<label for="titulo">

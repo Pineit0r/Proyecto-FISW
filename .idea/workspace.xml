@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511a478f-4ad2-4931-b3b0-8abc3d5e8859" name="Default" comment="Correccion Login">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Institucion$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Institucion$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Institucion.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Institucion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Pais$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Pais$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Pais.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Pais.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Titulo$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Titulo$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Titulo.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Titulo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$__tt__delete_closure19$_closure29.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$__tt__delete_closure19$_closure29.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$__tt__delete_closure19$_closure30.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$__tt__delete_closure19$_closure30.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$__tt__delete_closure19.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$__tt__delete_closure19.class" />
@@ -20,12 +12,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$_notFound_closure10$_closure21.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$_notFound_closure10$_closure21.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$_notFound_closure10.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController$_notFound_closure10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Institucion.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Institucion.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Pais.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Pais.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -71,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_editForm.gsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_editForm.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56233424">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+            <state vertical-scroll-proportion="-8.743243">
+              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -84,8 +73,8 @@
       <file leaf-file-name="UsuarioController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2608695">
-              <caret line="119" column="65" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
+            <state vertical-scroll-proportion="-7.521739">
+              <caret line="129" column="58" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
               <folding>
                 <element signature="e#23#77#0" expanded="true" />
               </folding>
@@ -119,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5321508">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -176,6 +165,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.32692307">
               <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ficha.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4468083">
+              <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -245,13 +244,13 @@
         <option value="$PROJECT_DIR$/grails-app/views/intranet/ficha.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/editFicha.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Usuario.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Pais.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Institucion.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
       </list>
     </option>
   </component>
@@ -636,12 +635,12 @@
       <workItem from="1450189406972" duration="8265000" />
       <workItem from="1450236989517" duration="7776000" />
       <workItem from="1450244928802" duration="3118000" />
-      <workItem from="1450276325281" duration="13676000" />
+      <workItem from="1450276325281" duration="15024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94560000" />
+    <option name="totallyTimeSpent" value="95908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1032,14 +1031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3404255">
-          <caret line="46" column="69" selection-start-line="46" selection-start-column="69" selection-end-line="46" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-30.0">
@@ -1133,14 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Institucion.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
@@ -1171,20 +1154,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4468083">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.743243">
+          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2608695">
-          <caret line="119" column="65" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
+        <state vertical-scroll-proportion="-7.521739">
+          <caret line="129" column="58" selection-start-line="129" selection-start-column="58" selection-end-line="129" selection-end-column="58" />
           <folding>
             <element signature="e#23#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56233424">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.5321508">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="59" />
           <folding />
         </state>
       </provider>
