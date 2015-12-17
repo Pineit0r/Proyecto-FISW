@@ -40,45 +40,48 @@
 	</div>
 </div>
 
+<label>Estudios de Pregrado<span class="required-indicator">*</span></label>
+<div class="well">
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
 	<div class="form-group">
 		<label for="rol_lab">
 			<g:message code="usuario.rol_lab.label" default="Carrera" />
 			<span class="required-indicator">*</span>
+			<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="pregrado.titulo.nombre" from="${proyecto.fisw.Titulo.findAllByTipo(false)}" optionKey="nombre" required="" value="${(tituloPregradoInstance == null)? "" : tituloPregradoInstance?.nombre}"/>
 		</label>
-		<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="titulo.nombre" from="${proyecto.fisw.Titulo.list()}" optionKey="nombre" required="" value="${(tituloInstance == null)? "" : tituloInstance?.nombre}"/>
-	</div>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
-	<div class="form-group">
 		<label for="rol_lab">
 			<g:message code="usuario.rol_lab.label" default="Universidad" />
 			<span class="required-indicator">*</span>
+			<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="pregrado.institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" required="" value="${(tituloPregradoInstance == null)? "" : tituloPregradoInstance?.institucion?.nombre}"/>
 		</label>
-		<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" required="" value="${(institucionInstance == null)? "" : institucionInstance?.nombre}"/>
-	</div>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
-	<div class="form-group">
 		<label for="rol_lab">
 			<g:message code="usuario.rol_lab.label" default="País" />
 			<span class="required-indicator">*</span>
+			<g:select optionValue="nombre" noSelection="['':'Seleccione País']" id="pais" class="form-control" name="pregrado.pais.nombre" from="${proyecto.fisw.Pais.list()}" optionKey="nombre" required="" value="${(tituloPregradoInstance == null)? "" : tituloPregradoInstance?.institucion?.pais?.nombre}"/>
 		</label>
-		<g:select optionValue="nombre" noSelection="['':'Seleccione País']" id="pais" class="form-control" name="pais.nombre" from="${proyecto.fisw.Pais.list()}" optionKey="nombre" required="" value="${(paisInstance == null)? "" : paisInstance?.nombre}"/>
+
 	</div>
 </div>
+</div>
 
-%{--
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'titulo', 'error')} required">
-	<div class="form-group">
-		<label for="titulo">
-			<g:message code="usuario.username.label" default="Carrera" />
-			<span class="required-indicator">*</span>
-		</label>
-		<g:field type="text" placeholder="Carrera" name="usuarioInstance.usuarioTitulo.titulo.nombre" class="form-control" required="" value="${usuarioInstance?.usuarioTitulo?.titulo?.nombre}"/>
-		<g:field type="text" placeholder="Universidad" name="usuarioInstance.usuarioTitulo.titulo.institucion.nombre" class="form-control" required="" value="${usuarioInstance?.usuarioTitulo?.titulo?.institucion?.nombre}"/>
-		<g:field type="text" placeholder="País" name="usuarioInstance.usuarioTitulo.titulo.institucion.pais.nombre" class="form-control" required="" value="${usuarioInstance?.usuarioTitulo?.titulo?.institucion?.pais?.nombre}"/>
+
+<label>Estudios de Postgrado</label>
+<div class="well">
+	<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
+		<div class="form-group">
+			<label for="rol_lab">
+				<g:message code="usuario.rol_lab.label" default="Carrera" />
+				<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="postgrado.titulo.nombre" from="${proyecto.fisw.Titulo.findAllByTipo(true)}" optionKey="nombre" required="" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.nombre}"/>
+			</label>
+			<label for="rol_lab">
+				<g:message code="usuario.rol_lab.label" default="Universidad" />
+				<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="postgrado.institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" required="" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.institucion?.nombre}"/>
+			</label>
+			<label for="rol_lab">
+				<g:message code="usuario.rol_lab.label" default="País" />
+				<g:select optionValue="nombre" noSelection="['':'Seleccione País']" id="pais" class="form-control" name="postgrado.pais.nombre" from="${proyecto.fisw.Pais.list()}" optionKey="nombre" required="" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.institucion?.pais?.nombre}"/>
+			</label>
+
+		</div>
 	</div>
-</div>--}%
+</div>

@@ -43,12 +43,17 @@
                                             ${usuarioInstance?.area?.nombre}</p>
 
                                         <p><span class="label label-success">Estudios de Pregrado:</span>
-                                        <g:if test="${tituloInstance != null}">
-                                            ${tituloInstance?.nombre}, ${tituloInstance?.institucion?.nombre}, ${tituloInstance?.institucion?.pais?.nombre}</p>
+                                        <g:if test="${tituloPregradoInstance != null}">
+                                            ${tituloPregradoInstance?.nombre}, ${tituloPregradoInstance?.institucion?.nombre}, ${tituloPregradoInstance?.institucion?.pais?.nombre}</p>
                                         </g:if>
                                         <g:else>
                                             -</p>
                                         </g:else>
+                                        <g:if test="${tituloPostgradoInstance != null}">
+                                        <p><span class="label label-success">Estudios de Postgrado:</span>
+
+                                            ${tituloPostgradoInstance?.nombre}, ${tituloPostgradoInstance?.institucion?.nombre}, ${tituloPostgradoInstance?.institucion?.pais?.nombre}</p>
+                                        </g:if>
                                     </div>
                                 </div>
                             </div>

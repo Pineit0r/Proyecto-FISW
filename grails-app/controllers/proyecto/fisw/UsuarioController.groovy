@@ -117,14 +117,22 @@ class UsuarioController {
             return
         }
 
-        Pais pais = Pais.findByNombre(params.pais.nombre)
-        Institucion institucion = Institucion.findWhere(nombre: params.institucion.nombre, pais: pais)
-        Titulo titulo = Titulo.findWhere(nombre: params.titulo.nombre, institucion: institucion)
-        UsuarioTitulo usuarioTitulo = UsuarioTitulo.findOrSaveWhere(titulo: titulo, usuario: usuarioInstance)
-
         if (usuarioInstance.hasErrors()) {
             respond usuarioInstance.errors, view:'edit'
             return
+        }
+
+        Pais paisPregrado = Pais.findByNombre(params.pregrado.pais.nombre)
+        Institucion institucionPregrado = Institucion.findWhere(nombre: params.pregrado.institucion.nombre, pais: paisPregrado)
+        Titulo tituloPregrado = Titulo.findWhere(nombre: params.pregrado.titulo.nombre, institucion: institucionPregrado)
+        UsuarioTitulo.findOrSaveWhere(titulo: tituloPregrado, usuario: usuarioInstance)
+
+        Titulo tituloPostgrado = null
+        if ((params.postgrado.titulo.nombre)&&(params.postgrado.institucion.nombre)&&(params.postgrado.pais.nombre)) {
+            Pais paisPostgrago = Pais.findByNombre(params.postgrado.pais.nombre)
+            Institucion institucionPostgrado = Institucion.findWhere(nombre: params.postgrado.institucion.nombre, pais: paisPostgrago)
+            tituloPostgrado = Titulo.findWhere(nombre: params.postgrado.titulo.nombre, institucion: institucionPostgrado)
+            UsuarioTitulo.findOrSaveWhere(titulo: tituloPostgrado, usuario: usuarioInstance)
         }
 
         usuarioInstance.save flush:true, failOnError: true
@@ -132,7 +140,7 @@ class UsuarioController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Usuario.label', default: 'Usuario'), usuarioInstance.id])
-                render view: "ficha", model: [usuarioInstance: usuarioInstance, tituloInstance: titulo]//redirect usuarioInstance
+                render view: "ficha", model: [usuarioInstance: usuarioInstance, tituloPregradoInstance: tituloPregrado, tituloPostgradoInstance: tituloPostgrado]//redirect usuarioInstance
             }
             '*'{ render view: "ficha" /*respond usuarioInstance, [status: OK]*/ }
         }
@@ -177,47 +185,40 @@ class UsuarioController {
         } else {
             def usuarioTitulo = UsuarioTitulo.findAllByUsuario(usuario)
 
-            Titulo titulo = null
+            Titulo tituloPregrado = null
+            Titulo tituloPostgrado = null
 
             for (UsuarioTitulo u : usuarioTitulo) {
                 if (u.titulo != null)
                     if (!u.titulo.tipo) {
-                        titulo = u.titulo
-                        break
+                        tituloPregrado = u.titulo
+                    } else {
+                        tituloPostgrado = u.titulo
                     }
             }
 
-            return [ usuarioInstance: usuario, tituloInstance: titulo]
+            return [usuarioInstance: usuario, tituloPregradoInstance: tituloPregrado, tituloPostgradoInstance: tituloPostgrado]
         }
     }
 
     def editFicha() {
 
         Usuario usuario = (Usuario) springSecurityService.currentUser
-        /*
-        if (usuario.usuarioTitulo == null)
-            Titulo titulo = new Titulo(params)
-        */
 
         def usuarioTitulo = UsuarioTitulo.findAllByUsuario(usuario)
 
-        Titulo titulo = null
-        Institucion institucion = null
-        Pais pais = null
+        Titulo tituloPregrado = null
+        Titulo tituloPostgrado = null
 
         for (UsuarioTitulo u : usuarioTitulo) {
             if (u.titulo != null)
                 if (!u.titulo.tipo) {
-                    titulo = u.titulo
-                    break
+                    tituloPregrado = u.titulo
+                } else {
+                    tituloPostgrado = u.titulo
                 }
         }
 
-        if (titulo != null) {
-            institucion = titulo.institucion
-            pais = institucion.pais
-        }
-
-        return [usuarioInstance: usuario, tituloInstance: titulo, institucionInstance: institucion, paisInstance: pais]
+        return [usuarioInstance: usuario, tituloPregradoInstance: tituloPregrado, tituloPostgradoInstance: tituloPostgrado]
     }
 }

@@ -16,7 +16,7 @@
         <div class="fixed-navbar-content">
             <div class="site-wrapper">
                 <div class="centrado">
-                    <g:form url="[resource:usuarioInstance, action:'updateFicha']" class="form-signin" method="PUT"  style="max-width: 500px">
+                    <g:form url="[resource:usuarioInstance, action:'updateFicha']" class="form-signin" method="PUT"  style="max-width: 700px">
                             <div class="row">
                                     <div class="panel panel-success">
                                         <div class="panel-heading">
