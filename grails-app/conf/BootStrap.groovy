@@ -9,15 +9,16 @@ class BootStrap {
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
         def chile = new Pais("Chile").save(failOnError: true)
-        def francia = new Pais("Francia").save(failOnError: true)
 
         def usm = new Institucion("USM", chile).save(failOnError: true)
         def pucv = new Institucion("PUCV", chile).save(failOnError: true)
-        def utc = new Institucion("UTC", francia).save(failOnError: true)
 
-        def informatica = new Titulo("Informática", usm, false).save(failOnError: true)
-        def industrial = new Titulo("Industrial", pucv, false).save(failOnError: true)
-        def quimica = new Titulo("Química", utc, true).save(failOnError: true)
+        new Titulo("Informática", usm, false).save(failOnError: true)
+        new Titulo("Informática", pucv, true).save(failOnError: true)
+        new Titulo("Industrial", usm, false).save(failOnError: true)
+        new Titulo("Industrial", pucv, true).save(failOnError: true)
+        new Titulo("Química", usm, true).save(failOnError: true)
+        new Titulo("Química", usm, false).save(failOnError: true)
 
         def biotechVegetalArea = Area.findOrSaveByNombre("Biotecnología vegetal")
         def compuestosArea = Area.findOrSaveByNombre("Compuestos bioactivos")

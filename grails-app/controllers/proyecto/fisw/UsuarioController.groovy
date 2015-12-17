@@ -135,6 +135,11 @@ class UsuarioController {
             UsuarioTitulo.findOrSaveWhere(titulo: tituloPostgrado, usuario: usuarioInstance)
         }
 
+        PublicacionLibro publicacionLibro = null
+        if ((params.publicacionLibro.titulo)&&(params.publicacionLibro.autores)&&(params.publicacionLibro.anho)&&(params.publicacionLibro.ISBN)&&(params.publicacionLibro.editorial)) {
+            publicacionLibro = PublicacionLibro.findOrSaveWhere(usuario: usuarioInstance, titulo: params.publicacionLibro.titulo, autores: params.publicacionLibro.autores, anho: params.publicacionLibro.anho, ISBN: params.publicacionLibro.ISBN, editorial: params.publicacionLibro.editorial)
+        }
+
         usuarioInstance.save flush:true, failOnError: true
 
         request.withFormat {

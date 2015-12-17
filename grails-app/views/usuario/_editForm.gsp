@@ -42,7 +42,7 @@
 
 <label>Estudios de Pregrado<span class="required-indicator">*</span></label>
 <div class="well">
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulos', 'error')} required">
 	<div class="form-group">
 		<label for="rol_lab">
 			<g:message code="usuario.rol_lab.label" default="Carrera" />
@@ -67,21 +67,51 @@
 
 <label>Estudios de Postgrado</label>
 <div class="well">
-	<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulo', 'error')} required">
+	<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'usuarioTitulos', 'error')} required">
 		<div class="form-group">
 			<label for="rol_lab">
 				<g:message code="usuario.rol_lab.label" default="Carrera" />
-				<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="postgrado.titulo.nombre" from="${proyecto.fisw.Titulo.findAllByTipo(true)}" optionKey="nombre" required="" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.nombre}"/>
+				<g:select optionValue="nombre" noSelection="['':'Seleccione Carrera']" id="titulo" class="form-control" name="postgrado.titulo.nombre" from="${proyecto.fisw.Titulo.findAllByTipo(true)}" optionKey="nombre" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.nombre}"/>
 			</label>
 			<label for="rol_lab">
 				<g:message code="usuario.rol_lab.label" default="Universidad" />
-				<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="postgrado.institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" required="" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.institucion?.nombre}"/>
+				<g:select optionValue="nombre" noSelection="['':'Seleccione Universidad']" id="institucion" class="form-control" name="postgrado.institucion.nombre" from="${proyecto.fisw.Institucion.list()}" optionKey="nombre" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.institucion?.nombre}"/>
 			</label>
 			<label for="rol_lab">
 				<g:message code="usuario.rol_lab.label" default="País" />
-				<g:select optionValue="nombre" noSelection="['':'Seleccione País']" id="pais" class="form-control" name="postgrado.pais.nombre" from="${proyecto.fisw.Pais.list()}" optionKey="nombre" required="" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.institucion?.pais?.nombre}"/>
+				<g:select optionValue="nombre" noSelection="['':'Seleccione País']" id="pais" class="form-control" name="postgrado.pais.nombre" from="${proyecto.fisw.Pais.list()}" optionKey="nombre" value="${(tituloPostgradoInstance == null)? "" : tituloPostgradoInstance?.institucion?.pais?.nombre}"/>
 			</label>
 
 		</div>
 	</div>
+</div>
+
+
+<label>Publicaciones en Capítulos de Libros</label>
+<div class="well">
+	<label for="publicacionLibro.titulo">
+		Titulo del Libro
+	</label>
+
+	<g:field type="text" placeholder="Titulo del Libro" name="publicacionLibro.titulo" class="form-control top"/>
+	<label for="publicacionLibro.autores">
+		Autores
+	</label>
+
+	<g:field type="text" placeholder="Autores" name="publicacionLibro.autores" class="form-control top"/>
+	<label for="publicacionLibro.anho">
+		Año
+	</label>
+
+	<g:field type="text" placeholder="Año" name="publicacionLibro.anho" class="form-control top"/>
+	<label for="publicacionLibro.ISBN">
+		ISBN
+	</label>
+
+	<g:field type="text" placeholder="ISBN" name="publicacionLibro.ISBN" class="form-control top"/>
+	<label for="publicacionLibro.editorial">
+		Editorial
+	</label>
+
+	<g:field type="text" placeholder="Editorial" name="publicacionLibro.editorial" class="form-control top"/>
 </div>

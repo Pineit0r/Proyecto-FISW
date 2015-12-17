@@ -54,6 +54,14 @@
 
                                             ${tituloPostgradoInstance?.nombre}, ${tituloPostgradoInstance?.institucion?.nombre}, ${tituloPostgradoInstance?.institucion?.pais?.nombre}</p>
                                         </g:if>
+                                        <g:if test="${!usuarioInstance?.publicacionesLibro.empty}">
+                                            <p><span class="label label-success">Publicaciones en Capítulos de Libros:</span>
+                                            <g:each in="${usuarioInstance?.publicacionesLibro}">
+
+                                                <p>${it.titulo}, ${it.autores}, ${it.anho}, ${it.ISBN}, ${it.editorial}</p>
+                                            </g:each><p>
+                                        </g:if>
+
                                     </div>
                                 </div>
                             </div>
