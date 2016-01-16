@@ -41,8 +41,7 @@
                             </li>
 
                             <li class="dropdown">
-
-                                <g:img class="dropdown-toggle img-circle"  data-toggle="dropdown" dir="imagenes" id="user-image"  file="default_user.png" width="40" height="40"></g:img>
+                            <img src="/Proyecto-FISW/assets/<g:getPhoto />" class="dropdown-toggle img-circle" data-toggle="dropdown" id="user-image" width="40" height="40">
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li><g:link controller="usuario" action="ficha"><span class="glyphicon glyphicon-user"></span> Ficha Personal</g:link></li>

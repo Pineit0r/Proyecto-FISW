@@ -24,4 +24,13 @@ class TagLibTagLib {
             out << "Director"
     }
 
+    def getPhoto = { attrs, body ->
+            Usuario user = (Usuario) springSecurityService.currentUser
+            def photo = Multimedia.findWhere(usuario: user, tipo: "fotoPerfil")
+            if (photo != null)
+                out << photo.filename
+            else
+                out << "default_user.png"
+    }
+
 }

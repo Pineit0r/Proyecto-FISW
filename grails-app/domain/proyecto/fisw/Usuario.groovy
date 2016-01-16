@@ -28,6 +28,7 @@ class Usuario extends User {
 
     static constraints = {
         area nullable: true
+        apellidos nullable: true
         rol_lab nullable: true
         registroCompletado nullable: true
         usuarioTitulos nullable: true

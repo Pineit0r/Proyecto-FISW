@@ -26,6 +26,10 @@ class UsuarioController {
         respond usuarioInstance
     }
 
+    def addPhoto(Usuario usuarioInstance) {
+        render view:"addPhoto"
+    }
+
     @Secured("IS_AUTHENTICATED_ANONYMOUSLY")
     def create() {
         respond new Usuario(params)
@@ -47,27 +51,36 @@ class UsuarioController {
         usuarioInstance.registroCompletado = false
         usuarioInstance.save flush:true
 
+
+
         Rol rol_admin = Rol.findByAuthority('ROLE_ADMIN')
         def admin = UserRol.findAllByRol(rol_admin)
 
+        /*Se itera sobre los administradores
+        y se les envia un mail a cada uno
+        en el caso de que haya mas de uno.*/
         admin.each { administrador ->
-            sendMail {
-                to administrador.user
-                subject "Autorización de Registro - Sistema Labmmba"
-                html g.render(template:"email", model:[ usuario: usuarioInstance])
+            if (administrador!= null) {
+                sendMail {
+                    to administrador.user
+                    subject "Autorización de Registro - Sistema Labmmba"
+                    html g.render(template: "email", model: [usuario: usuarioInstance])
+                }
             }
         }
 
         Rol rol_director = Rol.findByAuthority('ROLE_DIRECTOR')
         def director = UserRol.findByRol(rol_director)
 
-        sendMail {
-            to director.user
-            subject "Autorización de Registro - Sistema Labmmba"
-            html g.render(template:"email", model:[ usuario: usuarioInstance])
+        /* Se verifica que exista un director y se le envia un mail de solicitud
+            de registro */
+        if (director !=null) {
+            sendMail {
+                to director.user
+                subject "Autorización de Registro - Sistema Labmmba"
+                html g.render(template: "email", model: [usuario: usuarioInstance])
+            }
         }
-
-
 
         Rol rol = Rol.find{authority == 'ROLE_USER'}
         UserRol.create usuarioInstance,rol,true
@@ -139,7 +152,7 @@ class UsuarioController {
         if ((params.publicacionLibro.titulo)&&(params.publicacionLibro.autores)&&(params.publicacionLibro.anho)&&(params.publicacionLibro.ISBN)&&(params.publicacionLibro.editorial)) {
             publicacionLibro = PublicacionLibro.findOrSaveWhere(usuario: usuarioInstance, titulo: params.publicacionLibro.titulo, autores: params.publicacionLibro.autores, anho: params.publicacionLibro.anho, ISBN: params.publicacionLibro.ISBN, editorial: params.publicacionLibro.editorial)
         }
-
+        usuarioInstance.registroCompletado =true
         usuarioInstance.save flush:true, failOnError: true
 
         request.withFormat {

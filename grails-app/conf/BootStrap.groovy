@@ -4,6 +4,7 @@ import proyecto.fisw.*
 class BootStrap {
 
     def init = { servletContext ->
+
         def adminRol = new Rol("ROLE_ADMIN").save(failOnError: true)
         def userRol = new Rol("ROLE_USER").save(failOnError: true)
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
@@ -32,12 +33,14 @@ class BootStrap {
         def colaboradorRolLab = RolLab.findOrSaveByNombre("Colaborador")
 
         def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", compuestosArea, jefeLaboratorioRolLab).save(failOnError: true)
-        def adminFelipe= new Usuario("tatafel_8@hotmail.com","123","Felipe","Gonzalez", microbiologiaArea,trabajadorRolLab).save(failOnError: true)
-        def usuarioAdmin = new Usuario("felipefdezpino@gmail.com", "admin00", "Administrador", "Administrador", biotechVegetalArea, trabajadorRolLab).save(failOnError: true)
+        def adminFelipe= new Usuario("tatafel_8@hotmail.com","48dpswx45kfiga","Felipe","Gonzalez", microbiologiaArea,trabajadorRolLab).save(failOnError: true)
+        def usuarioAdmin = new Usuario("felipefdezpino@gmail.com", "admin00", "Administrador", "", biotechVegetalArea, trabajadorRolLab).save(failOnError: true)
+        def director = new Usuario("Director@director.cl","director","NombreAdministrador","ApellidoAdmin",biotechVegetalArea,trabajadorRolLab).save(failOnError: true)
 
         UserRol.create adminFelipe,adminRol,true
         UserRol.create usuarioAdmin,adminRol,true
         UserRol.create usuarioFelipe,userRol,true
+        UserRol.create director,directorRol,true
     }
     def destroy = {
     }

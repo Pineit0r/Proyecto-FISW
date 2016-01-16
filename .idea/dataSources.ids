@@ -124,7 +124,8 @@
     <table name="multimedia" schema="" catalog="fisw" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fullpath" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="subido" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="tipo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -137,7 +138,7 @@
     <table name="pais" schema="" catalog="fisw" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="pais" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="FK_cajnyyepyatp2769gy5o1578w" table="ciudad" schema="" catalog="fisw" columns="pais_id"/>
       <exported-key name="FK_8mk61c7wpw8a14c5rwcjjoklf" table="institucion" schema="" catalog="fisw" columns="pais_id"/>
@@ -168,9 +169,10 @@
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="isbn" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="anho" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="autores" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="editorial" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="titulo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
@@ -269,14 +271,12 @@
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="institucion_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="tipo" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="titulo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_5456c7ypql5nnhmymax0cfmyw" columns="institucion_id" ref-table="institucion" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_jwjao6d35tpxx3f6uplnhcf7s" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_ej54a7keb61rh5fp7me09loj0" table="usuario_titulo" schema="" catalog="fisw" columns="titulo_id"/>
       <index name="FK_5456c7ypql5nnhmymax0cfmyw" unique="false" columns="institucion_id"/>
-      <index name="FK_jwjao6d35tpxx3f6uplnhcf7s" unique="false" columns="usuario_id"/>
     </table>
     <table name="user" schema="" catalog="fisw" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
@@ -288,9 +288,9 @@
       <column name="password_expired" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="class" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="apellidos" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="apellidos" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="area_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="nombres" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="nombres" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="registro_completado" sqlType="BIT" precision="1" scale="0" nullable="true" jdbcType="-7"/>
       <column name="rol_lab_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
@@ -310,9 +310,9 @@
       <exported-key name="FK_1oribla7k4krb929kjjp8198q" table="tesis" schema="" catalog="fisw" columns="autor_id"/>
       <exported-key name="FK_r2rsfjmklqn9t2ay6gfyydwlx" table="tesis" schema="" catalog="fisw" columns="cotutor_id"/>
       <exported-key name="FK_sbn8f6ljucrfk4at3rrukbcs" table="tesis" schema="" catalog="fisw" columns="tutor_id"/>
-      <exported-key name="FK_jwjao6d35tpxx3f6uplnhcf7s" table="titulo" schema="" catalog="fisw" columns="usuario_id"/>
       <exported-key name="FK_a3imlf41l37utmxiquukk8ajc" table="user" schema="" catalog="fisw" columns="user_id"/>
       <exported-key name="FK_6mpe5i3e0bmjpy9ee7chvi7fr" table="user_rol" schema="" catalog="fisw" columns="user_id"/>
+      <exported-key name="FK_eo0ney42jtcp6xyhipxx6ajin" table="usuario_titulo" schema="" catalog="fisw" columns="usuario_id"/>
       <index name="UK_a3imlf41l37utmxiquukk8ajc" unique="true" columns="user_id"/>
       <index name="UK_sb8bbouer5wak8vyiiy4pf2bx" unique="true" columns="username"/>
       <index name="FK_l15pi1u587xf9dqgp9ljg8bqx" unique="false" columns="area_id"/>
@@ -325,6 +325,17 @@
       <foreign-key name="FK_6mpe5i3e0bmjpy9ee7chvi7fr" columns="user_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="FK_pn3er40eu5hd09r6yhy3p8jia" columns="rol_id" ref-table="rol" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="FK_pn3er40eu5hd09r6yhy3p8jia" unique="false" columns="rol_id"/>
+    </table>
+    <table name="usuario_titulo" schema="" catalog="fisw" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="titulo_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_ej54a7keb61rh5fp7me09loj0" columns="titulo_id" ref-table="titulo" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_eo0ney42jtcp6xyhipxx6ajin" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_ej54a7keb61rh5fp7me09loj0" unique="false" columns="titulo_id"/>
+      <index name="FK_eo0ney42jtcp6xyhipxx6ajin" unique="false" columns="usuario_id"/>
     </table>
   </data-source>
 </component>

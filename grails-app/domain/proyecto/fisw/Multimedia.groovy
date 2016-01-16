@@ -12,5 +12,6 @@ class Multimedia {
     static constraints = {
         filename blank: false, nullable: false
         fullpath blank: false, nullable: false
+        tipo nullable: true, blank: true
     }
 }
