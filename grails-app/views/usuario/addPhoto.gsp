@@ -16,7 +16,6 @@
         <div class="fixed-navbar-content">
             <div class="site-wrapper">
                 <div class="centrado">
-                    <g:if test="${flash.message}"><div class="message" role="status">${flash.message}</div></g:if>
                     <g:uploadForm action="upload" controller="multimedia" style="max-width: 400px; margin-left: auto; margin-right: auto">
                         <div class="row">
                            <div class="panel panel-success">

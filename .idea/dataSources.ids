@@ -127,7 +127,7 @@
       <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="fullpath" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="subido" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="tipo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tipo" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_57cj37vnguog864g3hfs3l9xm" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>

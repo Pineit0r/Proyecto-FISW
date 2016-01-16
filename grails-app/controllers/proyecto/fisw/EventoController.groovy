@@ -12,11 +12,13 @@ class EventoController {
     def springSecurityService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Evento.list(params), model: [eventoInstanceCount: Evento.count()]
     }
 
+    @Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Evento eventoInstance) {
         respond eventoInstance
     }
@@ -39,16 +41,21 @@ class EventoController {
             respond eventoInstance.errors, view: 'create'
             return
         }
+        Date now = new Date()
+        if (now > params.fecha){
+            flash.message = "Fecha inválida."
+            redirect (controller:'evento', action:'create')
+        }
+        else {
+            eventoInstance.save flush: true
 
-
-        eventoInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'evento.label', default: 'Evento'), eventoInstance.id])
-                redirect eventoInstance
+            request.withFormat {
+                form multipartForm {
+                    flash.message = message(code: 'default.created.message', args: [message(code: 'evento.label', default: 'Evento'), eventoInstance.id])
+                    redirect eventoInstance
+                }
+                '*' { respond eventoInstance, [status: CREATED] }
             }
-            '*' { respond eventoInstance, [status: CREATED] }
         }
     }
 
