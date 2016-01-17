@@ -6,13 +6,10 @@
 	<body>
 
 		<g:render template="/layouts/headerExterno"/>
-
 		<div class="site-wrapper">
 			<div class="site-wrapper-inner">
-
 				<div class="formulario">
 					<div class='inner'>
-
 						<form action='${postUrl}' method='POST' id='loginForm' class='form-signin' autocomplete='off'>
 
 							<div class="panel panel-success">
@@ -51,7 +48,6 @@
 				</div>
 				<g:render template="/layouts/footer"/>
 			</div>
-
 		</div>
 
 

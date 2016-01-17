@@ -13,33 +13,48 @@
 
     <body>
         <g:render template="/layouts/headerInterno"/>
-        <div class="fixed-navbar-content">
-            <div class="site-wrapper">
+        <div class="container">
+            <div class="alineacion">
                 <div class="centrado">
-                    <g:form url="[resource:usuarioInstance, action:'updateFicha']" class="form-signin" method="PUT"  style="max-width: 700px">
-                        <div class="row">
-
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-1">
+                            <ol class="breadcrumb">
+                                <li><g:link controller="intranet" action="index" style="color: #0f0f0f">Intranet</g:link></li>
+                                <li><g:link controller="usuario" action="ficha" style="color: #0f0f0f">Ficha personal</g:link></li>
+                                <li class="active">Editar ficha</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
                             <div class="panel panel-success">
                                 <div class="panel-heading">
-                                    <h1 class='panel-title' style="font-size: 40px">Editar Ficha Personal</h1>
+                                    <h1 class='panel-title' style="font-size: 40px">Editar Ficha</h1>
                                 </div>
-
                                 <fieldset class="form">
                                     <div class="panel-body">
-                                        <h3><g:getUserName /></h3>
-                                        <g:render template="editForm"/>
-                                        <fieldset class="buttons">
-                                            <g:actionSubmit class="btn btn-success" action="updateFicha" value="Aceptar" />
-                                        </fieldset>
+                                        <g:if test='${flash.message}'>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <button type="button" class="close" data-dismiss="alert">&times;</button>${flash.message}
+                                                </div>
+                                        </g:if>
+                                        <g:form url="[resource:usuarioInstance, action:'updateFicha']" method="PUT">
+                                            <g:render template="editForm"/>
+                                            <div class="form-group">
+                                                <g:actionSubmit class="btn btn-success" action="updateFicha" value="Actualizar" />
+                                            </div>
+                                        </g:form>
                                     </div>
                                 </fieldset>
                             </div>
-
-
                         </div>
-                    </g:form>
+                    </div>
                 </div>
             </div>
+        </div>
+        <hr>
+        <div class="centrado"
+            <g:render template="/layouts/footer"/>
         </div>
     </body>
 </html>

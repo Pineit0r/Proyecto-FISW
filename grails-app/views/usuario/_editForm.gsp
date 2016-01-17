@@ -85,32 +85,3 @@
 		</div>
 	</div>
 </div>
-
-<label>Publicaciones en Capítulos de Libros</label>
-<div class="well">
-	<label for="publicacionLibro.titulo">
-		Titulo del Libro
-	</label>
-
-	<g:field type="text" placeholder="Titulo del Libro" name="publicacionLibro.titulo" class="form-control top"/>
-	<label for="publicacionLibro.autores">
-		Autores
-	</label>
-
-	<g:field type="text" placeholder="Autores" name="publicacionLibro.autores" class="form-control top"/>
-	<label for="publicacionLibro.anho">
-		Año
-	</label>
-
-	<g:field type="text" placeholder="Año" name="publicacionLibro.anho" class="form-control top"/>
-	<label for="publicacionLibro.ISBN">
-		ISBN
-	</label>
-
-	<g:field type="text" placeholder="ISBN" name="publicacionLibro.ISBN" class="form-control top"/>
-	<label for="publicacionLibro.editorial">
-		Editorial
-	</label>
-
-	<g:field type="text" placeholder="Editorial" name="publicacionLibro.editorial" class="form-control top"/>
-</div>

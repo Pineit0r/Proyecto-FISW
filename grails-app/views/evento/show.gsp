@@ -52,7 +52,7 @@
 										<g:form url="[resource:eventoInstance, action:'delete']" method="DELETE">
 
 												<g:link class="btn btn-primary" action="edit" resource="${eventoInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-												<g:actionSubmit class="bnt btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: '¿Estás Seguro?')}');" />
+												<g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: '¿Estás Seguro?')}');" />
 
 										</g:form>
 									</sec:ifAnyGranted>

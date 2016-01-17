@@ -68,7 +68,7 @@ class AsistCongresoController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'asistCongreso.label', default: 'AsistCongreso'), asistCongresoInstance.id])
-                redirect asistCongresoInstance
+                redirect action: "index", controller: "asistCongreso"
             }
             '*' { respond asistCongresoInstance, [status: CREATED] }
         }

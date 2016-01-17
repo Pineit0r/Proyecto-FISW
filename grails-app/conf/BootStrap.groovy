@@ -49,7 +49,7 @@ class BootStrap {
         def director = new Usuario("Director@director.cl","director","Juan","Pérez",biotechVegetalArea,trabajadorRolLab).save(failOnError: true)
 
         UserRol.create adminFelipeG,adminRol,true
-        UserRol.create adminFelipeF,adminRol,true
+        //UserRol.create adminFelipeF,adminRol,true
         UserRol.create usuario,userRol,true
         UserRol.create director,directorRol,true
     }

@@ -6,88 +6,77 @@
 		<meta name="layout" content="main">
 	</head>
 	<body>
-		<div class="container">
+	<g:render template="/layouts/headerInterno"/>
+	<div class="container">
+		<div class="alineacion">
 			<div class="centrado">
-				<li><g:link class="list" action="index">Lista de Usuarios</g:link></li>
+				<div class="row">
+					<div class="col-md-4 col-md-offset-1">
+						<ol class="breadcrumb">
+							<li><g:link controller="intranet" action="index" style="color: #0f0f0f">Intranet</g:link></li>
+							<li><g:link controller="usuario" action="index" style="color: #0f0f0f">Lista usuarios</g:link></li>
+							<li class="active">Ver usuario</li>
+						</ol>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="panel panel-success">
+							<div class="panel-heading">
+								<h1 class='panel-title' style="font-size: 40px">Usuario</h1>
+							</div>
+							<div class="panel-body">
 
+								<table class="table table-condensed">
+									<tbody>
+										<tr>
+											<td>Nombre</td>
+											<td><g:fieldValue bean="${usuarioInstance}" field="nombres"/></td>
+										</tr>
+										<tr>
+											<td>Apellido</td>
+											<td><g:fieldValue bean="${usuarioInstance}" field="apellidos"/></td>
+										</tr>
+										<tr>
+											<td>Correo</td>
+											<td><g:fieldValue bean="${usuarioInstance}" field="username"/></td>
+										</tr>
+										<tr>
+											<td>Area de investigación</td>
+											<td><g:fieldValue bean="${usuarioInstance?.area}" field="nombre"/></td>
+										</tr>
 
-		<div id="show-usuario" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<ol class="property-list usuario">
-			
-				<g:if test="${usuarioInstance?.username}">
-				<li class="fieldcontain">
-					<span id="username-label" class="property-label"><g:message code="usuario.username.label" default="Correo" /></span>
-					
-						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${usuarioInstance}" field="username"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${usuarioInstance?.nombres}">
-				<li class="fieldcontain">
-					<span id="nombre-label" class="property-label"><g:message code="usuario.nombres.label" default="Nombre" /></span>
-					
-						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${usuarioInstance}" field="nombres"/></span>
-					
-				</li>
-				</g:if>
-			
-				%{--<g:if test="${usuarioInstance?.accountLocked}">
-				<li class="fieldcontain">
-					<span id="accountLocked-label" class="property-label"><g:message code="usuario.accountLocked.label" default="Account Locked" /></span>
-					
-						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${usuarioInstance?.accountLocked}" /></span>
-					
-				</li>
-				</g:if>--}%
-			
-				<g:if test="${usuarioInstance?.area}">
-				<li class="fieldcontain">
-					<span id="area-label" class="property-label"><g:message code="usuario.area.label" default="Area" /></span>
-					
-						<span class="property-value" aria-labelledby="area-label"><g:link controller="area" action="show" id="${usuarioInstance?.area?.id}">${usuarioInstance?.area?.nombre}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				%{--<g:if test="${usuarioInstance?.passwordExpired}">
-				<li class="fieldcontain">
-					<span id="passwordExpired-label" class="property-label"><g:message code="usuario.passwordExpired.label" default="Password Expired" /></span>
-					
-						<span class="property-value" aria-labelledby="passwordExpired-label"><g:formatBoolean boolean="${usuarioInstance?.passwordExpired}" /></span>
-					
-				</li>
-				</g:if>--}%
-			
-				<g:if test="${usuarioInstance?.rol_lab}">
-				<li class="fieldcontain">
-					<span id="rol_lab-label" class="property-label"><g:message code="usuario.rol_lab.label" default="Rollab" /></span>
-					
-						<span class="property-value" aria-labelledby="rol_lab-label"><g:link controller="rol_Lab" action="show" id="${usuarioInstance?.rol_lab?.id}">${usuarioInstance?.rol_lab?.nombre}</g:link></span>
-					
-				</li>
-				</g:if>
+										<tr>
+											<td>Verificado</td>
+											<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
+												<g:if test="${usuarioInstance?.enabled}">
+													<td><span class="glyphicon glyphicon-ok-circle"></span></td>
+												</g:if>
+												<g:else>
+													<td><span class="glyphicon glyphicon-remove-circle"></span></td>
+												</g:else>
 
-				<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
-					<li class="fieldcontain">
-						<span id="enabled-label" class="property-label"><g:message code="usuario.enabled.label" default="Verificado" /></span>
-
-						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${usuarioInstance?.enabled}" /></span>
-
-					</li>
-				</sec:ifAnyGranted>
-			
-			</ol>
-			<g:form url="[resource:usuarioInstance, action:'delete']" method="DELETE">
-				<fieldset class="buttons">
-					<g:link class="edit" action="edit" resource="${usuarioInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
-				</fieldset>
-			</g:form>
+											</sec:ifAnyGranted>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="panel-footer">
+								<g:form url="[resource:usuarioInstance, action:'delete']" method="DELETE">
+									<fieldset class="buttons">
+										<g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+									</fieldset>
+								</g:form>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="centrado"
+			<g:render template="/layouts/footer"/>
 		</div>
 	</body>
 </html>

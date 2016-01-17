@@ -68,8 +68,11 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <g:render template="/layouts/footer"/>
                 </div>
             </div>
         </div>
+    <br>
     </body>
 </html>

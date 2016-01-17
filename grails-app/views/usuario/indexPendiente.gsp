@@ -42,7 +42,7 @@
 													<td>${fieldValue(bean: usuarioInstance, field: "nombres")}</td>
 													<td>${fieldValue(bean: usuarioInstance, field: "apellidos")}</td>
 													<td><g:link action="show" style="color: #0f0f0f;" id="${usuarioInstance.id}">${fieldValue(bean: usuarioInstance, field: "username")}</g:link></td>
-													<td><g:link controller="usuario" action="show" class="btn btn-success btn-xs" id="${usuarioInstance.id}">Validar</g:link> </td>
+													<td><g:link controller="usuario" action="validar" class="btn btn-success btn-xs" id="${usuarioInstance.id}">Validar</g:link> </td>
 												</tr>
 											</g:each>
 										</tbody>

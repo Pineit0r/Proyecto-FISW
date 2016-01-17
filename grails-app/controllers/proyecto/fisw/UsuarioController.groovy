@@ -240,4 +240,13 @@ class UsuarioController {
 
         return [usuarioInstance: usuario, tituloPregradoInstance: tituloPregrado, tituloPostgradoInstance: tituloPostgrado]
     }
+
+    @Transactional
+    @Secured(['ROLE_ADMIN','ROLE_DIRECTOR'])
+    def validar(Usuario usuarioInstance){
+        usuarioInstance.enabled = true
+        usuarioInstance.save(failOnError: true)
+        redirect controller: "usuario",action: "indexPendiente"
+    }
+
 }

@@ -34,9 +34,9 @@
                                         <li class="disabled"><a href="#">Solicitudes pendientes<span class="badge">${usuarioInstanceCount}</span></a></li>
                                     </g:if>
                                     <g:else>
-                                        <li class="active"><g:link class="list" controller="usuario" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
+                                        <li class="active"><g:link style="color: white" class="list" controller="usuario" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
                                     </g:else>
-                                    <li><g:link  controller="usuario" action="index">Lista de Usuarios</g:link></li>
+                                    <li><g:link  controller="usuario" action="index"><span class="glyphicon glyphicon-th-list"></span> Lista de Usuarios</g:link></li>
                                     <hr>
 
                                     <li><g:link controller="publicacionLibro" action="create"><span class="glyphicon glyphicon-plus"></span> Publicación de Capitulos de Libro</g:link></li>
@@ -50,8 +50,8 @@
 
                                     <hr>
 
-                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-calendar"></span> Registrar asistencia a congreso</g:link></li>
-                                    <li><g:link controller="asistCongreso" action="index">Mis asistencias</g:link></li>
+                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-edit"></span> Registrar asistencia a congreso</g:link></li>
+                                    <li><g:link controller="asistCongreso" action="index"><span class="glyphicon glyphicon-time"></span> Mis asistencias</g:link></li>
                                 </ul>
                             </sec:ifAnyGranted>
 
@@ -63,8 +63,8 @@
                                 </ul>
                                 <hr>
                                 <ul class="nav nav-pills nav-justified">
-                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-calendar"></span> Registrar asistencia a congreso</g:link></li>
-                                    <li><g:link controller="asistCongreso" action="index">Mis asistencias</g:link></li>
+                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-edit"></span> Registrar asistencia a congreso</g:link></li>
+                                    <li><g:link controller="asistCongreso" action="index"><span class="glyphicon glyphicon-time"></span> Mis asistencias</g:link></li>
                                 </ul>
                             </sec:ifAnyGranted>
 
@@ -75,9 +75,9 @@
                                         <li class="disabled"><a href="#">Solicitudes pendientes<span class="badge">${usuarioInstanceCount}</span></a></li>
                                     </g:if>
                                     <g:else>
-                                        <li class="active"><g:link class="list" controller="usuario" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
+                                        <li class="active" ><g:link class="list" controller="usuario" style="color: white" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
                                     </g:else>
-                                    <li><g:link  controller="usuario" action="index">Lista de Usuarios</g:link></li>
+                                    <li><g:link  controller="usuario" action="index"><span class="glyphicon glyphicon-th-list"></span> Lista de Usuarios</g:link></li>
                                 </ul>
                                 <hr>
 

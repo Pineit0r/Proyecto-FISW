@@ -31,7 +31,9 @@
 											<tr>
 												<th>Nombre</th>
 												<th>Correo</th>
+												<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
 												<th>Verificación</th>
+												</sec:ifAnyGranted>
 											</tr>
 										</thead>
 

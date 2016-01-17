@@ -558,529 +558,547 @@
         <columns>pdf_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="153" parent="17" name="PRIMARY">
+      <index id="153" parent="17" name="UK_880jxojdl7lv7ceojt4oh54o4">
+        <columns>isbn</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="154" parent="17" name="UK_kp0pn8hgf2dvc4y5vpyme9kvm">
+        <columns>titulo</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="155" parent="17" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="154" parent="17" name="FK_nlic7t7iio0436r600lpjwdjd">
+      <key id="156" parent="17" name="UK_880jxojdl7lv7ceojt4oh54o4">
+        <columns>isbn</columns>
+        <underlying-index>UK_880jxojdl7lv7ceojt4oh54o4</underlying-index>
+      </key>
+      <key id="157" parent="17" name="UK_kp0pn8hgf2dvc4y5vpyme9kvm">
+        <columns>titulo</columns>
+        <underlying-index>UK_kp0pn8hgf2dvc4y5vpyme9kvm</underlying-index>
+      </key>
+      <foreign-key id="158" parent="17" name="FK_nlic7t7iio0436r600lpjwdjd">
         <columns>usuario_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="155" parent="17" name="FK_op3my7mxcg4q8tvn8dd9jb7b">
+      <foreign-key id="159" parent="17" name="FK_op3my7mxcg4q8tvn8dd9jb7b">
         <columns>pdf_id</columns>
         <ref-key>~.multimedia.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="156" parent="18" name="id">
+      <column id="160" parent="18" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="157" parent="18" name="version">
+      <column id="161" parent="18" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="158" parent="18" name="keyword_id">
+      <column id="162" parent="18" name="keyword_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="159" parent="18" name="publicacion_revista_id">
+      <column id="163" parent="18" name="publicacion_revista_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="160" parent="18" name="FK_1q8hbfg6qgfski7fb3wlqpqaf">
+      <index id="164" parent="18" name="FK_1q8hbfg6qgfski7fb3wlqpqaf">
         <columns>publicacion_revista_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="161" parent="18" name="FK_fvye5hrqyrqd578xkuv9d4sr6">
+      <index id="165" parent="18" name="FK_fvye5hrqyrqd578xkuv9d4sr6">
         <columns>keyword_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="162" parent="18" name="PRIMARY">
+      <key id="166" parent="18" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="163" parent="18" name="FK_1q8hbfg6qgfski7fb3wlqpqaf">
+      <foreign-key id="167" parent="18" name="FK_1q8hbfg6qgfski7fb3wlqpqaf">
         <columns>publicacion_revista_id</columns>
         <ref-key>~.publicacion_revistas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="164" parent="18" name="FK_fvye5hrqyrqd578xkuv9d4sr6">
+      <foreign-key id="168" parent="18" name="FK_fvye5hrqyrqd578xkuv9d4sr6">
         <columns>keyword_id</columns>
         <ref-key>~.keyword.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="165" parent="19" name="id">
+      <column id="169" parent="19" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="166" parent="19" name="version">
+      <column id="170" parent="19" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="167" parent="19" name="anno">
+      <column id="171" parent="19" name="anno">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="168" parent="19" name="area_id">
+      <column id="172" parent="19" name="area_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="169" parent="19" name="autores">
+      <column id="173" parent="19" name="autores">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="170" parent="19" name="keywords">
+      <column id="174" parent="19" name="keywords">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="171" parent="19" name="revista">
+      <column id="175" parent="19" name="revista">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="172" parent="19" name="ruta">
+      <column id="176" parent="19" name="ruta">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="173" parent="19" name="titulo">
+      <column id="177" parent="19" name="titulo">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="174" parent="19" name="usuario_id">
+      <column id="178" parent="19" name="usuario_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="175" parent="19" name="FK_7lhck9yio28bko241dcxl6ofv">
+      <index id="179" parent="19" name="FK_7lhck9yio28bko241dcxl6ofv">
         <columns>usuario_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="176" parent="19" name="FK_q4h1x4j54r0qhdwwhiuncuddd">
+      <index id="180" parent="19" name="FK_q4h1x4j54r0qhdwwhiuncuddd">
         <columns>area_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="177" parent="19" name="PRIMARY">
+      <key id="181" parent="19" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="178" parent="19" name="FK_7lhck9yio28bko241dcxl6ofv">
+      <foreign-key id="182" parent="19" name="FK_7lhck9yio28bko241dcxl6ofv">
         <columns>usuario_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="179" parent="19" name="FK_q4h1x4j54r0qhdwwhiuncuddd">
+      <foreign-key id="183" parent="19" name="FK_q4h1x4j54r0qhdwwhiuncuddd">
         <columns>area_id</columns>
         <ref-key>~.area.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="180" parent="20" name="id">
+      <column id="184" parent="20" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="181" parent="20" name="date_created">
+      <column id="185" parent="20" name="date_created">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <column id="182" parent="20" name="token">
+      <column id="186" parent="20" name="token">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="183" parent="20" name="username">
+      <column id="187" parent="20" name="username">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="184" parent="20" name="PRIMARY">
+      <key id="188" parent="20" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="185" parent="21" name="id">
+      <column id="189" parent="21" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="186" parent="21" name="version">
+      <column id="190" parent="21" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="187" parent="21" name="admin_id">
+      <column id="191" parent="21" name="admin_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="188" parent="21" name="reporte">
+      <column id="192" parent="21" name="reporte">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="189" parent="21" name="usuario_id">
+      <column id="193" parent="21" name="usuario_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="190" parent="21" name="FK_3sn7deyrw0w38maupxy6sc275">
+      <index id="194" parent="21" name="FK_3sn7deyrw0w38maupxy6sc275">
         <columns>admin_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="191" parent="21" name="FK_4c3to0mbsu3mm7pjpqkappghi">
+      <index id="195" parent="21" name="FK_4c3to0mbsu3mm7pjpqkappghi">
         <columns>usuario_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="192" parent="21" name="PRIMARY">
+      <key id="196" parent="21" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="193" parent="21" name="FK_3sn7deyrw0w38maupxy6sc275">
+      <foreign-key id="197" parent="21" name="FK_3sn7deyrw0w38maupxy6sc275">
         <columns>admin_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="194" parent="21" name="FK_4c3to0mbsu3mm7pjpqkappghi">
+      <foreign-key id="198" parent="21" name="FK_4c3to0mbsu3mm7pjpqkappghi">
         <columns>usuario_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="195" parent="22" name="id">
+      <column id="199" parent="22" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="196" parent="22" name="version">
+      <column id="200" parent="22" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="197" parent="22" name="authority">
+      <column id="201" parent="22" name="authority">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="198" parent="22" name="UK_pbdeb23es4jm3il5dvs9ec1jb">
+      <index id="202" parent="22" name="UK_pbdeb23es4jm3il5dvs9ec1jb">
         <columns>authority</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="199" parent="22" name="PRIMARY">
+      <key id="203" parent="22" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="200" parent="22" name="UK_pbdeb23es4jm3il5dvs9ec1jb">
+      <key id="204" parent="22" name="UK_pbdeb23es4jm3il5dvs9ec1jb">
         <columns>authority</columns>
         <underlying-index>UK_pbdeb23es4jm3il5dvs9ec1jb</underlying-index>
       </key>
-      <column id="201" parent="23" name="id">
+      <column id="205" parent="23" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="202" parent="23" name="version">
+      <column id="206" parent="23" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="203" parent="23" name="nombre">
+      <column id="207" parent="23" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="204" parent="23" name="PRIMARY">
+      <key id="208" parent="23" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="205" parent="24" name="id">
+      <column id="209" parent="24" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="206" parent="24" name="version">
+      <column id="210" parent="24" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="207" parent="24" name="autor_id">
+      <column id="211" parent="24" name="autor_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="208" parent="24" name="cotutor_id">
+      <column id="212" parent="24" name="cotutor_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="209" parent="24" name="institucion_id">
+      <column id="213" parent="24" name="institucion_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="210" parent="24" name="modificado">
+      <column id="214" parent="24" name="modificado">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <column id="211" parent="24" name="nombre">
+      <column id="215" parent="24" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="212" parent="24" name="pdf_id">
+      <column id="216" parent="24" name="pdf_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="213" parent="24" name="ruta">
+      <column id="217" parent="24" name="ruta">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="214" parent="24" name="tipo">
+      <column id="218" parent="24" name="tipo">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <column id="215" parent="24" name="tutor_id">
+      <column id="219" parent="24" name="tutor_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="216" parent="24" name="FK_1oribla7k4krb929kjjp8198q">
+      <index id="220" parent="24" name="FK_1oribla7k4krb929kjjp8198q">
         <columns>autor_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="217" parent="24" name="FK_k3n85bnvg0tbhcrs6spyqovn7">
+      <index id="221" parent="24" name="FK_k3n85bnvg0tbhcrs6spyqovn7">
         <columns>institucion_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="218" parent="24" name="FK_l72mrecu0sf1oc72c0p3h7le9">
+      <index id="222" parent="24" name="FK_l72mrecu0sf1oc72c0p3h7le9">
         <columns>pdf_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="219" parent="24" name="FK_r2rsfjmklqn9t2ay6gfyydwlx">
+      <index id="223" parent="24" name="FK_r2rsfjmklqn9t2ay6gfyydwlx">
         <columns>cotutor_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="220" parent="24" name="FK_sbn8f6ljucrfk4at3rrukbcs">
+      <index id="224" parent="24" name="FK_sbn8f6ljucrfk4at3rrukbcs">
         <columns>tutor_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="221" parent="24" name="PRIMARY">
+      <key id="225" parent="24" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="222" parent="24" name="FK_1oribla7k4krb929kjjp8198q">
+      <foreign-key id="226" parent="24" name="FK_1oribla7k4krb929kjjp8198q">
         <columns>autor_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="223" parent="24" name="FK_k3n85bnvg0tbhcrs6spyqovn7">
+      <foreign-key id="227" parent="24" name="FK_k3n85bnvg0tbhcrs6spyqovn7">
         <columns>institucion_id</columns>
         <ref-key>~.institucion.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="224" parent="24" name="FK_l72mrecu0sf1oc72c0p3h7le9">
+      <foreign-key id="228" parent="24" name="FK_l72mrecu0sf1oc72c0p3h7le9">
         <columns>pdf_id</columns>
         <ref-key>~.multimedia.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="225" parent="24" name="FK_r2rsfjmklqn9t2ay6gfyydwlx">
+      <foreign-key id="229" parent="24" name="FK_r2rsfjmklqn9t2ay6gfyydwlx">
         <columns>cotutor_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="226" parent="24" name="FK_sbn8f6ljucrfk4at3rrukbcs">
+      <foreign-key id="230" parent="24" name="FK_sbn8f6ljucrfk4at3rrukbcs">
         <columns>tutor_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="227" parent="25" name="id">
+      <column id="231" parent="25" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="228" parent="25" name="version">
+      <column id="232" parent="25" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="229" parent="25" name="institucion_id">
+      <column id="233" parent="25" name="institucion_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="230" parent="25" name="nombre">
+      <column id="234" parent="25" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="231" parent="25" name="tipo">
+      <column id="235" parent="25" name="tipo">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <index id="232" parent="25" name="FK_5456c7ypql5nnhmymax0cfmyw">
+      <index id="236" parent="25" name="FK_5456c7ypql5nnhmymax0cfmyw">
         <columns>institucion_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="233" parent="25" name="PRIMARY">
+      <key id="237" parent="25" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="234" parent="25" name="FK_5456c7ypql5nnhmymax0cfmyw">
+      <foreign-key id="238" parent="25" name="FK_5456c7ypql5nnhmymax0cfmyw">
         <columns>institucion_id</columns>
         <ref-key>~.institucion.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="235" parent="26" name="id">
+      <column id="239" parent="26" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="236" parent="26" name="version">
+      <column id="240" parent="26" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="237" parent="26" name="account_expired">
+      <column id="241" parent="26" name="account_expired">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <column id="238" parent="26" name="account_locked">
+      <column id="242" parent="26" name="account_locked">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <column id="239" parent="26" name="enabled">
+      <column id="243" parent="26" name="enabled">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <column id="240" parent="26" name="password">
+      <column id="244" parent="26" name="password">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="241" parent="26" name="password_expired">
+      <column id="245" parent="26" name="password_expired">
         <mandatory>1</mandatory>
         <data-type>bit(1)</data-type>
       </column>
-      <column id="242" parent="26" name="username">
+      <column id="246" parent="26" name="username">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="243" parent="26" name="class">
+      <column id="247" parent="26" name="class">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="244" parent="26" name="apellidos">
+      <column id="248" parent="26" name="apellidos">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="245" parent="26" name="area_id">
+      <column id="249" parent="26" name="area_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="246" parent="26" name="nombres">
+      <column id="250" parent="26" name="nombres">
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="247" parent="26" name="registro_completado">
+      <column id="251" parent="26" name="registro_completado">
         <data-type>bit(1)</data-type>
       </column>
-      <column id="248" parent="26" name="rol_lab_id">
+      <column id="252" parent="26" name="rol_lab_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="249" parent="26" name="user_id">
+      <column id="253" parent="26" name="user_id">
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="250" parent="26" name="FK_l15pi1u587xf9dqgp9ljg8bqx">
+      <index id="254" parent="26" name="FK_l15pi1u587xf9dqgp9ljg8bqx">
         <columns>area_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="251" parent="26" name="FK_rd7yb0jynpq0kvck18tsmic05">
+      <index id="255" parent="26" name="FK_rd7yb0jynpq0kvck18tsmic05">
         <columns>rol_lab_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="252" parent="26" name="UK_a3imlf41l37utmxiquukk8ajc">
+      <index id="256" parent="26" name="UK_a3imlf41l37utmxiquukk8ajc">
         <columns>user_id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="253" parent="26" name="UK_sb8bbouer5wak8vyiiy4pf2bx">
+      <index id="257" parent="26" name="UK_sb8bbouer5wak8vyiiy4pf2bx">
         <columns>username</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="254" parent="26" name="PRIMARY">
+      <key id="258" parent="26" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="255" parent="26" name="UK_a3imlf41l37utmxiquukk8ajc">
+      <key id="259" parent="26" name="UK_a3imlf41l37utmxiquukk8ajc">
         <columns>user_id</columns>
         <underlying-index>UK_a3imlf41l37utmxiquukk8ajc</underlying-index>
       </key>
-      <key id="256" parent="26" name="UK_sb8bbouer5wak8vyiiy4pf2bx">
+      <key id="260" parent="26" name="UK_sb8bbouer5wak8vyiiy4pf2bx">
         <columns>username</columns>
         <underlying-index>UK_sb8bbouer5wak8vyiiy4pf2bx</underlying-index>
       </key>
-      <foreign-key id="257" parent="26" name="FK_a3imlf41l37utmxiquukk8ajc">
+      <foreign-key id="261" parent="26" name="FK_a3imlf41l37utmxiquukk8ajc">
         <columns>user_id</columns>
         <ref-key>PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="258" parent="26" name="FK_l15pi1u587xf9dqgp9ljg8bqx">
+      <foreign-key id="262" parent="26" name="FK_l15pi1u587xf9dqgp9ljg8bqx">
         <columns>area_id</columns>
         <ref-key>~.area.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="259" parent="26" name="FK_rd7yb0jynpq0kvck18tsmic05">
+      <foreign-key id="263" parent="26" name="FK_rd7yb0jynpq0kvck18tsmic05">
         <columns>rol_lab_id</columns>
         <ref-key>~.rol_lab.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="260" parent="27" name="user_id">
+      <column id="264" parent="27" name="user_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="261" parent="27" name="rol_id">
+      <column id="265" parent="27" name="rol_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="262" parent="27" name="FK_pn3er40eu5hd09r6yhy3p8jia">
+      <index id="266" parent="27" name="FK_pn3er40eu5hd09r6yhy3p8jia">
         <columns>rol_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="263" parent="27" name="PRIMARY">
+      <key id="267" parent="27" name="PRIMARY">
         <columns>user_id
 rol_id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="264" parent="27" name="FK_6mpe5i3e0bmjpy9ee7chvi7fr">
+      <foreign-key id="268" parent="27" name="FK_6mpe5i3e0bmjpy9ee7chvi7fr">
         <columns>user_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="265" parent="27" name="FK_pn3er40eu5hd09r6yhy3p8jia">
+      <foreign-key id="269" parent="27" name="FK_pn3er40eu5hd09r6yhy3p8jia">
         <columns>rol_id</columns>
         <ref-key>~.rol.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="266" parent="28" name="id">
+      <column id="270" parent="28" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="267" parent="28" name="version">
+      <column id="271" parent="28" name="version">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="268" parent="28" name="titulo_id">
+      <column id="272" parent="28" name="titulo_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="269" parent="28" name="usuario_id">
+      <column id="273" parent="28" name="usuario_id">
         <mandatory>1</mandatory>
         <data-type>bigint(20)</data-type>
       </column>
-      <index id="270" parent="28" name="FK_ej54a7keb61rh5fp7me09loj0">
+      <index id="274" parent="28" name="FK_ej54a7keb61rh5fp7me09loj0">
         <columns>titulo_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="271" parent="28" name="FK_eo0ney42jtcp6xyhipxx6ajin">
+      <index id="275" parent="28" name="FK_eo0ney42jtcp6xyhipxx6ajin">
         <columns>usuario_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="272" parent="28" name="PRIMARY">
+      <key id="276" parent="28" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="273" parent="28" name="FK_ej54a7keb61rh5fp7me09loj0">
+      <foreign-key id="277" parent="28" name="FK_ej54a7keb61rh5fp7me09loj0">
         <columns>titulo_id</columns>
         <ref-key>~.titulo.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="274" parent="28" name="FK_eo0ney42jtcp6xyhipxx6ajin">
+      <foreign-key id="278" parent="28" name="FK_eo0ney42jtcp6xyhipxx6ajin">
         <columns>usuario_id</columns>
         <ref-key>~.user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
