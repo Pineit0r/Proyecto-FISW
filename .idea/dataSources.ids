@@ -1,341 +1,1086 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="Proyecto-FISW dev" uuid="5a2430ce-7c7b-4721-92e2-f436c9928607">
-    <database-info product="MySQL" version="5.7.9" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
+    <database-info product="MySQL" version="5.7.9-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.37 ( Revision: 09940f05b4c98150f352e787a2549f11a2e9da93 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
-    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
-    <schema name="" catalog="fisw"/>
-    <table name="area" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_lue51huqett0l1p97tg0jbx8d" table="proyecto_area" schema="" catalog="fisw" columns="area_id"/>
-      <exported-key name="FK_q4h1x4j54r0qhdwwhiuncuddd" table="publicacion_revistas" schema="" catalog="fisw" columns="area_id"/>
-      <exported-key name="FK_l15pi1u587xf9dqgp9ljg8bqx" table="user" schema="" catalog="fisw" columns="area_id"/>
-    </table>
-    <table name="asist_congreso" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="congreso_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="poster_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_26wxvskaoqfibyu8p3an5nks1" columns="poster_id" ref-table="multimedia" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_bblsf6e9294kulo6vu7kleni4" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_sul5iav8y89mchw04ewiuscqh" columns="congreso_id" ref-table="congreso" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_26wxvskaoqfibyu8p3an5nks1" unique="false" columns="poster_id"/>
-      <index name="FK_bblsf6e9294kulo6vu7kleni4" unique="false" columns="usuario_id"/>
-      <index name="FK_sul5iav8y89mchw04ewiuscqh" unique="false" columns="congreso_id"/>
-    </table>
-    <table name="avance_tesis" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="actualizacion" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="tesis_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_i702imtvt88oolonpie72p2ea" columns="tesis_id" ref-table="tesis" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_liakyhlfhuwkq2635262vvmps" table="avance_tesis_comentario_avance_tesis" schema="" catalog="fisw" columns="avance_tesis_comentarios_id"/>
-      <index name="FK_i702imtvt88oolonpie72p2ea" unique="false" columns="tesis_id"/>
-    </table>
-    <table name="avance_tesis_comentario_avance_tesis" schema="" catalog="fisw" type="TABLE">
-      <column name="avance_tesis_comentarios_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="comentario_avance_tesis_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <foreign-key name="FK_6e9rtr510kgwx2ttrea5i1oh4" columns="comentario_avance_tesis_id" ref-table="comentario_avance_tesis" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_liakyhlfhuwkq2635262vvmps" columns="avance_tesis_comentarios_id" ref-table="avance_tesis" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_6e9rtr510kgwx2ttrea5i1oh4" unique="false" columns="comentario_avance_tesis_id"/>
-      <index name="FK_liakyhlfhuwkq2635262vvmps" unique="false" columns="avance_tesis_comentarios_id"/>
-    </table>
-    <table name="cargo_proyecto" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cargo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="proyecto_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_quedjdb0pivb14otips1mb7xh" columns="proyecto_id" ref-table="proyecto" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_rtxrufdtkgw5r10kiellns215" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_quedjdb0pivb14otips1mb7xh" unique="false" columns="proyecto_id"/>
-      <index name="FK_rtxrufdtkgw5r10kiellns215" unique="false" columns="usuario_id"/>
-    </table>
-    <table name="ciudad" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="ciudad" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="pais_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_cajnyyepyatp2769gy5o1578w" columns="pais_id" ref-table="pais" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_i3nmnxihvwj2310io160ic70j" table="congreso" schema="" catalog="fisw" columns="ciudad_id"/>
-      <index name="FK_cajnyyepyatp2769gy5o1578w" unique="false" columns="pais_id"/>
-    </table>
-    <table name="comentario_avance_tesis" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="autor_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="comentario" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_73i2icj22ihfqlv6jyfrr7qk2" columns="autor_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_6e9rtr510kgwx2ttrea5i1oh4" table="avance_tesis_comentario_avance_tesis" schema="" catalog="fisw" columns="comentario_avance_tesis_id"/>
-      <index name="FK_73i2icj22ihfqlv6jyfrr7qk2" unique="false" columns="autor_id"/>
-    </table>
-    <table name="congreso" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="ciudad_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="fecha" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="lugar" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_i3nmnxihvwj2310io160ic70j" columns="ciudad_id" ref-table="ciudad" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_sul5iav8y89mchw04ewiuscqh" table="asist_congreso" schema="" catalog="fisw" columns="congreso_id"/>
-      <index name="FK_i3nmnxihvwj2310io160ic70j" unique="false" columns="ciudad_id"/>
-    </table>
-    <table name="evento" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="fecha" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_p2prb8ph5xylg504sycxb08yx" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_p2prb8ph5xylg504sycxb08yx" unique="false" columns="usuario_id"/>
-    </table>
-    <table name="institucion" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="pais_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_8mk61c7wpw8a14c5rwcjjoklf" columns="pais_id" ref-table="pais" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_k3n85bnvg0tbhcrs6spyqovn7" table="tesis" schema="" catalog="fisw" columns="institucion_id"/>
-      <exported-key name="FK_5456c7ypql5nnhmymax0cfmyw" table="titulo" schema="" catalog="fisw" columns="institucion_id"/>
-      <index name="FK_8mk61c7wpw8a14c5rwcjjoklf" unique="false" columns="pais_id"/>
-    </table>
-    <table name="keyword" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="keyword" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_fvye5hrqyrqd578xkuv9d4sr6" table="publicacion_revista_keyword" schema="" catalog="fisw" columns="keyword_id"/>
-    </table>
-    <table name="multimedia" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="filename" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="fullpath" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="subido" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="tipo" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_57cj37vnguog864g3hfs3l9xm" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_26wxvskaoqfibyu8p3an5nks1" table="asist_congreso" schema="" catalog="fisw" columns="poster_id"/>
-      <exported-key name="FK_l72mrecu0sf1oc72c0p3h7le9" table="tesis" schema="" catalog="fisw" columns="pdf_id"/>
-      <index name="FK_57cj37vnguog864g3hfs3l9xm" unique="false" columns="usuario_id"/>
-    </table>
-    <table name="pais" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_cajnyyepyatp2769gy5o1578w" table="ciudad" schema="" catalog="fisw" columns="pais_id"/>
-      <exported-key name="FK_8mk61c7wpw8a14c5rwcjjoklf" table="institucion" schema="" catalog="fisw" columns="pais_id"/>
-    </table>
-    <table name="proyecto" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="fin" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="inicio" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="otro" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_quedjdb0pivb14otips1mb7xh" table="cargo_proyecto" schema="" catalog="fisw" columns="proyecto_id"/>
-      <exported-key name="FK_43aabu6vshyamk3bacomkmdhq" table="proyecto_area" schema="" catalog="fisw" columns="proyecto_id"/>
-    </table>
-    <table name="proyecto_area" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="area_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="proyecto_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_43aabu6vshyamk3bacomkmdhq" columns="proyecto_id" ref-table="proyecto" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_lue51huqett0l1p97tg0jbx8d" columns="area_id" ref-table="area" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_43aabu6vshyamk3bacomkmdhq" unique="false" columns="proyecto_id"/>
-      <index name="FK_lue51huqett0l1p97tg0jbx8d" unique="false" columns="area_id"/>
-    </table>
-    <table name="publicacion_libro" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="isbn" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="anho" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="autores" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="editorial" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="titulo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_nlic7t7iio0436r600lpjwdjd" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_nlic7t7iio0436r600lpjwdjd" unique="false" columns="usuario_id"/>
-    </table>
-    <table name="publicacion_revista_keyword" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="keyword_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="publicacion_revista_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_1q8hbfg6qgfski7fb3wlqpqaf" columns="publicacion_revista_id" ref-table="publicacion_revistas" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_fvye5hrqyrqd578xkuv9d4sr6" columns="keyword_id" ref-table="keyword" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_1q8hbfg6qgfski7fb3wlqpqaf" unique="false" columns="publicacion_revista_id"/>
-      <index name="FK_fvye5hrqyrqd578xkuv9d4sr6" unique="false" columns="keyword_id"/>
-    </table>
-    <table name="publicacion_revistas" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="anno" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="area_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="autores" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="keywords" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="revista" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="titulo" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_7lhck9yio28bko241dcxl6ofv" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_q4h1x4j54r0qhdwwhiuncuddd" columns="area_id" ref-table="area" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_1q8hbfg6qgfski7fb3wlqpqaf" table="publicacion_revista_keyword" schema="" catalog="fisw" columns="publicacion_revista_id"/>
-      <index name="FK_7lhck9yio28bko241dcxl6ofv" unique="false" columns="usuario_id"/>
-      <index name="FK_q4h1x4j54r0qhdwwhiuncuddd" unique="false" columns="area_id"/>
-    </table>
-    <table name="registration_code" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="date_created" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-    </table>
-    <table name="reporte" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="admin_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="reporte" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_3sn7deyrw0w38maupxy6sc275" columns="admin_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_4c3to0mbsu3mm7pjpqkappghi" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_3sn7deyrw0w38maupxy6sc275" unique="false" columns="admin_id"/>
-      <index name="FK_4c3to0mbsu3mm7pjpqkappghi" unique="false" columns="usuario_id"/>
-    </table>
-    <table name="rol" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="authority" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_pn3er40eu5hd09r6yhy3p8jia" table="user_rol" schema="" catalog="fisw" columns="rol_id"/>
-      <index name="UK_pbdeb23es4jm3il5dvs9ec1jb" unique="true" columns="authority"/>
-    </table>
-    <table name="rol_lab" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_rd7yb0jynpq0kvck18tsmic05" table="user" schema="" catalog="fisw" columns="rol_lab_id"/>
-    </table>
-    <table name="tesis" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="autor_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cotutor_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="institucion_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="modificado" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="pdf_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="ruta" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="tipo" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="tutor_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_1oribla7k4krb929kjjp8198q" columns="autor_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_k3n85bnvg0tbhcrs6spyqovn7" columns="institucion_id" ref-table="institucion" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_l72mrecu0sf1oc72c0p3h7le9" columns="pdf_id" ref-table="multimedia" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_r2rsfjmklqn9t2ay6gfyydwlx" columns="cotutor_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_sbn8f6ljucrfk4at3rrukbcs" columns="tutor_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_i702imtvt88oolonpie72p2ea" table="avance_tesis" schema="" catalog="fisw" columns="tesis_id"/>
-      <index name="FK_1oribla7k4krb929kjjp8198q" unique="false" columns="autor_id"/>
-      <index name="FK_k3n85bnvg0tbhcrs6spyqovn7" unique="false" columns="institucion_id"/>
-      <index name="FK_l72mrecu0sf1oc72c0p3h7le9" unique="false" columns="pdf_id"/>
-      <index name="FK_r2rsfjmklqn9t2ay6gfyydwlx" unique="false" columns="cotutor_id"/>
-      <index name="FK_sbn8f6ljucrfk4at3rrukbcs" unique="false" columns="tutor_id"/>
-    </table>
-    <table name="titulo" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="institucion_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="nombre" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="tipo" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_5456c7ypql5nnhmymax0cfmyw" columns="institucion_id" ref-table="institucion" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_ej54a7keb61rh5fp7me09loj0" table="usuario_titulo" schema="" catalog="fisw" columns="titulo_id"/>
-      <index name="FK_5456c7ypql5nnhmymax0cfmyw" unique="false" columns="institucion_id"/>
-    </table>
-    <table name="user" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="account_expired" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="account_locked" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="enabled" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="password_expired" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="class" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
-      <column name="apellidos" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="area_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="nombres" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="registro_completado" sqlType="BIT" precision="1" scale="0" nullable="true" jdbcType="-7"/>
-      <column name="rol_lab_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_a3imlf41l37utmxiquukk8ajc" columns="user_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_l15pi1u587xf9dqgp9ljg8bqx" columns="area_id" ref-table="area" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_rd7yb0jynpq0kvck18tsmic05" columns="rol_lab_id" ref-table="rol_lab" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="FK_bblsf6e9294kulo6vu7kleni4" table="asist_congreso" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_rtxrufdtkgw5r10kiellns215" table="cargo_proyecto" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_73i2icj22ihfqlv6jyfrr7qk2" table="comentario_avance_tesis" schema="" catalog="fisw" columns="autor_id"/>
-      <exported-key name="FK_p2prb8ph5xylg504sycxb08yx" table="evento" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_57cj37vnguog864g3hfs3l9xm" table="multimedia" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_nlic7t7iio0436r600lpjwdjd" table="publicacion_libro" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_7lhck9yio28bko241dcxl6ofv" table="publicacion_revistas" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_3sn7deyrw0w38maupxy6sc275" table="reporte" schema="" catalog="fisw" columns="admin_id"/>
-      <exported-key name="FK_4c3to0mbsu3mm7pjpqkappghi" table="reporte" schema="" catalog="fisw" columns="usuario_id"/>
-      <exported-key name="FK_1oribla7k4krb929kjjp8198q" table="tesis" schema="" catalog="fisw" columns="autor_id"/>
-      <exported-key name="FK_r2rsfjmklqn9t2ay6gfyydwlx" table="tesis" schema="" catalog="fisw" columns="cotutor_id"/>
-      <exported-key name="FK_sbn8f6ljucrfk4at3rrukbcs" table="tesis" schema="" catalog="fisw" columns="tutor_id"/>
-      <exported-key name="FK_a3imlf41l37utmxiquukk8ajc" table="user" schema="" catalog="fisw" columns="user_id"/>
-      <exported-key name="FK_6mpe5i3e0bmjpy9ee7chvi7fr" table="user_rol" schema="" catalog="fisw" columns="user_id"/>
-      <exported-key name="FK_eo0ney42jtcp6xyhipxx6ajin" table="usuario_titulo" schema="" catalog="fisw" columns="usuario_id"/>
-      <index name="UK_a3imlf41l37utmxiquukk8ajc" unique="true" columns="user_id"/>
-      <index name="UK_sb8bbouer5wak8vyiiy4pf2bx" unique="true" columns="username"/>
-      <index name="FK_l15pi1u587xf9dqgp9ljg8bqx" unique="false" columns="area_id"/>
-      <index name="FK_rd7yb0jynpq0kvck18tsmic05" unique="false" columns="rol_lab_id"/>
-    </table>
-    <table name="user_rol" schema="" catalog="fisw" type="TABLE">
-      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="rol_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="user_id,rol_id"/>
-      <foreign-key name="FK_6mpe5i3e0bmjpy9ee7chvi7fr" columns="user_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_pn3er40eu5hd09r6yhy3p8jia" columns="rol_id" ref-table="rol" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_pn3er40eu5hd09r6yhy3p8jia" unique="false" columns="rol_id"/>
-    </table>
-    <table name="usuario_titulo" schema="" catalog="fisw" type="TABLE">
-      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
-      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="titulo_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="usuario_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_ej54a7keb61rh5fp7me09loj0" columns="titulo_id" ref-table="titulo" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="FK_eo0ney42jtcp6xyhipxx6ajin" columns="usuario_id" ref-table="user" ref-schema="" ref-catalog="fisw" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="FK_ej54a7keb61rh5fp7me09loj0" unique="false" columns="titulo_id"/>
-      <index name="FK_eo0ney42jtcp6xyhipxx6ajin" unique="false" columns="usuario_id"/>
-    </table>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="fisw"/>
+      <table id="2" parent="1" name="area"/>
+      <table id="3" parent="1" name="asist_congreso"/>
+      <table id="4" parent="1" name="avance_tesis"/>
+      <table id="5" parent="1" name="avance_tesis_comentario_avance_tesis"/>
+      <table id="6" parent="1" name="cargo_proyecto"/>
+      <table id="7" parent="1" name="ciudad"/>
+      <table id="8" parent="1" name="comentario_avance_tesis"/>
+      <table id="9" parent="1" name="congreso"/>
+      <table id="10" parent="1" name="evento"/>
+      <table id="11" parent="1" name="institucion"/>
+      <table id="12" parent="1" name="keyword"/>
+      <table id="13" parent="1" name="multimedia"/>
+      <table id="14" parent="1" name="pais"/>
+      <table id="15" parent="1" name="proyecto"/>
+      <table id="16" parent="1" name="proyecto_area"/>
+      <table id="17" parent="1" name="publicacion_libro"/>
+      <table id="18" parent="1" name="publicacion_revista_keyword"/>
+      <table id="19" parent="1" name="publicacion_revistas"/>
+      <table id="20" parent="1" name="registration_code"/>
+      <table id="21" parent="1" name="reporte"/>
+      <table id="22" parent="1" name="rol"/>
+      <table id="23" parent="1" name="rol_lab"/>
+      <table id="24" parent="1" name="tesis"/>
+      <table id="25" parent="1" name="titulo"/>
+      <table id="26" parent="1" name="user"/>
+      <table id="27" parent="1" name="user_rol"/>
+      <table id="28" parent="1" name="usuario_titulo"/>
+      <column id="29" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="30" parent="2" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="31" parent="2" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="32" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="34" parent="3" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="35" parent="3" name="congreso_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="36" parent="3" name="poster_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="37" parent="3" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="38" parent="3" name="FK_26wxvskaoqfibyu8p3an5nks1">
+        <columns>poster_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="39" parent="3" name="FK_bblsf6e9294kulo6vu7kleni4">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="40" parent="3" name="FK_sul5iav8y89mchw04ewiuscqh">
+        <columns>congreso_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="41" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="42" parent="3" name="FK_26wxvskaoqfibyu8p3an5nks1">
+        <columns>poster_id</columns>
+        <ref-key>~.multimedia.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="43" parent="3" name="FK_bblsf6e9294kulo6vu7kleni4">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="44" parent="3" name="FK_sul5iav8y89mchw04ewiuscqh">
+        <columns>congreso_id</columns>
+        <ref-key>~.congreso.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="45" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="46" parent="4" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="47" parent="4" name="actualizacion">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="48" parent="4" name="ruta">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="49" parent="4" name="tesis_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="50" parent="4" name="FK_i702imtvt88oolonpie72p2ea">
+        <columns>tesis_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="51" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="52" parent="4" name="FK_i702imtvt88oolonpie72p2ea">
+        <columns>tesis_id</columns>
+        <ref-key>~.tesis.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="53" parent="5" name="avance_tesis_comentarios_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="54" parent="5" name="comentario_avance_tesis_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="55" parent="5" name="FK_6e9rtr510kgwx2ttrea5i1oh4">
+        <columns>comentario_avance_tesis_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="56" parent="5" name="FK_liakyhlfhuwkq2635262vvmps">
+        <columns>avance_tesis_comentarios_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <foreign-key id="57" parent="5" name="FK_6e9rtr510kgwx2ttrea5i1oh4">
+        <columns>comentario_avance_tesis_id</columns>
+        <ref-key>~.comentario_avance_tesis.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="58" parent="5" name="FK_liakyhlfhuwkq2635262vvmps">
+        <columns>avance_tesis_comentarios_id</columns>
+        <ref-key>~.avance_tesis.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="59" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="60" parent="6" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="61" parent="6" name="cargo">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="62" parent="6" name="proyecto_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="63" parent="6" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="64" parent="6" name="FK_quedjdb0pivb14otips1mb7xh">
+        <columns>proyecto_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="65" parent="6" name="FK_rtxrufdtkgw5r10kiellns215">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="66" parent="6" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="67" parent="6" name="FK_quedjdb0pivb14otips1mb7xh">
+        <columns>proyecto_id</columns>
+        <ref-key>~.proyecto.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="68" parent="6" name="FK_rtxrufdtkgw5r10kiellns215">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="69" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="70" parent="7" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="71" parent="7" name="ciudad">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="72" parent="7" name="pais_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="73" parent="7" name="FK_cajnyyepyatp2769gy5o1578w">
+        <columns>pais_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="74" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="75" parent="7" name="FK_cajnyyepyatp2769gy5o1578w">
+        <columns>pais_id</columns>
+        <ref-key>~.pais.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="76" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="77" parent="8" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="78" parent="8" name="autor_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="79" parent="8" name="comentario">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="80" parent="8" name="FK_73i2icj22ihfqlv6jyfrr7qk2">
+        <columns>autor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="81" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="82" parent="8" name="FK_73i2icj22ihfqlv6jyfrr7qk2">
+        <columns>autor_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="83" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="84" parent="9" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="85" parent="9" name="ciudad_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="86" parent="9" name="fecha">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="87" parent="9" name="lugar">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="88" parent="9" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="89" parent="9" name="FK_i3nmnxihvwj2310io160ic70j">
+        <columns>ciudad_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="90" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="91" parent="9" name="FK_i3nmnxihvwj2310io160ic70j">
+        <columns>ciudad_id</columns>
+        <ref-key>~.ciudad.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="92" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="93" parent="10" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="94" parent="10" name="descripcion">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="95" parent="10" name="fecha">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="96" parent="10" name="lugar">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="97" parent="10" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="98" parent="10" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="99" parent="10" name="FK_p2prb8ph5xylg504sycxb08yx">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="100" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="101" parent="10" name="FK_p2prb8ph5xylg504sycxb08yx">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="102" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="103" parent="11" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="104" parent="11" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="105" parent="11" name="pais_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="106" parent="11" name="FK_8mk61c7wpw8a14c5rwcjjoklf">
+        <columns>pais_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="107" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="108" parent="11" name="FK_8mk61c7wpw8a14c5rwcjjoklf">
+        <columns>pais_id</columns>
+        <ref-key>~.pais.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="109" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="110" parent="12" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="111" parent="12" name="keyword">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="112" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="113" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="114" parent="13" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="115" parent="13" name="filename">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="116" parent="13" name="fullpath">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="117" parent="13" name="subido">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="118" parent="13" name="tipo">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="119" parent="13" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="120" parent="13" name="FK_57cj37vnguog864g3hfs3l9xm">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="121" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="122" parent="13" name="FK_57cj37vnguog864g3hfs3l9xm">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="123" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="124" parent="14" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="125" parent="14" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="126" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="127" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="128" parent="15" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="129" parent="15" name="fin">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="130" parent="15" name="inicio">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="131" parent="15" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="132" parent="15" name="otro">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="133" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="134" parent="16" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="135" parent="16" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="136" parent="16" name="area_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="137" parent="16" name="proyecto_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="138" parent="16" name="FK_43aabu6vshyamk3bacomkmdhq">
+        <columns>proyecto_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="139" parent="16" name="FK_lue51huqett0l1p97tg0jbx8d">
+        <columns>area_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="140" parent="16" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="141" parent="16" name="FK_43aabu6vshyamk3bacomkmdhq">
+        <columns>proyecto_id</columns>
+        <ref-key>~.proyecto.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="142" parent="16" name="FK_lue51huqett0l1p97tg0jbx8d">
+        <columns>area_id</columns>
+        <ref-key>~.area.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="143" parent="17" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="144" parent="17" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="145" parent="17" name="isbn">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="146" parent="17" name="anho">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="147" parent="17" name="autores">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="148" parent="17" name="editorial">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="149" parent="17" name="ruta">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="150" parent="17" name="titulo">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="151" parent="17" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="152" parent="17" name="FK_nlic7t7iio0436r600lpjwdjd">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="153" parent="17" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="154" parent="17" name="FK_nlic7t7iio0436r600lpjwdjd">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="155" parent="18" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="156" parent="18" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="157" parent="18" name="keyword_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="158" parent="18" name="publicacion_revista_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="159" parent="18" name="FK_1q8hbfg6qgfski7fb3wlqpqaf">
+        <columns>publicacion_revista_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="160" parent="18" name="FK_fvye5hrqyrqd578xkuv9d4sr6">
+        <columns>keyword_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="161" parent="18" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="162" parent="18" name="FK_1q8hbfg6qgfski7fb3wlqpqaf">
+        <columns>publicacion_revista_id</columns>
+        <ref-key>~.publicacion_revistas.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="163" parent="18" name="FK_fvye5hrqyrqd578xkuv9d4sr6">
+        <columns>keyword_id</columns>
+        <ref-key>~.keyword.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="164" parent="19" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="165" parent="19" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="166" parent="19" name="anno">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="167" parent="19" name="area_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="168" parent="19" name="autores">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="169" parent="19" name="keywords">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="170" parent="19" name="revista">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="171" parent="19" name="ruta">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="172" parent="19" name="titulo">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="173" parent="19" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="174" parent="19" name="FK_7lhck9yio28bko241dcxl6ofv">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="175" parent="19" name="FK_q4h1x4j54r0qhdwwhiuncuddd">
+        <columns>area_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="176" parent="19" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="177" parent="19" name="FK_7lhck9yio28bko241dcxl6ofv">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="178" parent="19" name="FK_q4h1x4j54r0qhdwwhiuncuddd">
+        <columns>area_id</columns>
+        <ref-key>~.area.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="179" parent="20" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="180" parent="20" name="date_created">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="181" parent="20" name="token">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="182" parent="20" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="183" parent="20" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="184" parent="21" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="185" parent="21" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="186" parent="21" name="admin_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="187" parent="21" name="reporte">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="188" parent="21" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="189" parent="21" name="FK_3sn7deyrw0w38maupxy6sc275">
+        <columns>admin_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="190" parent="21" name="FK_4c3to0mbsu3mm7pjpqkappghi">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="191" parent="21" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="192" parent="21" name="FK_3sn7deyrw0w38maupxy6sc275">
+        <columns>admin_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="193" parent="21" name="FK_4c3to0mbsu3mm7pjpqkappghi">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="194" parent="22" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="195" parent="22" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="196" parent="22" name="authority">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="197" parent="22" name="UK_pbdeb23es4jm3il5dvs9ec1jb">
+        <columns>authority</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="198" parent="22" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="199" parent="22" name="UK_pbdeb23es4jm3il5dvs9ec1jb">
+        <columns>authority</columns>
+        <underlying-index>UK_pbdeb23es4jm3il5dvs9ec1jb</underlying-index>
+      </key>
+      <column id="200" parent="23" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="201" parent="23" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="202" parent="23" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="203" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="204" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="205" parent="24" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="206" parent="24" name="autor_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="207" parent="24" name="cotutor_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="208" parent="24" name="institucion_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="209" parent="24" name="modificado">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="210" parent="24" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="211" parent="24" name="pdf_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="212" parent="24" name="ruta">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="213" parent="24" name="tipo">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="214" parent="24" name="tutor_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="215" parent="24" name="FK_1oribla7k4krb929kjjp8198q">
+        <columns>autor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="216" parent="24" name="FK_k3n85bnvg0tbhcrs6spyqovn7">
+        <columns>institucion_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="217" parent="24" name="FK_l72mrecu0sf1oc72c0p3h7le9">
+        <columns>pdf_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="218" parent="24" name="FK_r2rsfjmklqn9t2ay6gfyydwlx">
+        <columns>cotutor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="219" parent="24" name="FK_sbn8f6ljucrfk4at3rrukbcs">
+        <columns>tutor_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="220" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="221" parent="24" name="FK_1oribla7k4krb929kjjp8198q">
+        <columns>autor_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="222" parent="24" name="FK_k3n85bnvg0tbhcrs6spyqovn7">
+        <columns>institucion_id</columns>
+        <ref-key>~.institucion.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="223" parent="24" name="FK_l72mrecu0sf1oc72c0p3h7le9">
+        <columns>pdf_id</columns>
+        <ref-key>~.multimedia.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="224" parent="24" name="FK_r2rsfjmklqn9t2ay6gfyydwlx">
+        <columns>cotutor_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="225" parent="24" name="FK_sbn8f6ljucrfk4at3rrukbcs">
+        <columns>tutor_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="226" parent="25" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="227" parent="25" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="228" parent="25" name="institucion_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="229" parent="25" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="230" parent="25" name="tipo">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <index id="231" parent="25" name="FK_5456c7ypql5nnhmymax0cfmyw">
+        <columns>institucion_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="232" parent="25" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="233" parent="25" name="FK_5456c7ypql5nnhmymax0cfmyw">
+        <columns>institucion_id</columns>
+        <ref-key>~.institucion.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="234" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="235" parent="26" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="236" parent="26" name="account_expired">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="237" parent="26" name="account_locked">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="238" parent="26" name="enabled">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="239" parent="26" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="240" parent="26" name="password_expired">
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="241" parent="26" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="242" parent="26" name="class">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="243" parent="26" name="apellidos">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="244" parent="26" name="area_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="245" parent="26" name="nombres">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="246" parent="26" name="registro_completado">
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="247" parent="26" name="rol_lab_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="248" parent="26" name="user_id">
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="249" parent="26" name="FK_l15pi1u587xf9dqgp9ljg8bqx">
+        <columns>area_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="250" parent="26" name="FK_rd7yb0jynpq0kvck18tsmic05">
+        <columns>rol_lab_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="251" parent="26" name="UK_a3imlf41l37utmxiquukk8ajc">
+        <columns>user_id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="252" parent="26" name="UK_sb8bbouer5wak8vyiiy4pf2bx">
+        <columns>username</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="253" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="254" parent="26" name="UK_a3imlf41l37utmxiquukk8ajc">
+        <columns>user_id</columns>
+        <underlying-index>UK_a3imlf41l37utmxiquukk8ajc</underlying-index>
+      </key>
+      <key id="255" parent="26" name="UK_sb8bbouer5wak8vyiiy4pf2bx">
+        <columns>username</columns>
+        <underlying-index>UK_sb8bbouer5wak8vyiiy4pf2bx</underlying-index>
+      </key>
+      <foreign-key id="256" parent="26" name="FK_a3imlf41l37utmxiquukk8ajc">
+        <columns>user_id</columns>
+        <ref-key>PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="257" parent="26" name="FK_l15pi1u587xf9dqgp9ljg8bqx">
+        <columns>area_id</columns>
+        <ref-key>~.area.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="258" parent="26" name="FK_rd7yb0jynpq0kvck18tsmic05">
+        <columns>rol_lab_id</columns>
+        <ref-key>~.rol_lab.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="259" parent="27" name="user_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="260" parent="27" name="rol_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="261" parent="27" name="FK_pn3er40eu5hd09r6yhy3p8jia">
+        <columns>rol_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="262" parent="27" name="PRIMARY">
+        <columns>user_id
+rol_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="263" parent="27" name="FK_6mpe5i3e0bmjpy9ee7chvi7fr">
+        <columns>user_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="264" parent="27" name="FK_pn3er40eu5hd09r6yhy3p8jia">
+        <columns>rol_id</columns>
+        <ref-key>~.rol.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="265" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="266" parent="28" name="version">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="267" parent="28" name="titulo_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <column id="268" parent="28" name="usuario_id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)</data-type>
+      </column>
+      <index id="269" parent="28" name="FK_ej54a7keb61rh5fp7me09loj0">
+        <columns>titulo_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="270" parent="28" name="FK_eo0ney42jtcp6xyhipxx6ajin">
+        <columns>usuario_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="271" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="272" parent="28" name="FK_ej54a7keb61rh5fp7me09loj0">
+        <columns>titulo_id</columns>
+        <ref-key>~.titulo.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="273" parent="28" name="FK_eo0ney42jtcp6xyhipxx6ajin">
+        <columns>usuario_id</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
   </data-source>
 </component>

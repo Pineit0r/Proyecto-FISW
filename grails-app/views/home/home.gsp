@@ -5,7 +5,7 @@
   Time: 9:56
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta name="layout" content="main"/>
     </head>
@@ -32,7 +32,6 @@
         <!-- Seccion Descripciones -->
         <div class="container-fluid" id="fondo_gris">
             <div class="centrado" id="portada">
-
                 <h1>Nuestro Equipo</h1>
                 <div class="row">
                     <g:img class="img-rounded" dir="images" file="equipo.jpg" height="350" width="1000"></g:img>
@@ -42,15 +41,16 @@
                         <p class="lead">
                             Mas de 30 personas conforman el laboratorio entre profesores y alumnos tanto de pregrado y postgrado.
                         </p>
-                        <p>
-                            <a class="btn btn-default" href="#" role="button">Conócelos &raquo;</a>
-                        </p>
+
                     </div>
                 </div>
 
-                <hr class="featurette-divider">
-
-                <h1>Contacto</h1>
+                    <hr class="featurette-divider">
+                    </br>
+                    </br>
+                <div class="footer">
+                    <g:render template="/layouts/footer"/>
+                </div>
             </div>
         </div>
     </body>

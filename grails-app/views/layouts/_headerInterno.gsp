@@ -15,19 +15,6 @@
                         <sec:ifLoggedIn>
                             <li class="active"><g:link controller="intranet">Intranet</g:link></li>
                         </sec:ifLoggedIn>
-
-                        <sec:ifAnyGranted roles="ROLE_ADMIN">
-                            <li><g:link controller="admin">Menú</g:link></li>
-                        </sec:ifAnyGranted>
-
-                        <sec:ifAnyGranted roles="ROLE_USER">
-                            <li><g:link controller="home" href="#">Menú</g:link></li> <!-- Corregir -->
-                        </sec:ifAnyGranted>
-
-                        <sec:ifAnyGranted roles="ROLE_DIRECTOR">
-                            <li><g:link controller="director">Menú</g:link></li>
-                        </sec:ifAnyGranted>
-
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

@@ -14,12 +14,15 @@ class BootStrap {
 
         def Valpo = new Ciudad("Valparaíso", chile).save(failOnError: true)
         def Berlin = new Ciudad("Berlin", alemania).save(failOnError: true)
+        def santiago = new Ciudad("Santiago",chile).save(failOnError: true)
 
         def clca = new Congreso("Congreso Latinoamericano de Ciencias Ambientales", new Date(2016, 5, 13), Berlin).save(failOnError: true)
         def encq = new Congreso("Encuentro Nacional de Ciencias Químicas", new Date(2016, 9, 1), Valpo).save(failOnError: true)
 
         def usm = new Institucion("USM", chile).save(failOnError: true)
         def pucv = new Institucion("PUCV", chile).save(failOnError: true)
+        def uc = new Institucion("UC",chile).save(failOnError: true)
+        def uch = new Institucion("UCH",chile).save(failOnError: true)
 
         new Titulo("Informática", usm, false).save(failOnError: true)
         new Titulo("Informática", pucv, true).save(failOnError: true)
@@ -27,6 +30,7 @@ class BootStrap {
         new Titulo("Industrial", pucv, true).save(failOnError: true)
         new Titulo("Química", usm, true).save(failOnError: true)
         new Titulo("Química", usm, false).save(failOnError: true)
+
 
         def biotechVegetalArea = Area.findOrSaveByNombre("Biotecnología vegetal")
         def compuestosArea = Area.findOrSaveByNombre("Compuestos bioactivos")
@@ -42,7 +46,7 @@ class BootStrap {
         def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", compuestosArea, jefeLaboratorioRolLab).save(failOnError: true)
         def adminFelipe= new Usuario("tatafel_8@hotmail.com","48dpswx45kfiga","Felipe","Gonzalez", microbiologiaArea,trabajadorRolLab).save(failOnError: true)
         def usuarioAdmin = new Usuario("felipefdezpino@gmail.com", "admin00", "Administrador", "", biotechVegetalArea, trabajadorRolLab).save(failOnError: true)
-        def director = new Usuario("Director@director.cl","director","NombreAdministrador","ApellidoAdmin",biotechVegetalArea,trabajadorRolLab).save(failOnError: true)
+        def director = new Usuario("Director@director.cl","director","Juan","Pérez",biotechVegetalArea,trabajadorRolLab).save(failOnError: true)
 
         UserRol.create adminFelipe,adminRol,true
         UserRol.create usuarioAdmin,adminRol,true

@@ -13,31 +13,30 @@
     <div>
 <body>
     <g:render template="/layouts/headerInterno"/>
-    <div class="fixed-navbar-content">
-        <div class="site-wrapper">
-            <div class="centrado">
 
-                <div class="container">
-                    <div class="jumbotron">
-                        <div class="row">
-                            <div class="panel panel-success">
-                                <div class="panel-heading">
-                                    <h1 class="panel-title" style="font-size: 40px">Intranet</h1>
-                                </div>
-                            </div>
+    <div class="container">
+        <div class="alineacion">
 
-                            <div class="col-md-6">
-                                <div class="well">
-                                    <h3>Bienvenido <g:getRole /></h3>
-                                    <g:getUserName />
-                                    <sec:ifAllGranted roles="ROLE_ADMIN">
-                                        <g:if test="${usuarioInstanceCount > 0}">
-                                            <h1>Existen <g:link class="list" controller="usuario" action="indexPendiente">
-                                                cuentas de usuarios</g:link> pendientes de verificación.
-                                            </h1>
-                                        </g:if>
-                                    </sec:ifAllGranted>
-                                    <sec:ifAllGranted roles="ROLE_DIRECTOR">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title" style="font-size: 40px">Intranet</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="well">
+                        
+                        <sec:ifAllGranted roles="ROLE_ADMIN">
+                            <g:if test="${usuarioInstanceCount > 0}">
+                                <h1>Existen <g:link class="list" controller="usuario" action="indexPendiente">
+                                    cuentas de usuarios</g:link> pendientes de verificación.
+                                </h1>
+                            </g:if>
+                        </sec:ifAllGranted>
+                        <sec:ifAllGranted roles="ROLE_DIRECTOR">
                                         <p><div class="well">
                                             <g:link class="btn btn-xs btn-success" controller="evento" action="create">Crear Nuevo Evento</g:link>
                                             <g:link class="btn btn-xs btn-success" controller="congreso" action="create">Agregar Congreso</g:link>
@@ -106,8 +105,7 @@
                 </div>
             </div>
             </div>
-        </div>
-    </div>
+
 </body>
 </html>
 

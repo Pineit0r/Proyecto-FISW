@@ -10,6 +10,7 @@
 		<title>Labmmba</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${assetPath(src: 'usm.ico')}" type="image/x-icon">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   		<asset:stylesheet src="application.css"/>
 		<asset:stylesheet src="bootstrap.css"/>

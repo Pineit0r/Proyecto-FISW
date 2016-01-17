@@ -13,10 +13,8 @@
 
 <body>
 	<g:render template="/layouts/headerInterno"/>
-	<div class="fixed-navbar-content">
-		<div class="site-wrapper">
-			<div class="centrado">
-				<div class="row">
+	<div class="container"
+
 					<div class="panel panel-success">
 						<fieldset class="form">
 							<div class="panel-body">
@@ -26,9 +24,6 @@
 							</div>
 						</fieldset>
 					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </body>
 </html>
