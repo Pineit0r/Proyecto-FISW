@@ -67,20 +67,25 @@
                             <div class="panel-body">
                             <g:if test="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date()).size() != 0}">
                                 <table class='table table-condensed'>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Fecha</th>
-                                        <th>Lugar</th>
-                                        <th></th>
-                                    </tr>
-                                    <g:each in="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date())}" var="evento" status="i">
+                                    <thead>
                                         <tr>
-                                            <td>${evento.nombre}</td>
-                                            <td>${evento.fecha.getTimeString()}  ${evento.fecha.getDateString()}</td>
-                                            <td>${evento.lugar}</td>
-                                            <td><g:link class="btn btn-success btn-xs" action="show" controller="evento" id="${evento.id}"><span class="glyphicon glyphicon-eye-open"></span> Ver</g:link></td>
+                                            <th>Nombre</th>
+                                            <th>Fecha</th>
+                                            <th>Lugar</th>
+                                            <th></th>
                                         </tr>
-                                    </g:each>
+                                    </thead>
+                                    <tbody>
+                                        <g:each in="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date())}" var="evento" status="i">
+                                            <tr>
+                                                <td>${evento.nombre}</td>
+                                                <td>${evento.fecha.getTimeString()}  ${evento.fecha.getDateString()}</td>
+                                                <td>${evento.lugar}</td>
+                                                <td><g:link class="btn btn-success btn-xs" action="show" controller="evento" id="${evento.id}"><span class="glyphicon glyphicon-eye-open"></span> Ver</g:link></td>
+                                            </tr>
+                                        </g:each>
+                                    </tbody>
+
                                 </table>
                             </g:if>
                             <g:else>
@@ -100,12 +105,15 @@
 
                                     <g:if test="${proyecto.fisw.Congreso.findAllByFechaGreaterThan(new Date()).size() != 0}">
                                         <table class='table table-condensed'>
-                                        <tr>
-                                            <th>Nombre</th>
-                                            <th>Fecha</th>
-                                            <th>Ciudad, País</th>
-                                            <th></th>
-                                        </tr>
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Fecha</th>
+                                                    <th>Ciudad, País</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
                                             <g:each in="${proyecto.fisw.Congreso.findAllByFechaGreaterThan(new Date())}" var="congreso">
                                                 <tr>
                                                     <td>${congreso.nombre}</td>
@@ -114,6 +122,7 @@
                                                     <td><g:link class="btn btn-success btn-xs" action="show" controller="congreso" id="${congreso.id}"><span class="glyphicon glyphicon-eye-open"></span> Ver</g:link></td>
                                                 </tr>
                                             </g:each>
+                                            </tbody>
                                         </table>
                                     </g:if>
                                 <g:else>

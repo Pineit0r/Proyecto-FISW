@@ -1,6 +1,6 @@
 <%@ page import="proyecto.fisw.PublicacionLibro" %>
 
-<div class="well">
+
 	<label for="titulo">
 		Titulo del Libro
 	</label>
@@ -26,7 +26,7 @@
 	</label>
 
 	<g:field type="text" placeholder="Editorial" name="editorial" class="form-control top"/>
-
+	<br>
 	<div class="fieldcontain ${hasErrors(bean: publicacionLibroInstance, field: 'poster', 'error')} ">
 		<label>PDF</label>
 		<div align="center">
@@ -35,4 +35,4 @@
 	</div>
 	<input name="tipo" value="publicacionLibro" hidden>
 	<input name="usuario.id" value="1" hidden>
-</div>
+	<br>

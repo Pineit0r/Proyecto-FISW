@@ -69,6 +69,26 @@
       </PATH_ELEMENT>
     </PATH>
   </component>
+  <component name="DockManager">
+    <window id="6">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="index.gsp" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.82474226">
+                    <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Proyecto-FISW" />
@@ -95,41 +115,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
+      <file leaf-file-name="UsuarioController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-36.081635">
-              <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
-              <folding />
+            <state vertical-scroll-proportion="42.869564">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="create.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/evento/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2040815">
-              <caret line="49" column="6" selection-start-line="15" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
+            <state vertical-scroll-proportion="-7.285714">
+              <caret line="24" column="38" selection-start-line="7" selection-start-column="8" selection-end-line="24" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.gsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/evento/show.gsp">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53424656">
-              <caret line="53" column="78" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
+            <state vertical-scroll-proportion="-2.941452">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/show.gsp">
+      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.22449">
-              <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+            <state vertical-scroll-proportion="-4.897959">
+              <caret line="49" column="110" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
               <folding />
             </state>
           </provider>
@@ -156,40 +178,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Pais.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Institucion.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/usuario/editFicha.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/UsuarioTitulo.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/multimedia/list.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/multimedia/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Multimedia.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Usuario.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/MultimediaController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Evento.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/evento/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/AsistCongreso.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/evento/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/congreso/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Ciudad.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/congreso/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/congreso/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/addPhoto.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Congreso.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/AsistCongresoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CongresoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/taglib/proyecto/fisw/TagLibTagLib.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/PublicacionLibro.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/PublicacionLibroController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
@@ -200,13 +210,25 @@
         <option value="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC5/grails-app/views/login/denied.gsp" />
         <option value="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC5/grails-app/views/login/auth.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/_headerInterno.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/intranet/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.css" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/admin/admin.gsp" />
         <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/grails-app/views/evento/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/edit.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/usuario/editFicha.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/evento/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/evento/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/congreso/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/congreso/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/congreso/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/evento/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/intranet/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/usuario/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
       </list>
     </option>
   </component>
@@ -762,12 +784,12 @@
       <workItem from="1452903177964" duration="10619000" />
       <workItem from="1452978174521" duration="3745000" />
       <workItem from="1452994710505" duration="11615000" />
-      <workItem from="1453007621966" duration="13021000" />
+      <workItem from="1453007621966" duration="18731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143113000" />
+    <option name="totallyTimeSpent" value="148823000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -790,7 +812,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837838" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11965812" sideWeight="0.46494994" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13846155" sideWeight="0.46494994" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21580547" sideWeight="0.5086849" order="3" side_tool="true" content_ui="tabs" />
@@ -842,35 +864,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Evento.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4423077">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/evento/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.489362">
-          <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Ciudad.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1538461">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Pais.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5769231">
@@ -925,20 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.425532">
           <caret line="36" column="180" selection-start-line="36" selection-start-column="180" selection-end-line="36" selection-end-column="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8723404">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5531914">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1004,30 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7872341">
           <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="30" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="180" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="180" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1106,16 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.695652">
-          <caret line="221" column="8" selection-start-line="221" selection-start-column="8" selection-end-line="221" selection-end-column="8" />
-          <folding>
-            <element signature="e#23#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
@@ -1131,14 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.877551">
-          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1231,46 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1636364">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.081635">
-          <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/evento/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.591837">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2040815">
-          <caret line="49" column="6" selection-start-line="15" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/editFicha.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9387755">
-          <caret line="38" column="14" selection-start-line="15" selection-start-column="8" selection-end-line="38" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/edit.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.868421">
@@ -1287,18 +1184,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/editFicha.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4536083">
+          <caret line="84" column="14" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.22449">
-          <caret line="53" column="7" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.73913044">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/evento/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53424656">
-          <caret line="53" column="78" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.68878716">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="70" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/evento/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5171624">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5675057">
+          <caret line="31" column="47" selection-start-line="19" selection-start-column="20" selection-end-line="31" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37757438">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9387755">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43814433">
+          <caret line="39" column="47" selection-start-line="14" selection-start-column="8" selection-end-line="39" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4897957">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="51" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77803206">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1636364">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82474226">
+          <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.897959">
+          <caret line="49" column="110" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="42.869564">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/evento/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.285714">
+          <caret line="24" column="38" selection-start-line="7" selection-start-column="8" selection-end-line="24" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.941452">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

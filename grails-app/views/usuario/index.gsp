@@ -4,53 +4,62 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'usuario.label', default: 'Usuario')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-usuario" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		%{--<div class="nav" role="navigation">
-        <ul>
-            <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>--}%
-		<div id="list-usuario" class="content scaffold-list" role="main">
-			<h1>Lista de Usuarios</h1>
-			<g:if test="${flash.message}">
-				<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<table>
-			<thead>
-					<tr>
-					
-						<g:sortableColumn property="username" title="${message(code: 'usuario.username.label', default: 'Correo')}" />
+		<g:render template="/layouts/headerInterno"/>
+		<div class="container">
+			<div class="alineacion">
+				<div class="centrado">
+					<div class="row">
+						<div class="col-md-3 col-md-offset-1">
+							<ol class="breadcrumb">
+								<li><g:link controller="intranet" action="index" style="color: #0f0f0f">Intranet</g:link></li>
+								<li class="active">Lista Usuarios</li>
+							</ol>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="panel panel-success">
+								<div class="panel-heading">
+									<h1 class='panel-title' style="font-size: 40px">Lista Usuarios</h1>
+								</div>
 
-						<g:sortableColumn property="nombres" title="${message(code: 'usuario.nombres.label', default: 'Nombre')}" />
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<td>Nombre</td>
+												<td>Correo</td>
+												<td>Verificación</td>
+											</tr>
+										</thead>
 
-						<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
-							<g:sortableColumn property="enable" title="${message(code: 'usuario.nombres.label', default: 'Verificado')}" />
-						</sec:ifAnyGranted>
-					</tr>
-				</thead>
-				<tbody>
-				<g:each in="${usuarioInstanceList}" status="i" var="usuarioInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${usuarioInstance.id}">${fieldValue(bean: usuarioInstance, field: "username")}</g:link></td>
-					
-						<td>${fieldValue(bean: usuarioInstance, field: "nombres")}</td>
+										<tbody>
+											<g:each in="${usuarioInstanceList}" status="i" var="usuarioInstance">
+												<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-						<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
-							<td><g:formatBoolean boolean="${usuarioInstance?.enabled}" /></td>
-						</sec:ifAnyGranted>
-					
-					</tr>
-				</g:each>
-				</tbody>
-			</table>
-			<div class="pagination">
-				<g:paginate total="${usuarioInstanceCount ?: 0}" />
+													<td>${fieldValue(bean: usuarioInstance, field: "nombres")}</td>
+													<td><g:link action="show" style="color: #0f0f0f" id="${usuarioInstance.id}">${fieldValue(bean: usuarioInstance, field: "username")}</g:link></td>
+
+													<sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
+														<g:if test="${usuarioInstance?.enabled}">
+															<td><span class="glyphicon glyphicon-ok-circle"></span></td>
+														</g:if>
+														<g:else>
+															<td><span class="glyphicon glyphicon-remove-circle"></span></td>
+														</g:else>
+
+													</sec:ifAnyGranted>
+												</tr>
+											</g:each>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
