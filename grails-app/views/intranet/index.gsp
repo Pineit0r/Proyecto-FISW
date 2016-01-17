@@ -31,13 +31,13 @@
 
                                 <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
                                     <g:if test="${usuarioInstanceCount == 0}">
-                                        <li class="disabled"><a href="#">Aceptar solicitudes <span class="badge">${usuarioInstanceCount}</span></a></li>
+                                        <li class="disabled"><a href="#">Solicitudes pendientes<span class="badge">${usuarioInstanceCount}</span></a></li>
                                     </g:if>
                                     <g:else>
-                                        <li class="active"><g:link class="list" controller="usuario" action="indexPendiente" >Aceptar solicitudes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
+                                        <li class="active"><g:link class="list" controller="usuario" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
                                     </g:else>
                                     <li><g:link  controller="usuario" action="index">Lista de Usuarios</g:link></li>
-                                    <li><g:link  controller="usuario" action="indexPendiente">Lista de Usuarios Pendientes</g:link></li>
+
                                 </sec:ifAnyGranted>
 
                                 <hr>

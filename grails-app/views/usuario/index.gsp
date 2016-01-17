@@ -62,5 +62,9 @@
 				</div>
 			</div>
 		</div>
+		<hr>
+		<div class="centrado"
+		<g:render template="/layouts/footer"/>
+		</div>
 	</body>
 </html>

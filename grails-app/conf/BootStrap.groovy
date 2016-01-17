@@ -43,14 +43,14 @@ class BootStrap {
         def jefeLaboratorioRolLab = RolLab.findOrSaveByNombre("Jefe de Laboratorio")
         def colaboradorRolLab = RolLab.findOrSaveByNombre("Colaborador")
 
-        def usuarioFelipe = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", compuestosArea, jefeLaboratorioRolLab).save(failOnError: true)
-        def adminFelipe= new Usuario("tatafel_8@hotmail.com","48dpswx45kfiga","Felipe","Gonzalez", microbiologiaArea,trabajadorRolLab).save(failOnError: true)
-        def usuarioAdmin = new Usuario("felipefdezpino@gmail.com", "admin00", "Administrador", "", biotechVegetalArea, trabajadorRolLab).save(failOnError: true)
+        def usuario = new Usuario("felipe@felipe.cl", "felipe", "felipe", "fernández", compuestosArea, jefeLaboratorioRolLab).save(failOnError: true)
+        def adminFelipeG= new Usuario("tatafel_8@hotmail.com","48dpswx45kfiga","Felipe","Gonzalez", microbiologiaArea,trabajadorRolLab).save(failOnError: true)
+        def adminFelipeF = new Usuario("felipefdezpino@gmail.com", "admin00", "Administrador", "", biotechVegetalArea, trabajadorRolLab).save(failOnError: true)
         def director = new Usuario("Director@director.cl","director","Juan","Pérez",biotechVegetalArea,trabajadorRolLab).save(failOnError: true)
 
-        UserRol.create adminFelipe,adminRol,true
-        UserRol.create usuarioAdmin,adminRol,true
-        UserRol.create usuarioFelipe,userRol,true
+        UserRol.create adminFelipeG,adminRol,true
+        UserRol.create usuarioFelipeF,adminRol,true
+        UserRol.create usuario,userRol,true
         UserRol.create director,directorRol,true
     }
     def destroy = {
