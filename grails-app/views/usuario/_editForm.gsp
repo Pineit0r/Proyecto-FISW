@@ -86,18 +86,6 @@
 	</div>
 </div>
 
-<label>Subir/cambiar Foto</label>
-<div class="well">
-	<g:if test="${flash.message}"><div class="message" role="status">${flash.message}</div></g:if>
-	%{--<g:uploadForm action="upload">
-		<fieldset class="form">--}%
-			<input type="file" name="file" />
-	%{--</fieldset>
-    <fieldset class="buttons">
-        <g:submitButton name="upload" class="save" value="Subir Foto" />
-    </fieldset>
-</g:uploadForm>--}%
-</div>
 <label>Publicaciones en Capítulos de Libros</label>
 <div class="well">
 	<label for="publicacionLibro.titulo">

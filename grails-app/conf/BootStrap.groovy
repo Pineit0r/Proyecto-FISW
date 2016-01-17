@@ -10,6 +10,13 @@ class BootStrap {
         def directorRol = new Rol("ROLE_DIRECTOR").save(failOnError: true)
 
         def chile = new Pais("Chile").save(failOnError: true)
+        def alemania = new Pais("Alemania").save(failOnError: true)
+
+        def Valpo = new Ciudad("Valparaíso", chile).save(failOnError: true)
+        def Berlin = new Ciudad("Berlin", alemania).save(failOnError: true)
+
+        def clca = new Congreso("Congreso Latinoamericano de Ciencias Ambientales", new Date(2016, 5, 13), Berlin).save(failOnError: true)
+        def encq = new Congreso("Encuentro Nacional de Ciencias Químicas", new Date(2016, 9, 1), Valpo).save(failOnError: true)
 
         def usm = new Institucion("USM", chile).save(failOnError: true)
         def pucv = new Institucion("PUCV", chile).save(failOnError: true)

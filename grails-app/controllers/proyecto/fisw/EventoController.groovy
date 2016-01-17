@@ -39,8 +39,7 @@ class EventoController {
         if (now > params.fecha){
             flash.message = "Fecha inválida."
             redirect (controller:'evento', action:'create')
-        }
-        else {
+        } else {
             eventoInstance.save flush: true
 
             request.withFormat {

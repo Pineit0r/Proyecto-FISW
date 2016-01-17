@@ -64,6 +64,7 @@
                                         </g:if>
 
                                     </div>
+                                    <p><g:link class="btn btn btn-primary" controller="asistCongreso" action="index">Ver Asistencia a Congresos</g:link></p>
                                 </div>
                             </div>
                         </div>

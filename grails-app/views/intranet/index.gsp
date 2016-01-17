@@ -38,8 +38,17 @@
                                         </g:if>
                                     </sec:ifAllGranted>
                                     <sec:ifAllGranted roles="ROLE_DIRECTOR">
-                                            <p><g:link class="btn btn-success" controller="evento" action="create">Crear Nuevo Evento</g:link></p>
+                                        <p><div class="well">
+                                            <g:link class="btn btn-xs btn-success" controller="evento" action="create">Crear Nuevo Evento</g:link>
+                                            <g:link class="btn btn-xs btn-success" controller="congreso" action="create">Agregar Congreso</g:link>
+                                            <g:link class="btn btn-xs btn-success" controller="usuario" action="index">Lista de Usuarios</g:link>
+                                            <g:link class="btn btn-xs btn-success" controller="usuario" action="indexPendiente">Lista de Usuarios Pendientes</g:link>
+                                    </div></p>
                                     </sec:ifAllGranted>
+                                    <p><div class="well">
+                                    <g:link class="btn btn-xs btn-success" controller="asistCongreso" action="create">Agregar Asistencia a Congreso</g:link>
+                                    <g:link class="btn btn-xs btn-success" controller="publicacionLibro" action="create">Agregar Publicación de Capitulos de Libro</g:link>
+                                </div></p>
                                 </div>
                             </div>
 
@@ -66,6 +75,30 @@
                                     </g:if>
                                     <g:else>
                                         <h4>No hay próximos eventos</h4>
+                                    </g:else>
+                                </div>
+                                <div class="well">
+                                    <h3>Lista de Próximos Congresos</h3>
+                                    <g:if test="${proyecto.fisw.Congreso.findAllByFechaGreaterThan(new Date()).size() != 0}">
+                                        <table class='table table-striped'>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Fecha</th>
+                                                <th>Ciudad, País</th>
+                                                <th>Ver</th>
+                                            </tr>
+                                            <g:each in="${proyecto.fisw.Congreso.findAllByFechaGreaterThan(new Date())}" var="congreso">
+                                                <tr>
+                                                    <td>${congreso.nombre}</td>
+                                                    <td>${congreso.fecha.getTimeString()}  ${congreso.fecha.getDateString()}</td>
+                                                    <td>${congreso.ciudad.ciudad}, ${congreso.ciudad.pais.nombre}</td>
+                                                    <td><g:link class="btn btn-success" action="show" controller="congreso" id="${congreso.id}">Ver</g:link></td>
+                                                </tr>
+                                            </g:each>
+                                        </table>
+                                    </g:if>
+                                    <g:else>
+                                        <h4>No hay próximos congresos</h4>
                                     </g:else>
                                 </div>
                             </div>

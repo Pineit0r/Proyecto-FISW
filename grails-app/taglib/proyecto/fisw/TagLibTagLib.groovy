@@ -26,9 +26,10 @@ class TagLibTagLib {
 
     def getPhoto = { attrs, body ->
             Usuario user = (Usuario) springSecurityService.currentUser
-            def photo = Multimedia.findWhere(usuario: user, tipo: "fotoPerfil")
-            if (photo != null)
-                out << photo.filename
+            def photo = Multimedia.findAllWhere(usuario: user, tipo: "fotoPerfil")
+            photo.sort{a,b-> b.subido<=>a.subido}
+            if (!photo.empty)
+                out << photo.first().filename
             else
                 out << "default_user.png"
     }

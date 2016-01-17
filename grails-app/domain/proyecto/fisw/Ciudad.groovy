@@ -7,4 +7,9 @@ class Ciudad {
     static belongsTo = [pais:Pais]
     static constraints = {
     }
+
+    Ciudad(String c, Pais p) {
+        ciudad = c
+        pais = p
+    }
 }

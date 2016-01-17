@@ -9,7 +9,7 @@
 <div class="fixed-navbar-content">
 <div class="site-wrapper">
 <div class="centrado">
-	<g:form url="[resource:eventoInstance, action:'save']" action="upload" controller="multimedia" style="max-width: 450px; margin-left: auto; margin-right: auto">
+	<g:form url="[resource:eventoInstance, action:'save']" style="max-width: 450px; margin-left: auto; margin-right: auto">
 		<div class="row">
 			<div class="panel panel-success">
 				<div class="panel-heading">

@@ -5,5 +5,6 @@ class AsistCongreso {
     Multimedia poster
 
     static constraints = {
+        poster nullable: true, blank: true
     }
 }
