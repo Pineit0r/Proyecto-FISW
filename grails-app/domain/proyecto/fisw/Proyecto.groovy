@@ -2,9 +2,11 @@ package proyecto.fisw
 
 class Proyecto {
     String nombre
-    Date inicio
-    Date fin
+    String inicio
+    String fin
     String otro
+
+    static hasMany = [areas: ProyectoArea]
 
     static constraints = {
     }

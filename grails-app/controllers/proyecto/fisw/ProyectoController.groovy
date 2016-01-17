@@ -2,9 +2,11 @@ package proyecto.fisw
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugin.springsecurity.annotation.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
+@Secured(['IS_AUTHENTICATED_FULLY'])
 class ProyectoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -34,7 +36,13 @@ class ProyectoController {
             return
         }
 
-        proyectoInstance.save flush: true
+        proyectoInstance.save flush: true, failOnError: true
+
+        params.list("area.id").each {
+            Area area = Area.findById(it)
+            ProyectoArea proyectoArea = new ProyectoArea(proyecto: proyectoInstance, area: area)
+            proyectoArea.save(flush: true, failOnError: true)
+        }
 
         request.withFormat {
             form multipartForm {
@@ -59,6 +67,16 @@ class ProyectoController {
         if (proyectoInstance.hasErrors()) {
             respond proyectoInstance.errors, view: 'edit'
             return
+        }
+
+        ProyectoArea.findAllByProyecto(proyectoInstance).each {
+            it.delete()
+        }
+
+        params.list("area.id").each {
+            Area area = Area.findById(it)
+            ProyectoArea proyectoArea = new ProyectoArea(proyecto: proyectoInstance, area: area)
+            proyectoArea.save(flush: true, failOnError: true)
         }
 
         proyectoInstance.save flush: true
