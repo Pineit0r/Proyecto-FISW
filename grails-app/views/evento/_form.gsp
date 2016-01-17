@@ -18,5 +18,23 @@
 
 </div>
 
-<g:hiddenField name="usuario.id" value="2" />
+<g:hiddenField name="usuario.id" value="1" />
+
+<div class="fieldcontain ${hasErrors(bean: eventoInstance, field: 'lugar', 'error')} required">
+	<label for="lugar">
+		<g:message code="evento.nombre.label" default="Lugar" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="lugar" required="" value="${eventoInstance?.lugar}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: eventoInstance, field: 'descripcion', 'error')} required">
+	<label for="descripcion">
+		<g:message code="evento.nombre.label" default="Descripción" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textArea name="descripcion" rows="4" cols="50" value="${eventoInstance?.descripcion}"/>
+
+</div>
 

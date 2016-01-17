@@ -45,23 +45,28 @@
 
                             <div class="col-md-6">
                                 <div class="well">
-                                    <h3>Lista de Eventos</h3>
+                                    <h3>Lista de Próximos Eventos</h3>
+                                    <g:if test="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date()).size() != 0}">
                                     <table class='table table-striped'>
                                         <tr>
-                                            <th>i</th>
                                             <th>Nombre</th>
                                             <th>Fecha</th>
+                                            <th>Lugar</th>
                                             <th>Ver</th>
                                         </tr>
                                         <g:each in="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date())}" var="evento" status="i">
                                             <tr>
-                                                <td>${i+1}</td>
                                                 <td>${evento.nombre}</td>
                                                 <td>${evento.fecha.getTimeString()}  ${evento.fecha.getDateString()}</td>
+                                                <td>${evento.lugar}</td>
                                                 <td><g:link class="btn btn-success" action="show" controller="evento" id="${evento.id}">Ver</g:link></td>
                                             </tr>
                                         </g:each>
                                     </table>
+                                    </g:if>
+                                    <g:else>
+                                        <h4>No hay próximos eventos</h4>
+                                    </g:else>
                                 </div>
                             </div>
                         </div>

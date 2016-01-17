@@ -13,12 +13,6 @@ class EventoController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     @Secured(['IS_AUTHENTICATED_FULLY'])
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond Evento.list(params), model: [eventoInstanceCount: Evento.count()]
-    }
-
-    @Secured(['IS_AUTHENTICATED_FULLY'])
     def show(Evento eventoInstance) {
         respond eventoInstance
     }
@@ -99,7 +93,7 @@ class EventoController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Evento.label', default: 'Evento'), eventoInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action: "index", controller: "intranet", method: "GET"
             }
             '*' { render status: NO_CONTENT }
         }

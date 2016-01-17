@@ -120,9 +120,11 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/7.0.55/tomcat-embed-el-7.0.55.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.55/tomcat-embed-jasper-7.0.55.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.55/tomcat-catalina-ant-7.0.55.jar!/" />
+          <root url="file://$MODULE_DIR$/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="Proyecto-FISW-grailsPlugins" />
