@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title><g:message code="dashboard.header" default="Welcome to Grails Webinar"/> </title>
+    <title id="portada"><g:message code="dashboard.header" default="Welcome to Grails Webinar"/> </title>
     <style type="text/css" media="screen">
     #login {
         margin: 15px 0px;
