@@ -6,7 +6,7 @@ import grails.plugin.springsecurity.annotation.Secured
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
-@Secured(['ROLE_DIRECTOR'])
+@Secured(['ROLE_DIRECTOR','ROLE_ADMIN'])
 class CongresoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

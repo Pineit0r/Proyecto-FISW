@@ -63,7 +63,7 @@ class PublicacionLibroController {
         publicacionLibroInstance.pdf = multimediaInstance
         publicacionLibroInstance.save flush: true, failOnError: true
 
-        redirect action: "ficha", controller: "usuario"
+        redirect action: "index", controller: "intranet"
 
         /*
         request.withFormat {

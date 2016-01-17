@@ -26,25 +26,25 @@
 								<g:form url="[resource:congresoInstance, action:'save']">
 									<div class="panel-body">
 										<table class="table table-condensed">
+											<thead>
+												<tr>
+													<th>Nombre</th>
+													<th>Fecha</th>
+													<th>Ciudad, País</th>
+												</tr>
+											</thead>
 											<tbody>
-											<tr>
-												<td>Nombre</td>
-												<td><g:fieldValue bean="${congresoInstance}" field="nombre"/></td>
-											</tr>
-											<tr>
-												<td>Fecha</td>
-												<td><g:fieldValue bean="${congresoInstance}" field="fecha"/></td>
-											</tr>
-											<tr>
-												<td>Ciudad, País</td>
-												<td><g:fieldValue bean="${congresoInstance}" field="ciudad.ciudad"/>, <g:fieldValue bean="${congresoInstance}" field="ciudad.pais.nombre"/></td>
-											</tr>
+												<tr>
+													<td><g:fieldValue bean="${congresoInstance}" field="nombre"/></td>
+													<td><g:fieldValue bean="${congresoInstance}" field="fecha"/></td>
+													<td><g:fieldValue bean="${congresoInstance}" field="ciudad.ciudad"/>, <g:fieldValue bean="${congresoInstance}" field="ciudad.pais.nombre"/></td>
+												</tr>
 											</tbody>
 										</table>
 									</div>
 
 									<div class="panel-footer">
-										<sec:ifAnyGranted roles="ROLE_DIRECTOR">
+										<sec:ifAnyGranted roles="ROLE_DIRECTOR,ROLE_ADMIN">
 											<g:form url="[resource:congresoInstance, action:'delete']" method="DELETE">
 												<fieldset class="buttons">
 													<g:link class="btn btn-primary" action="edit" resource="${congresoInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

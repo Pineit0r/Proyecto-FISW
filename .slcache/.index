@@ -5220,3 +5220,11 @@ n:2273:org/codehaus/groovy/grails/commons/GrailsApplication$isArtefactOfType
 n:1543:org/apache/commons/logging/Log$isDebugEnabled
 n:2787:BuildConfig$_run_closure1$_closure5
 n:3655:com/sun/mail/smtp/SMTPMessage
+n:1262:groovyjarjarantlr/NoViableAltForCharException
+n:503:org/springframework/web/multipart/MultipartHttpServletRequest
+n:912:org/springframework/web/multipart/MultipartRequest
+n:4589:org/springframework/web/multipart/commons/CommonsMultipartFile
+n:510:org/springframework/web/multipart/MultipartFile
+n:19629:org/springframework/http/HttpHeaders
+n:852:org/apache/commons/fileupload/FileItem
+n:302:org/apache/commons/fileupload/FileItemHeadersSupport

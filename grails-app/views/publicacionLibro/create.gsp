@@ -29,7 +29,7 @@
 						<div class="col-md-6 col-md-offset-3">
 							<div class="panel panel-success">
 								<div class="panel-heading">
-									<h1 class='panel-title' style="font-size: 40px">Crear nuevo congreso</h1>
+									<h1 class='panel-title' style="font-size: 40px">Nuevo Libro</h1>
 								</div>
 								<fieldset class="form">
 									<div class="panel-body">

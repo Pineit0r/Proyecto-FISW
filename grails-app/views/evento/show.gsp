@@ -48,7 +48,7 @@
 								</div>
 								<div class="panel-footer">
 
-									<sec:ifAnyGranted roles="ROLE_DIRECTOR">
+									<sec:ifAnyGranted roles="ROLE_DIRECTOR,ROLE_ADMIN">
 										<g:form url="[resource:eventoInstance, action:'delete']" method="DELETE">
 
 												<g:link class="btn btn-primary" action="edit" resource="${eventoInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

@@ -27,9 +27,9 @@
 
                     <div class="col-md-6">
                         <div class="well">
-                            <ul class="nav nav-pills nav-stacked">
 
-                                <sec:ifAnyGranted roles="ROLE_ADMIN,ROLE_DIRECTOR">
+                            <sec:ifAnyGranted roles="ROLE_DIRECTOR">
+                                <ul class="nav nav-pills nav-stacked">
                                     <g:if test="${usuarioInstanceCount == 0}">
                                         <li class="disabled"><a href="#">Solicitudes pendientes<span class="badge">${usuarioInstanceCount}</span></a></li>
                                     </g:if>
@@ -37,25 +37,56 @@
                                         <li class="active"><g:link class="list" controller="usuario" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
                                     </g:else>
                                     <li><g:link  controller="usuario" action="index">Lista de Usuarios</g:link></li>
+                                    <hr>
 
-                                </sec:ifAnyGranted>
-
-                                <hr>
-                            </ul>
-
-
-                            <ul class="nav nav-pills nav-justified">
-                                <sec:ifAnyGranted roles="ROLE_DIRECTOR">
-                                <li><g:link controller="evento" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Evento</g:link></li>
-                                <li><g:link controller="congreso" action="create"><span class="glyphicon glyphicon-plus"></span> Agregar Congreso</g:link></li>
-                                </sec:ifAnyGranted>
-                            </ul>
-                            <ul class="nav nav-pills nav-justified">
-                                <sec:ifAnyGranted roles="ROLE_DIRECTOR,ROLE_USER">
-                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-calendar"></span> Asistencia a Congreso</g:link></li>
                                     <li><g:link controller="publicacionLibro" action="create"><span class="glyphicon glyphicon-plus"></span> Publicación de Capitulos de Libro</g:link></li>
-                                </sec:ifAnyGranted>
-                            </ul>
+
+                                </ul>
+                                <hr>
+
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><g:link controller="evento" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Evento</g:link></li>
+                                    <li><g:link controller="congreso" action="create"><span class="glyphicon glyphicon-plus"></span> Agregar Congreso</g:link></li>
+
+                                    <hr>
+
+                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-calendar"></span> Registrar asistencia a congreso</g:link></li>
+                                    <li><g:link controller="asistCongreso" action="index">Mis asistencias</g:link></li>
+                                </ul>
+                            </sec:ifAnyGranted>
+
+
+                            <sec:ifAnyGranted roles="ROLE_USER">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><g:link controller="publicacionLibro" action="create"><span class="glyphicon glyphicon-plus"></span> Publicación de Capitulos de Libro</g:link></li>
+
+                                </ul>
+                                <hr>
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><g:link controller="asistCongreso" action="create"><span class="glyphicon glyphicon-calendar"></span> Registrar asistencia a congreso</g:link></li>
+                                    <li><g:link controller="asistCongreso" action="index">Mis asistencias</g:link></li>
+                                </ul>
+                            </sec:ifAnyGranted>
+
+
+                            <sec:ifAnyGranted roles="ROLE_ADMIN">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <g:if test="${usuarioInstanceCount == 0}">
+                                        <li class="disabled"><a href="#">Solicitudes pendientes<span class="badge">${usuarioInstanceCount}</span></a></li>
+                                    </g:if>
+                                    <g:else>
+                                        <li class="active"><g:link class="list" controller="usuario" action="indexPendiente" >Solicitudes pendientes <span class="badge">${usuarioInstanceCount}</span></g:link></li>
+                                    </g:else>
+                                    <li><g:link  controller="usuario" action="index">Lista de Usuarios</g:link></li>
+                                </ul>
+                                <hr>
+
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><g:link controller="evento" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Evento</g:link></li>
+                                    <li><g:link controller="congreso" action="create"><span class="glyphicon glyphicon-plus"></span> Agregar Congreso</g:link></li>
+
+                                </ul>
+                            </sec:ifAnyGranted>
                         </div>
                     </div>
 

@@ -29,9 +29,9 @@
 									<table class="table table-hover">
 										<thead>
 											<tr>
-												<td>Nombre</td>
-												<td>Correo</td>
-												<td>Verificación</td>
+												<th>Nombre</th>
+												<th>Correo</th>
+												<th>Verificación</th>
 											</tr>
 										</thead>
 

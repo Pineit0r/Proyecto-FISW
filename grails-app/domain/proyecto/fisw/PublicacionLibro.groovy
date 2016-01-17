@@ -20,5 +20,7 @@ class PublicacionLibro {
 
     static constraints = {
         pdf nullable: true, blank: true
+        titulo(unique: true)
+        ISBN(unique: true)
     }
 }

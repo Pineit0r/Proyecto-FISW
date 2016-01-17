@@ -31,8 +31,8 @@
                                     <img src="/Proyecto-FISW/assets/<g:getPhoto />" width="140" height="140" class="img-circle">
                                     <h2><g:getUserName /></h2>
                                     <p><g:getRole /></p>
-                                    <p><g:link class="btn btn-lg btn-primary" controller="usuario" action="editFicha">Editar Ficha Personal</g:link></p>
-                                    <p><g:link class="btn btn-lg btn-primary" controller="usuario" action="addPhoto">Añadir Foto</g:link></p>
+                                    <p><g:link class="btn btn-block btn-primary" controller="usuario" action="editFicha">Editar Ficha Personal</g:link></p>
+                                    <p><g:link class="btn btn-block btn-primary" controller="usuario" action="addPhoto">Añadir Foto</g:link></p>
                                 </div>
 
                                 <div class="col-md-6">
@@ -64,7 +64,6 @@
                                         </g:if>
 
                                     </div>
-                                    <p><g:link class="btn btn btn-primary" controller="asistCongreso" action="index">Ver Asistencia a Congresos</g:link></p>
                                 </div>
                             </div>
                         </div>
