@@ -5,5 +5,6 @@ class UsuarioTitulo {
     Titulo titulo
 
     static constraints = {
+        usuario unique: ["titulo"]
     }
 }

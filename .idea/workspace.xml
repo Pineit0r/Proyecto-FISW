@@ -2,35 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511a478f-4ad2-4931-b3b0-8abc3d5e8859" name="Default" comment="Correccion Login">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/index.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/show.gsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.asscache" afterPath="$PROJECT_DIR$/.asscache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/views/cargoProyecto/_editCargoForm.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyecto$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyecto$__clinit__closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyecto$__clinit__closure2.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyecto$__clinit__closure2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyecto.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyecto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure1.class" afterPath="$PROJECT_DIR$/target/classes/DataSource$_run_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__delete_closure11$_closure18.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__delete_closure11$_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__delete_closure11$_closure19.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__delete_closure11$_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__delete_closure11.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__delete_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__save_closure9$_closure14.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__save_closure9$_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__save_closure9$_closure15.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__save_closure9$_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__save_closure9.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__save_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__update_closure10$_closure16.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__update_closure10$_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__update_closure10$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__update_closure10$_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__update_closure10.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$__tt__update_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$_notFound_closure8$_closure12.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$_notFound_closure8$_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$_notFound_closure8$_closure13.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$_notFound_closure8$_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$_notFound_closure8.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController$_notFound_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/CargoProyectoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__delete_closure10$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__delete_closure10$_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__delete_closure10$_closure18.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__delete_closure10$_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__delete_closure10.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__delete_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__update_closure9$_closure15.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__update_closure9$_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__update_closure9$_closure16.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__update_closure9$_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__update_closure9.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$__tt__update_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$_notFound_closure7$_closure11.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$_notFound_closure7$_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$_notFound_closure7$_closure12.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$_notFound_closure7$_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$_notFound_closure7.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController$_notFound_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/EventoController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Proyecto$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Proyecto$__clinit__closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Proyecto.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Proyecto.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure11$_closure18.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure11$_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure11$_closure19.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure11$_closure19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure11.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure9$_closure14.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure9$_closure14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure9$_closure15.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure9$_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure14$_closure21.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure14$_closure21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure14$_closure22.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure14$_closure22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure14.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__delete_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure10$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure10$_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure10$_closure18.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure10$_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure10.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure9.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__save_closure9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure10$_closure16.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure10$_closure16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure10$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure10$_closure17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure10.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure12.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure13.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure11.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure12.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure13$_closure19.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure13$_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure13$_closure20.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure13$_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure13.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$__tt__update_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure15.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure16.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8$_closure16.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController$_notFound_closure8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/ProyectoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/Titulo.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/Titulo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioTitulo$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioTitulo$__clinit__closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioTitulo.class" afterPath="$PROJECT_DIR$/target/classes/proyecto/fisw/UsuarioTitulo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CargoProyectoController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CargoProyectoController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Proyecto.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Proyecto.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/ProyectoController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/ProyectoController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/UsuarioTitulo.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/UsuarioTitulo.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/multimedia/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/multimedia/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/cargoProyecto/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/cargoProyecto/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/proyecto/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/cargoProyecto/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/cargoProyecto/edit.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/intranet/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/intranet/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/proyecto/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/cargoProyecto/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/cargoProyecto/show.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/proyecto/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/proyecto/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -79,8 +117,8 @@
       <file leaf-file-name="ProyectoController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/ProyectoController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.130435">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.434783">
+              <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
               <folding>
                 <element signature="e#24#75#0" expanded="true" />
               </folding>
@@ -88,79 +126,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Proyecto.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Proyecto.groovy">
+      <file leaf-file-name="UsuarioTitulo.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/UsuarioTitulo.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+            <state vertical-scroll-proportion="-1.1538461">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4680853">
-              <caret line="58" column="168" selection-start-line="58" selection-start-column="168" selection-end-line="58" selection-end-column="168" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CargoProyecto.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy">
+      <file leaf-file-name="Titulo.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1730769">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state vertical-scroll-proportion="-3.4615386">
+              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CargoProyectoController.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CargoProyectoController.groovy">
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49323016">
-              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-              <folding>
-                <element signature="e#24#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/create.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0212765">
-              <caret line="37" column="125" selection-start-line="37" selection-start-column="125" selection-end-line="37" selection-end-column="125" />
+            <state vertical-scroll-proportion="0.5277778">
+              <caret line="25" column="69" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/create.gsp">
+      <file leaf-file-name="_editForm.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.382979">
-              <caret line="20" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/_form.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0270271">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.468085">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -169,8 +175,8 @@
       <file leaf-file-name="UsuarioController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.869565">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="10" selection-end-column="29" />
+            <state vertical-scroll-proportion="-9.782609">
+              <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
               <folding>
                 <element signature="e#23#77#0" expanded="true" />
               </folding>
@@ -178,11 +184,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp">
+      <file leaf-file-name="edit.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.3404255">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state vertical-scroll-proportion="-4.787234">
+              <caret line="31" column="133" selection-start-line="31" selection-start-column="133" selection-end-line="31" selection-end-column="133" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/show.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.7021275">
+              <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/index.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/show.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4680853">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -209,13 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/RolController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_footer.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/home/home.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/_headerInterno.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/bootstrap.css" />
-        <option value="$PROJECT_DIR$/grails-app/views/admin/admin.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/assets/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/evento/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/congreso/_form.gsp" />
@@ -225,10 +254,8 @@
         <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CongresoController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/PublicacionLibro.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/PublicacionLibroController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC5/grails-app/views/login/auth.gsp" />
@@ -237,7 +264,6 @@
         <option value="$PROJECT_DIR$/grails-app/views/usuario/ficha.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/asistCongreso/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/indexPendiente.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
@@ -249,17 +275,27 @@
         <option value="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC5/grails-app/views/login/denied.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/AsistCongresoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/multimedia/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/_editCargoForm.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/edit.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CargoProyectoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/proyecto/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Proyecto.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/proyecto/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/intranet/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/proyecto/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/ProyectoController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Proyecto.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/create.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/intranet/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/cargoProyecto/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CargoProyectoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/UsuarioTitulo.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy" />
       </list>
     </option>
   </component>
@@ -317,7 +353,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -344,13 +380,14 @@
     <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/grails-app/views/usuario" />
-      <recent name="C:\Users\tataf\Documents\GitHub\Proyecto-FISW\grails-app\views\intranet" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grails-app/views/cargoProyecto" />
       <recent name="$PROJECT_DIR$/grails-app/views/usuario" />
       <recent name="$PROJECT_DIR$/grails-app/views/intranet" />
+      <recent name="C:\Users\tataf\Documents\GitHub\Proyecto-FISW\grails-app\views\intranet" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grails-app/views/usuario" />
       <recent name="C:\Users\tataf\Documents\GitHub\Proyecto-FISW\grails-app\views\intranet" />
     </key>
   </component>
@@ -656,12 +693,12 @@
       <workItem from="1453007621966" duration="22017000" />
       <workItem from="1453042259553" duration="6967000" />
       <workItem from="1453053667430" duration="6355000" />
-      <workItem from="1453060314467" duration="5392000" />
+      <workItem from="1453060314467" duration="13013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170823000" />
+    <option name="totallyTimeSpent" value="178444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -761,7 +798,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -770,125 +807,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.868421">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0958905">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/evento/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5171624">
-          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4897957">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77803206">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/RolLab.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11486486">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Usuario.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73913044">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24727273">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40202704">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73913044">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding>
-            <element signature="e#24#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.714286">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7364706">
-          <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/PublicacionLibro.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8862559">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CongresoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30155212">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC5/grails-app/views/login/auth.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4693878">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -927,14 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="84" selection-start-line="19" selection-start-column="84" selection-end-line="19" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/indexPendiente.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -947,14 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26975945">
           <caret line="32" column="47" selection-start-line="7" selection-start-column="8" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="69" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,14 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.297873">
-          <caret line="54" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/PublicacionLibroController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.869565">
@@ -1031,14 +925,6 @@
           <folding>
             <element signature="e#23#91#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2340426">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,30 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1914895">
-          <caret line="22" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1914895">
-          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/show.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.06383">
-          <caret line="57" column="102" selection-start-line="57" selection-start-column="102" selection-end-line="57" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/ProyectoArea.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
@@ -1093,10 +955,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.787234">
-          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+        <state vertical-scroll-proportion="-1.4423077">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/evento/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.851064">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/EventoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.73913">
+          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+          <folding>
+            <element signature="e#24#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.2340426">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/multimedia/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="45" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.574468">
+          <caret line="41" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.382979">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/_editCargoForm.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1914895">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/asistCongreso/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8297873">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0212765">
+          <caret line="22" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6595745">
+          <caret line="67" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/_form.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.1914895">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2765957">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.680851">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1106,90 +1077,165 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        <state vertical-scroll-proportion="-2.0192308">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/create.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/MultimediaController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.382979">
-          <caret line="20" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+        <state vertical-scroll-proportion="-9.782609">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="34" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/publicacionLibro/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.93617">
+          <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/congreso/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.276596">
+          <caret line="54" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0212765">
-          <caret line="37" column="125" selection-start-line="37" selection-start-column="125" selection-end-line="37" selection-end-column="125" />
+        <state vertical-scroll-proportion="-7.425532">
+          <caret line="88" column="26" selection-start-line="82" selection-start-column="12" selection-end-line="88" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4680853">
-          <caret line="58" column="168" selection-start-line="58" selection-start-column="168" selection-end-line="58" selection-end-column="168" />
+        <state vertical-scroll-proportion="-6.2972975">
+          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.869565">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#23#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/_form.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3404255">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/_form.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0270271">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/ProyectoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.130435">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/CargoProyecto.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1730769">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state vertical-scroll-proportion="-4.675676">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/CargoProyectoController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49323016">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state vertical-scroll-proportion="-8.478261">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
             <element signature="e#24#75#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/intranet/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5531914">
+          <caret line="75" column="159" selection-start-line="75" selection-start-column="159" selection-end-line="75" selection-end-column="159" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4680853">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/edit.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.787234">
+          <caret line="31" column="133" selection-start-line="31" selection-start-column="133" selection-end-line="31" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proyecto/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7021275">
+          <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/ProyectoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.434783">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding>
+            <element signature="e#24#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/proyecto/fisw/UsuarioController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.782609">
+          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+          <folding>
+            <element signature="e#23#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/UsuarioTitulo.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1538461">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/proyecto/fisw/Titulo.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4615386">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/_editForm.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.468085">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/cargoProyecto/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5277778">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -18,8 +18,7 @@ class CargoProyectoController {
     }
 
     def show(CargoProyecto cargoProyectoInstance) {
-        CargoProyecto cargoProyecto = CargoProyecto.get(new CargoProyecto(usuario: params.usuario, proyecto: params.proyecto, cargo: params.cargo))
-        respond cargoProyecto
+        respond cargoProyectoInstance
     }
 
     def create() {
@@ -45,7 +44,7 @@ class CargoProyectoController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'cargoProyecto.label', default: 'CargoProyecto'), cargoProyectoInstance.id])
-                redirect action: 'show', params: [usuario: cargoProyectoInstance.usuario, proyecto: cargoProyectoInstance.proyecto, cargo: cargoProyectoInstance.cargo]
+                redirect cargoProyectoInstance
             }
             '*' { respond cargoProyectoInstance, [status: CREATED] }
         }
@@ -67,6 +66,8 @@ class CargoProyectoController {
             return
         }
 
+        Usuario user = (Usuario) springSecurityService.currentUser
+        cargoProyectoInstance.usuario = user
         cargoProyectoInstance.save flush: true
 
         request.withFormat {
@@ -91,7 +92,7 @@ class CargoProyectoController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'CargoProyecto.label', default: 'CargoProyecto'), cargoProyectoInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action: "index", controller: "intranet"
             }
             '*' { render status: NO_CONTENT }
         }

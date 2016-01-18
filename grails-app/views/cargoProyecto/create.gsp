@@ -32,11 +32,17 @@
 								</g:if>
 								<g:form url="[resource:cargoProyectoInstance, action:'save']">
 									<div class="well">
-										<g:render template="form"/>
-
+										<g:if test="${proyecto.fisw.Proyecto.count == 0}">
+											<div class="alert alert-danger" role="alert">
+												<button type="button" class="close" data-dismiss="alert">&times;</button>No existen proyectos. <g:link class="btn btn-primary btn-xs" action="create" controller="proyecto">Crear Nuevo Proyecto</g:link>
+											</div>
+										</g:if>
+										<g:else>
+											<g:render template="form"/>
 										<div class="form-group">
 											<g:submitButton name="create" class="btn btn-success" value="Asociarse a Proyecto" />
 										</div>
+										</g:else>
 									</div>
 								</g:form>
 							</div>

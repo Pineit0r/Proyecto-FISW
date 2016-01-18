@@ -1,7 +1,5 @@
 <%@ page import="proyecto.fisw.Multimedia" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: multimediaInstance, field: 'filename', 'error')} required">
 	<label for="filename">
 		<g:message code="multimedia.filename.label" default="Filename" />

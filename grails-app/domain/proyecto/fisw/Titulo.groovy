@@ -2,12 +2,12 @@ package proyecto.fisw
 
 class Titulo {
     String nombre
+
     /*
      * tipo: indica el tipo de titulo
      * false: Pregrado
      * true: Postgrado
      */
-
     Boolean tipo
 
     static hasMany = [usuarioTitulo: UsuarioTitulo]

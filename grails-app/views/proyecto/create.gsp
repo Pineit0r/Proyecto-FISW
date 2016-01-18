@@ -28,6 +28,13 @@
 								<g:if test='${flash.message}'>
 									<div class="alert alert-danger" role="alert">
 										<button type="button" class="close" data-dismiss="alert">&times;</button>${flash.message}
+										<g:hasErrors bean="${cargoProyectoInstance}">
+											<ul class="errors" role="alert">
+												<g:eachError bean="${cargoProyectoInstance}" var="error">
+													<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+												</g:eachError>
+											</ul>
+										</g:hasErrors>
 									</div>
 								</g:if>
 								<g:form url="[resource:proyectoInstance, action:'save']">

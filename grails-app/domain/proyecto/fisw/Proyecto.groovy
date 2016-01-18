@@ -5,8 +5,9 @@ class Proyecto {
     String inicio
     String fin
     String otro
+    Usuario creador
 
-    static hasMany = [areas: ProyectoArea]
+    static hasMany = [areas: ProyectoArea, cargos: CargoProyecto]
 
     static constraints = {
     }

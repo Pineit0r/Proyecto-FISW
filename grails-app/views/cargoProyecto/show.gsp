@@ -1,5 +1,86 @@
-
 <%@ page import="proyecto.fisw.CargoProyecto" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
+<head>
+	<meta name="layout" content="main"/>
+</head>
+
+<body>
+<g:render template="/layouts/headerInterno"/>
+<div class="container">
+	<div class="alineacion">
+
+		<div class="row">
+			<div class="col-md-3 col-md-offset-1">
+				<ol class="breadcrumb">
+					<li><g:link controller="intranet" action="index" style="color: #0f0f0f">Intranet</g:link></li>
+					<li class="active">Ver Cargo en Proyecto</li>
+				</ol>
+			</div>
+
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h1 class='panel-title' style="font-size: 40px">Mi cargo en el proyecto</h1>
+					</div>
+
+					<g:form url="[resource:cargoProyectoInstance, action:'save']">
+						<div class="panel-body">
+							<table class="table table-condensed">
+								<tbody>
+								<tr>
+									<td>Nombre Proyecto</td>
+									<td><g:fieldValue bean="${cargoProyectoInstance.proyecto}" field="nombre"/></td>
+								</tr>
+
+								<tr>
+									<td>Mi Cargo</td>
+									<td><g:fieldValue bean="${cargoProyectoInstance}" field="cargo"/></td>
+								</tr>
+
+								<tr>
+									<td>Año Inicio - Año Fin</td>
+									<td><g:fieldValue bean="${cargoProyectoInstance.proyecto}" field="inicio"/> - <g:fieldValue bean="${cargoProyectoInstance.proyecto}" field="fin"/></td>
+								</tr>
+								<tr>
+									<td>Otro</td>
+									<td><g:fieldValue bean="${cargoProyectoInstance.proyecto}" field="otro"/></td>
+								</tr>
+								<tr>
+									<td>Área(s)</td>
+									<td>
+										<g:each in="${proyecto.fisw.ProyectoArea.findAllByProyecto(cargoProyectoInstance.proyecto)}" var="proyectoArea">
+											<g:fieldValue bean="${proyectoArea.area}" field="nombre"/><br/>
+										</g:each>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="panel-footer">
+							<g:form url="[resource:cargoProyectoInstance, action:'delete']" method="DELETE">
+								<fieldset class="buttons">
+									<g:link class="btn btn-primary" action="edit" resource="${cargoProyectoInstance}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+									<g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: '¿Estás Seguro?')}');" />
+								</fieldset>
+							</g:form>
+						</div>
+					</g:form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<div class="centrado">
+	<g:render template="/layouts/footer"/>
+</div>
+</body>
+</html>
+
+
+%{--<%@ page import="proyecto.fisw.CargoProyecto" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -59,4 +140,4 @@
 			</g:form>
 		</div>
 	</body>
-</html>
+</html>--}%

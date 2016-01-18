@@ -1,4 +1,72 @@
 
+<%@ page import="proyecto.fisw.Usuario" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="layout" content="main">
+</head>
+<body>
+<g:render template="/layouts/headerInterno"/>
+<div class="container">
+	<div class="alineacion">
+		<div class="centrado">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-1">
+					<ol class="breadcrumb">
+						<li><g:link controller="intranet" action="index" style="color: #0f0f0f">Intranet</g:link></li>
+						<li class="active">Lista de Proyectos</li>
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h1 class='panel-title' style="font-size: 40px">Lista de Proyectos</h1>
+						</div>
+						<div class="panel-body">
+							<g:if test="${proyecto.fisw.Proyecto.count == 0}">
+									No existen proyectos. <g:link class="btn btn-primary btn-xs" action="create" controller="proyecto">Crear Nuevo Proyecto</g:link>
+							</g:if>
+							<g:else>
+							<table class="table table-hover">
+								<thead>
+								<tr>
+									<th>Nombre</th>
+									<th>Año inicio - fin</th>
+									<th>Ver</th>
+								</tr>
+								</thead>
+
+								<tbody>
+								<g:each in="${proyectoInstanceList}" status="i" var="proyectoInstance">
+									<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+
+										<td>${fieldValue(bean: proyectoInstance, field: "nombre")}</td>
+										<td>${fieldValue(bean: proyectoInstance, field: "inicio")} - ${fieldValue(bean: proyectoInstance, field: "fin")}</td>
+										<td><g:link class="btn btn-success btn-xs" action="show" controller="proyecto" id="${proyectoInstance.id}"><span class="glyphicon glyphicon-eye-open"></span> Ver</g:link></td>
+									</tr>
+								</g:each>
+								</tbody>
+							</table>
+						</div>
+						</g:else>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<div class="centrado"
+<g:render template="/layouts/footer"/>
+</div>
+</body>
+</html>
+
+
+
+%{--
 <%@ page import="proyecto.fisw.Proyecto" %>
 <!DOCTYPE html>
 <html>
@@ -56,3 +124,4 @@
 		</div>
 	</body>
 </html>
+--}%

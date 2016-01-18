@@ -8,6 +8,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 @Secured(['IS_AUTHENTICATED_FULLY'])
 class ProyectoController {
+    def springSecurityService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
@@ -69,24 +70,33 @@ class ProyectoController {
             return
         }
 
-        ProyectoArea.findAllByProyecto(proyectoInstance).each {
-            it.delete()
-        }
+        Usuario user = (Usuario) springSecurityService.currentUser
+        if (user != proyectoInstance.creador) {
+            flash.messageError = "Solo el creador puede editar el proyecto."
+            //respond proyectoInstance, view: 'edit'
+            redirect proyectoInstance
+        } else {
 
-        params.list("area.id").each {
-            Area area = Area.findById(it)
-            ProyectoArea proyectoArea = new ProyectoArea(proyecto: proyectoInstance, area: area)
-            proyectoArea.save(flush: true, failOnError: true)
-        }
-
-        proyectoInstance.save flush: true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Proyecto.label', default: 'Proyecto'), proyectoInstance.id])
-                redirect proyectoInstance
+            ProyectoArea.findAllByProyecto(proyectoInstance).each {
+                it.delete()
             }
-            '*' { respond proyectoInstance, [status: OK] }
+
+            params.list("area.id").each {
+                Area area = Area.findById(it)
+                ProyectoArea proyectoArea = new ProyectoArea(proyecto: proyectoInstance, area: area)
+                proyectoArea.save(flush: true, failOnError: true)
+            }
+
+            proyectoInstance.creador = user
+            proyectoInstance.save flush: true
+
+            request.withFormat {
+                form multipartForm {
+                    flash.message = message(code: 'default.updated.message', args: [message(code: 'Proyecto.label', default: 'Proyecto'), proyectoInstance.id])
+                    redirect proyectoInstance
+                }
+                '*' { respond proyectoInstance, [status: OK] }
+            }
         }
     }
 
@@ -98,14 +108,20 @@ class ProyectoController {
             return
         }
 
-        proyectoInstance.delete flush: true
+        Usuario user = (Usuario) springSecurityService.currentUser
+        if (user != proyectoInstance.creador) {
+            flash.message = "Solo el creador puede eliminar el proyecto."
+            respond proyectoInstance, view: 'show'
+        } else {
+            proyectoInstance.delete flush: true
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Proyecto.label', default: 'Proyecto'), proyectoInstance.id])
-                redirect action: "index", method: "GET"
+            request.withFormat {
+                form multipartForm {
+                    flash.message = message(code: 'default.deleted.message', args: [message(code: 'Proyecto.label', default: 'Proyecto'), proyectoInstance.id])
+                    redirect action: "index", method: "GET"
+                }
+                '*' { render status: NO_CONTENT }
             }
-            '*' { render status: NO_CONTENT }
         }
     }
 

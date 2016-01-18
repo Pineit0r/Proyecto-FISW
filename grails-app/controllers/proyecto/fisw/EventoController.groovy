@@ -68,6 +68,8 @@ class EventoController {
             return
         }
 
+        Usuario user = (Usuario) springSecurityService.currentUser
+        eventoInstance.usuario = user
         eventoInstance.save flush: true
 
         request.withFormat {

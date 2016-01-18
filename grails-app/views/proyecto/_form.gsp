@@ -46,3 +46,5 @@
 		<g:select multiple="multiple" optionValue="nombre"  id="area" name="area.id" from="${proyecto.fisw.Area.list()}" optionKey="id" required="" class="many-to-one form-control" value="${proyectoInstance?.areas?.area?.id}"/>
 	</div>
 </div>
+
+<g:hiddenField name="creador.id" value="${proyectoInstance?.creador?.id}" />

@@ -27,9 +27,9 @@
 
 						<fieldset class="form">
 							<div class="panel-body">
-								<g:if test='${flash.message}'>
+								<g:if test='${flash.messageError}'>
 									<div class="alert alert-danger" role="alert">
-										<button type="button" class="close" data-dismiss="alert">&times;</button>${flash.message}
+										<button type="button" class="close" data-dismiss="alert">&times;</button>${flash.messageError}
 									</div>
 								</g:if>
 								<g:form url="[resource:proyectoInstance, action:'update']" method="PUT" >

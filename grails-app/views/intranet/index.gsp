@@ -56,7 +56,7 @@
 
                                 <ul class="nav nav-pills nav-justified">
                                     <li><g:link controller="proyecto" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Proyecto</g:link></li>
-                                <li><g:link controller="cargoProyecto" action="create"><span class="glyphicon glyphicon-plus"></span> Asociarse a proyecto</g:link></li>
+                                <li><g:link controller="proyecto" action="index"><span class="glyphicon glyphicon-th-list"></span>  Proyectos</g:link></li>
                             </sec:ifAnyGranted>
 
 
@@ -73,7 +73,7 @@
 
                                 <ul class="nav nav-pills nav-justified">
                                     <li><g:link controller="proyecto" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Proyecto</g:link></li>
-                                    <li><g:link controller="cargoProyecto" action="create"><span class="glyphicon glyphicon-plus"></span> Asociarse a proyecto</g:link></li>
+                                    <li><g:link controller="proyecto" action="index"><span class="glyphicon glyphicon-th-list"></span>  Proyectos</g:link></li>
                                 </ul>
                             </sec:ifAnyGranted>
 
