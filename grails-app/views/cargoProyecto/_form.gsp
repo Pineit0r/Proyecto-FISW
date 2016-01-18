@@ -5,7 +5,7 @@
 		<g:message code="cargoProyecto.proyecto.label" default="Proyecto" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="proyecto" optionValue="nombre" name="proyecto.id" from="${proyecto.fisw.Proyecto.list()}" optionKey="id" required="" value="${cargoProyectoInstance?.proyecto?.id}" class="many-to-one"/>
+	<g:select id="proyecto" optionValue="nombre" name="proyecto.id" from="${proyecto.fisw.Proyecto.list()}" optionKey="id" required="" value="${cargoProyectoInstance?.proyecto?.id}" class="many-to-one form-control"/>
 
 </div>
 
@@ -14,7 +14,7 @@
 		<g:message code="cargoProyecto.cargo.label" default="Cargo" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="cargo" required="" value="${cargoProyectoInstance?.cargo}"/>
+	<g:textField name="cargo" required="" class="form-control" value="${cargoProyectoInstance?.cargo}"/>
 
 </div>
 

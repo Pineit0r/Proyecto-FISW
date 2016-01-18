@@ -25,7 +25,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="well">
 
                             <sec:ifAnyGranted roles="ROLE_DIRECTOR">
@@ -57,11 +57,22 @@
                                 <ul class="nav nav-pills nav-justified">
                                     <li><g:link controller="proyecto" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Proyecto</g:link></li>
                                 <li><g:link controller="proyecto" action="index"><span class="glyphicon glyphicon-th-list"></span>  Proyectos</g:link></li>
+                                </ul>
+
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><g:link controller="reporte" action="create"><span class="glyphicon glyphicon-plus"></span> Nuevo Reporte</g:link></li>
+                                </ul>
                             </sec:ifAnyGranted>
 
 
                             <sec:ifAnyGranted roles="ROLE_USER">
                                 <ul class="nav nav-pills nav-stacked">
+                                    <g:if test="${reporteInstanceCount != 0}">
+                                        <li class="active"><g:link style="color: white" class="list" controller="reporte" action="index" >Reportes recibidos <span class="badge">${reporteInstanceCount}</span></g:link></li>
+                                    </g:if>
+                                    <g:else>
+                                        <li><g:link class="list" controller="reporte" action="index" ><span class="glyphicon glyphicon-th-list"></span> Reportes recibidos</g:link></li>
+                                    </g:else>
                                     <li><g:link controller="publicacionLibro" action="create"><span class="glyphicon glyphicon-plus"></span> Publicación de Capitulos de Libro</g:link></li>
 
                                 </ul>
@@ -99,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 style="text-align: center">Próximos Eventos</h3>
@@ -116,7 +127,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <g:each in="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date())}" var="evento" status="i">
+                                        <g:each in="${proyecto.fisw.Evento.findAllByFechaGreaterThan(new Date()).sort {it.fecha}}" var="evento" status="i">
                                             <tr>
                                                 <td>${evento.nombre}</td>
                                                 <td>${evento.fecha.getTimeString()}  ${evento.fecha.getDateString()}</td>
@@ -136,7 +147,7 @@
                     </div>
 
 
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 style="text-align: center">Próximos Congresos</h3>
@@ -154,10 +165,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            <g:each in="${proyecto.fisw.Congreso.findAllByFechaGreaterThan(new Date())}" var="congreso">
+                                            <g:each in="${proyecto.fisw.Congreso.findAllByFechaGreaterThan(new Date()).sort {it.fecha}}" var="congreso">
                                                 <tr>
                                                     <td>${congreso.nombre}</td>
-                                                    <td>${congreso.fecha.getTimeString()}  ${congreso.fecha.getDateString()}</td>
+                                                    <td>${congreso.fecha.getDateString()}</td>
                                                     <td>${congreso.ciudad.ciudad}, ${congreso.ciudad.pais.nombre}</td>
                                                     <td><g:link class="btn btn-success btn-xs" action="show" controller="congreso" id="${congreso.id}"><span class="glyphicon glyphicon-eye-open"></span> Ver</g:link></td>
                                                 </tr>

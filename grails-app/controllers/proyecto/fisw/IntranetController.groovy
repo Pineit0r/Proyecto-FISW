@@ -8,6 +8,7 @@ class IntranetController {
     def springSecurityService
 
     def index() {
-        respond Usuario.list(params), model:[usuarioInstanceCount: Usuario.countByEnabled(false)]
+        Usuario user = (Usuario) springSecurityService.currentUser
+        respond Usuario.list(params), model:[usuarioInstanceCount: Usuario.countByEnabled(false), reporteInstanceCount: Reporte.findAllByUsuarioAndVisto(user, false).size()]
     }
 }

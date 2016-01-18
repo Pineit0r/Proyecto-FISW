@@ -5,7 +5,7 @@
 		<g:message code="cargoProyecto.cargo.label" default="Cargo" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="cargo" required="" value="${cargoProyectoInstance?.cargo}"/>
+	<g:textField name="cargo" required="" class="form-control" value="${cargoProyectoInstance?.cargo}"/>
 
 </div>
 

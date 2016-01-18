@@ -2,8 +2,10 @@ package proyecto.fisw
 
 class Reporte {
     String reporte
+    Date creado
+    Boolean visto
 
-    static belongsTo = [admin: Usuario, usuario: Usuario]
+    static belongsTo = [director: Usuario, usuario: Usuario]
 
     static constraints = {
     }
